@@ -1,12 +1,10 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
-
+const colors = require('tailwindcss/colors')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{js,jsx}'],
   theme: {
-    colors: {
-      primary: '#87972f',
-    },
+
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
       sm: ['0.875rem', { lineHeight: '1.5rem' }],
@@ -16,19 +14,33 @@ module.exports = {
       '2xl': ['1.5rem', { lineHeight: '2rem' }],
       '3xl': ['2rem', { lineHeight: '2.5rem' }],
       '4xl': ['2.5rem', { lineHeight: '3.5rem' }],
-      '5xl': ['3rem', { lineHeight: '3.5rem' }],
-      '6xl': ['3.75rem', { lineHeight: '1' }],
+      '5xl': ['2.75rem', { lineHeight: '3.5rem' }],
+      '6xl': ['3.2rem', { lineHeight: '1.15' }],
       '7xl': ['4.5rem', { lineHeight: '1.1' }],
       '8xl': ['6rem', { lineHeight: '1' }],
       '9xl': ['8rem', { lineHeight: '1' }],
     },
     extend: {
+      colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+        'primary': '#70AB0E',
+        'deep-dark': '#2E424D',
+        'white': '#ffffff',
+        'purple': '#3f3cbb',
+        'midnight': '#121063',
+        'metal': '#565584',
+        'tahiti': '#3ab7bf',
+        'silver': '#ecebff',
+        'bubble-gum': '#ff77e9',
+        'bermuda': '#78dcca',
+      },
       borderRadius: {
         '4xl': '2rem',
       },
       fontFamily: {
-        sans: ['Roboto Mono','Inter', ...defaultTheme.fontFamily.sans],
-        display: ['Roboto Mono', 'Lexend', ...defaultTheme.fontFamily.sans],
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        display: ['Lexend', ...defaultTheme.fontFamily.sans],
       },
       maxWidth: {
         '2xl': '40rem',
