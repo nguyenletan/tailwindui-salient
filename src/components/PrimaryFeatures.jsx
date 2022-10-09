@@ -8,31 +8,42 @@ import screenshotExpenses from '@/images/screenshots/expenses.png'
 import screenshotPayroll from '@/images/screenshots/payroll.png'
 import screenshotReporting from '@/images/screenshots/reporting.png'
 import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
+import screenshotBuildingPerformance from '@/images/screenshots/building-performance.webp'
+import screenshotComparison from '@/images/screenshots/comparison.webp'
+import screenshotImprove from '@/images/screenshots/improve.webp'
+import screenshotAssetReliability from '@/images/screenshots/asset-reliability.webp'
+import screenshotWeather from '@/images/screenshots/weather.webp'
 
 const features = [
   {
-    title: 'Payroll',
+    title: 'Building performance',
     description:
       "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
-    image: screenshotPayroll,
+    image: screenshotBuildingPerformance,
   },
   {
-    title: 'Claim expenses',
+    title: 'Comparison',
     description:
       "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
-    image: screenshotExpenses,
+    image: screenshotComparison,
   },
   {
-    title: 'VAT handling',
+    title: 'Improvement',
     description:
       "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
-    image: screenshotVatReturns,
+    image: screenshotImprove,
   },
   {
-    title: 'Reporting',
+    title: 'Asset Reliability',
     description:
       'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
-    image: screenshotReporting,
+    image: screenshotAssetReliability,
+  },
+  {
+    title: 'Weather Information',
+    description:
+      'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
+    image: screenshotWeather,
   },
 ]
 
@@ -70,8 +81,8 @@ export function PrimaryFeatures() {
       {/*/>*/}
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
-          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Everything you need to run your books.
+          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-6xl">
+            Our main features
           </h2>
           <p className="mt-6 text-lg tracking-tight text-blue-100">
             Well everything you need if you aren’t that picky about minor
@@ -80,12 +91,12 @@ export function PrimaryFeatures() {
         </div>
         <Tab.Group
           as="div"
-          className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
+          className="mt-16 grid grid-cols-1 gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
           vertical={tabOrientation === 'vertical'}
         >
           {({ selectedIndex }) => (
             <>
-              <div className="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
+              <div className="-mx-4 mt-16 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
                 <Tab.List className="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
                   {features.map((feature, featureIndex) => (
                     <div
