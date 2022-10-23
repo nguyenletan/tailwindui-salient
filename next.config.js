@@ -2,7 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  runtime: 'experimental-edge',
   experimental: {
     newNextLinkBehavior: true,
     scrollRestoration: true,

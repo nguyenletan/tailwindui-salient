@@ -37,7 +37,7 @@ export function ThirdFeatures() {
           />
         </div>
         <div className="w-2/5 md:mx-auto sm: text-center md:text-left xl:max-w-none">
-          <h2 className="font-display text-3xl tracking-tight text-deep-dark sm:text-4xl md:text-4xl">
+          <h2 className="font-display font-extrabold !leading-tight text-3xl tracking-tight text-deep-dark sm:text-4xl md:text-4xl">
             A single platform to manage property, leases and facilities with confidence.
           </h2>
           <p className="mt-6 text-lg tracking-tight text-deep-dark">
