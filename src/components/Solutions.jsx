@@ -25,9 +25,18 @@ export function Solutions() {
       <p className="text-deep-dark">Specialized solutions for the commercial real estate, industrial, office, retail and mixed portfolio</p>
       <Container className="mt-16">
         <ul className="flex gap-10 justify-between">
-          <li className="w-[500px] h-[281px] rounded-lg bg-lime-300"></li>
-          <li className="w-[500px] h-[281px] rounded-lg bg-lime-300"></li>
-          <li className="w-[500px] h-[281px] rounded-lg bg-lime-300"></li>
+          <li className="w-[500px] h-[281px] rounded-lg bg-lime-600 flex flex-col justify-end items-start p-5 text-white">
+            <h3 className="font-display font-semibold text-lg pb-1">Investor</h3>
+            <p className="text-md text-left pb-6">For Owners & Investors of Commercial Real Estate and multi-assets</p>
+          </li>
+          <li className="w-[500px] h-[281px] rounded-lg bg-lime-600 flex flex-col justify-end items-start p-5 text-white">
+            <h3 className="font-display font-semibold text-lg pb-1">Corporate</h3>
+            <p className="text-md text-left pb-6">For Owners & Investors of Commercial Real Estate and multi-assets</p>
+          </li>
+          <li className="w-[500px] h-[281px] rounded-lg bg-lime-600 flex flex-col justify-end items-start p-5 text-white">
+            <h3 className="font-display font-semibold text-lg pb-1">Infrastructure</h3>
+            <p className="text-md text-left pb-6">For Owners & Investors of Commercial Real Estate and multi-assets</p>
+          </li>
         </ul>
       </Container>
     </section>
