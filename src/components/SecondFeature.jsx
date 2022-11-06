@@ -13,7 +13,7 @@ export default function SecondFeature() {
       >
         <Container>
           <div className='lg:grid lg:grid-cols-2 lg:gap-8'>
-            <div className='bg-neutral-100 pt-14 px-16 pb-[150px]'>
+            <div className='bg-neutral-100 pt-14 px-16 pb-[100px]'>
               <h2 className='font-display text-3xl font-bold leading-tight text-neutral-900'>
                 How BEE helps with your building energy costs whilst supporting
                 your ESG requirements
