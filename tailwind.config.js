@@ -39,8 +39,8 @@ module.exports = {
         '4xl': '2rem',
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        display: ['Lexend', ...defaultTheme.fontFamily.sans],
+        sans: ['DM Sans', 'Inter', ...defaultTheme.fontFamily.sans],
+        display: [ 'Lexend', ...defaultTheme.fontFamily.sans],
       },
       maxWidth: {
         '2xl': '40rem',

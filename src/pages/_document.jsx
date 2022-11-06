@@ -19,6 +19,7 @@ export default function Document(props) {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend:wght@400;500&display=swap"
         />
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..900display=swap"

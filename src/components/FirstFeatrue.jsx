@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import Image from 'next/future/image'
+import Image from 'next/image'
 import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 import { Container } from '@/components/Container'
@@ -11,7 +11,7 @@ import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
 import feature from '@/images/feature.webp'
 
 
-export function ThirdFeatures() {
+export function FirstFeatures() {
 
 
   return (
@@ -31,6 +31,8 @@ export function ThirdFeatures() {
       <Container className="flex gap-20 justify-between">
         <div className="w-3/5">
           <Image
+            placeholder="blur"
+            quality={100}
             className=""
             src={feature}
             alt=""
