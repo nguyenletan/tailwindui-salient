@@ -262,7 +262,7 @@ export default function SecondFeature () {
               >
                 <div className="stack-label">
                   <p className="text-h-200 title border-t-2 border-t-gray-200 pb-2 text-sm leading-tight">
-                    Compare
+                    Compare Building Performance
                   </p>
                 </div>
                 <ColorDishSVG color="#BF4E03de"/>
@@ -271,7 +271,7 @@ export default function SecondFeature () {
               <ImproveStack
                 className={activeImproveStack ? 'active absolute z-30 grid w-full grid-cols-2 items-center gap-2' : 'absolute z-30 grid w-full grid-cols-2 items-center gap-2'}>
                 <div className="stack-label">
-                  <p className="text-h-200 border-t-2 border-t-gray-200 title text-sm leading-tight">Improve</p>
+                  <p className="text-h-200 border-t-2 border-t-gray-200 title text-sm leading-tight">Improve Building Performance</p>
                 </div>
                 <ColorDishSVG color="#3f3cbbde"/>
               </ImproveStack>
