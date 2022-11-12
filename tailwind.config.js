@@ -34,6 +34,7 @@ module.exports = {
         'silver': '#ecebff',
         'bubble-gum': '#ff77e9',
         'bermuda': '#78dcca',
+        'red': '#B81237',
       },
       borderRadius: {
         '4xl': '2rem',

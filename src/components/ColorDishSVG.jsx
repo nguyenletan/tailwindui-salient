@@ -1,9 +1,10 @@
-const BlackDishSVG = () => {
+export default function ColorDishSVG({color='#87972f'}) {
+  console.log(color)
   return (
     <svg viewBox='0 0 245 176'>
       <defs></defs>
       <path
-        fill='#12161E'
+        fill={color}
         fillRule='evenodd'
         d='M122.5 160c67.655 0 122.5-35.817 122.5-80v16c0 44.183-54.845 80-122.5 80S0 140.183 0 96V80c0 44.183 54.845 80 122.5 80z'
         clipRule='evenodd'
@@ -31,7 +32,7 @@ const BlackDishSVG = () => {
       ></path>
       <g filter='url(#stack-fed__filter0_i)'>
         <path
-          fill='#12161E'
+          fill={color}
           d='M245 80c0 44.183-54.845 80-122.5 80S0 124.183 0 80 54.845 0 122.5 0 245 35.817 245 80z'
         ></path>
       </g>
@@ -95,5 +96,3 @@ const BlackDishSVG = () => {
     </svg>
   )
 }
-
-export default BlackDishSVG

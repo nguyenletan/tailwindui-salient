@@ -4,13 +4,13 @@ const DarkGrayDishSVG = () => {
       <defs></defs>
       <path
         fill='#383E4F'
-        fill-rule='evenodd'
+        fillRule='evenodd'
         d='M123 160c67.931 0 123-35.817 123-80v32c0 44.183-55.069 80-123 80S0 156.183 0 112V80c0 44.183 55.069 80 123 80z'
         clipRule='evenodd'
       ></path>
       <path
         fill='#232730'
-        fill-rule='evenodd'
+        fillRule='evenodd'
         d='M123 192c67.931 0 123-35.817 123-80v1c0 44.183-55.069 80-123 80S0 157.183 0 113v-1c0 44.183 55.069 80 123 80zM.085 109A53.003 53.003 0 000 112v-3h.085zm245.83 0H246v3a52.47 52.47 0 00-.085-3z'
         clipRule='evenodd'
         opacity='.3'
@@ -18,13 +18,13 @@ const DarkGrayDishSVG = () => {
       <path
         fill='#fff'
         fillOpacity='.2'
-        fill-rule='evenodd'
+        fillRule='evenodd'
         d='M123 160c67.931 0 123-35.817 123-80v1c0 44.183-55.069 80-123 80S0 125.183 0 81v-1c0 44.183 55.069 80 123 80zM.085 77A53.006 53.006 0 000 80v-3h.085zm245.83 0H246v3c0-1.004-.028-2.004-.085-3z'
         clipRule='evenodd'
       ></path>
       <path
         fill='url(#sstack-middleware__paint0_linear)'
-        fill-rule='evenodd'
+        fillRule='evenodd'
         d='M123 160c67.931 0 123-35.817 123-80v32c0 44.183-55.069 80-123 80S0 156.183 0 112V80c0 44.183 55.069 80 123 80z'
         clipRule='evenodd'
         opacity='.28'
@@ -54,7 +54,7 @@ const DarkGrayDishSVG = () => {
           height='160'
           x='0'
           y='0'
-          color-interpolation-filters='sRGB'
+          colorInterpolationFilters='sRGB'
           filterUnits='userSpaceOnUse'
         >
           <feFlood floodOpacity='0' result='BackgroundImageFix'></feFlood>

@@ -5,5 +5,6 @@ module.exports = {
       replaceWith: '[data-focus-visible-added]',
     },
     autoprefixer: {},
+    ...(process.env.NODE_ENV === 'production' ? { cssnano: {} } : {})
   },
 }
