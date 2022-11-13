@@ -34,12 +34,12 @@ export function FirstFeatures() {
         </div>
         <div className='flex w-full justify-end'>
           <div className='relative flex w-3/5 justify-end self-end'>
-            <div className='absolute bottom-[250px] left-[-20px] flex flex-col gap-0 rounded-xl bg-white px-3 py-2 shadow-lg'>
+            <div className='absolute bottom-[250px] left-[-100px] flex flex-col gap-0 rounded-xl bg-white px-3 pt-2 pb-0 shadow-lg'>
               <p className="flex gap-2">
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
-                  width='41.21'
-                  height='41.209'
+                  width='31.21'
+                  height='31.209'
                   viewBox='0 0 41.21 41.209'
                 >
                   <g id='Path_8658' data-name='Path 8658' fill='#fff'>
