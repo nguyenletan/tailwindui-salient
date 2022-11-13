@@ -1,5 +1,4 @@
-export default function ColorDishSVG({color='#87972f'}) {
-  console.log(color)
+export default function ColorDishSVG({ color = '#87972f' }) {
   return (
     <svg viewBox='0 0 245 176'>
       <defs></defs>

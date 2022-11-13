@@ -10,7 +10,8 @@ const CurrentBuildingStack = styled.div`
   transform: translate3d(0, 40%, 0);
   will-change: transform;
   .title {
-    transition: font-weight 1s ease-in-out;
+    transition: all 0.8s ease-in-out;
+    will-change: all;
   }
 
   &.active {
@@ -18,6 +19,7 @@ const CurrentBuildingStack = styled.div`
 
     .title {
       font-weight: bold;
+      font-size: 1.1rem;
     }
   }
 `
@@ -28,7 +30,8 @@ const CompareStack = styled.div`
   will-change: transform;
 
   .title {
-    transition: font-weight 1s ease-in-out;
+    transition: all 0.8s ease-in-out;
+    will-change: all;
   }
 
   &.active {
@@ -36,6 +39,7 @@ const CompareStack = styled.div`
 
     .title {
       font-weight: bold;
+      font-size: 1.1rem;
     }
   }
 `
@@ -46,7 +50,8 @@ const ImproveStack = styled.div`
   will-change: transform;
 
   .title {
-    transition: font-weight 1s ease-in-out;
+    transition: all 0.8s ease-in-out;
+    will-change: all;
   }
 
   &.active {
@@ -54,6 +59,7 @@ const ImproveStack = styled.div`
 
     .title {
       font-weight: bold;
+      font-size: 1.1rem;
     }
   }
 `
@@ -64,7 +70,8 @@ const AssetReliabilityStack = styled.div`
   will-change: transform;
 
   .title {
-    transition: font-weight 1s ease-in-out;
+    transition: all 0.8s ease-in-out;
+    will-change: all;
   }
 
   &.active {
@@ -72,6 +79,7 @@ const AssetReliabilityStack = styled.div`
 
     .title {
       font-weight: bold;
+      font-size: 1.1rem;
     }
   }
 `
@@ -90,7 +98,6 @@ export default function SecondFeature () {
   // description scroll position
   useScrollPosition(
     ({ currPos }) => {
-      console.log(currPos)
       if (currPos.y < 400) {
         setActivePerformanceStack(true)
       } else {
@@ -105,12 +112,10 @@ export default function SecondFeature () {
 
   useScrollPosition(
     ({ currPos }) => {
-      console.log(currPos)
-      if (currPos.y < 300) {
+      if (currPos.y < 400) {
         setActiveCompareStack(true)
       } else {
         setActiveCompareStack(false)
-        //setCurrentActiveStack(currentActiveStack)
       }
     },
     [],
@@ -121,12 +126,10 @@ export default function SecondFeature () {
 
   useScrollPosition(
     ({ currPos }) => {
-      console.log(currPos)
-      if (currPos.y < 300) {
+      if (currPos.y < 400) {
         setActiveImproveStack(true)
       } else {
         setActiveImproveStack(false)
-        //setCurrentActiveStack(currentActiveStack)
       }
     },
     [],
@@ -137,12 +140,10 @@ export default function SecondFeature () {
 
   useScrollPosition(
     ({ currPos }) => {
-      console.log(currPos)
       if (currPos.y < 400) {
         setActiveAssetReliabilityStack(true)
       } else {
         setActiveAssetReliabilityStack(false)
-        //setCurrentActiveStack(currentActiveStack)
       }
     },
     [],
@@ -161,7 +162,7 @@ export default function SecondFeature () {
     >
       <Container>
         <div className="lg:grid lg:grid-cols-2 lg:gap-10">
-          <div className="mb-150px">
+          <div>
             <div className="bg-neutral-100 px-16 pt-14 pb-[150px]">
               <h2 className="font-display text-3xl font-bold leading-tight text-deep-dark">
                 How BEE helps with your building energy costs whilst supporting
@@ -236,7 +237,7 @@ export default function SecondFeature () {
               </p>
             </div>
           </div>
-          <div className="self-center mt-[7%] h-[90%] px-6">
+          <div className="self-center mt-[7%] h-[90%] px-4">
             <div className="stack-layer relative sticky top-[250px] flex h-[230px] flex-col">
               <CurrentBuildingStack
                 className={
