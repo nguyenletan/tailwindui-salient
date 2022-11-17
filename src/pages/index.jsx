@@ -10,7 +10,11 @@ import { ThirdFeature } from '@/components/ThirdFeature'
 import { Testimonials } from '@/components/Testimonials'
 import { Solutions } from '@/components/Solutions'
 import SecondFeature from '@/components/SecondFeature'
-import { FirstFeatures } from '@/components/FirstFeatrue'
+import { FirstFeatures } from '@/components/FirstFeature'
+import {FirstBFeatures} from "@/components/FirstBFeature";
+import {FirstCFeatures} from "@/components/FirstCFeature";
+import {FirstDFeatures} from "@/components/FirstDFeature";
+import {FirstEFeatures} from "@/components/FirstEFeature";
 
 export default function Home() {
   return (
@@ -28,6 +32,10 @@ export default function Home() {
       <main>
         <Hero />
         <FirstFeatures />
+        <FirstBFeatures />
+        <FirstCFeatures />
+        <FirstDFeatures />
+        <FirstEFeatures />
         <SecondFeature />
         <Solutions />
         <PrimaryFeatures />
