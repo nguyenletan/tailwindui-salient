@@ -84,7 +84,7 @@ const AssetReliabilityStack = styled.div`
   }
 `
 
-export default function SecondFeature () {
+export default function SecondFeature() {
   const currentBuildingPerformanceBoxRef = useRef(null)
   const compareBoxRef = useRef(null)
   const improveBoxRef = useRef(null)
@@ -93,7 +93,8 @@ export default function SecondFeature () {
   const [activePerformanceStack, setActivePerformanceStack] = useState(false)
   const [activeCompareStack, setActiveCompareStack] = useState(false)
   const [activeImproveStack, setActiveImproveStack] = useState(false)
-  const [activeAssetReliabilityStack, setActiveAssetReliabilityStack] = useState(false)
+  const [activeAssetReliabilityStack, setActiveAssetReliabilityStack] =
+    useState(false)
 
   // description scroll position
   useScrollPosition(
@@ -154,81 +155,87 @@ export default function SecondFeature () {
 
   return (
     <section
-      id="features"
-      aria-label="Features for running your books"
+      id='features'
+      aria-label='Features for running your books'
       //className="relative overflow-hidden bg-white  sm:py-32 h-[1601px]"
-      className="pt-20 pb-14 sm:pb-20 sm:pt-32 lg:pb-32"
+      className='pt-20 pb-14 sm:pb-20 sm:pt-32 lg:pb-32'
       //className="lg:grid lg:grid-cols-2 lg:gap-8"
     >
       <Container>
-        <div className="lg:grid lg:grid-cols-2 lg:gap-10">
+        <div className='lg:grid lg:grid-cols-2 lg:gap-10'>
           <div>
-            <div className="bg-neutral-100 px-16 pt-14 pb-[150px]">
-              <h2 className="font-display text-3xl font-bold leading-tight text-deep-dark">
+            <div className='bg-neutral-100 px-16 pt-14 pb-[150px]'>
+              <h2 className='font-display text-3xl font-bold leading-tight text-deep-dark'>
                 How BEE helps with your building energy costs whilst supporting
                 your ESG requirements
               </h2>
 
-              <h3 className="mt-8 font-display text-2xl font-bold text-neutral-700">
+              <h3 className='mt-8 font-display text-2xl font-bold text-neutral-700'>
                 Here’s how it all comes together
               </h3>
 
-              <p className="mt-6 text-lg">
-                Initially when our Building Energy Estimator was created it was
-                to quickly and easily enable you to get a quick overview of the
-                current state of your building compared to current building
-                regulations and what’s the best energy and CO2 performance you
-                could get from your building.
+              <p className='mt-6 text-lg'>
+                Using building information and sub-meter readings, track key
+                energy and emission numbers to see which sub-systems have the
+                largest impacts. Drill down to critical plant and equipment and
+                see the factors that influence your building’s energy
+                consumption. Track key building information to understand and
+                make informed decisions.
               </p>
             </div>
 
             <div
-              className="bg-neutral-100 px-16 pb-32"
+              className='bg-neutral-100 px-16 pb-32'
               ref={currentBuildingPerformanceBoxRef}
             >
-              <h3 className="font-display text-xl font-bold leading-tight text-neutral-700">
+              <h3 className='font-display text-xl font-bold leading-tight text-neutral-700'>
                 Current Building Performance
               </h3>
-              <p className="mt-8 text-lg">
-                Initially when our Building Energy Estimator was created it was
-                to quickly and easily enable you to get a quick overview of the
-                current state of your building compared to current building
-                regulations and what’s the best energy and CO2 performance you
-                could get from your building.
+              <p className='mt-8 text-lg'>
+                Compare each building’s performance with similar ones in your
+                portfolio, minimum legislative requirements and potential
+                best-in-class. Understand the gaps and the best possible
+                performance achievable. Look at individual spaces and identify
+                where improvements can be made. Receive alerts when compliance
+                requirements are not met.
               </p>
             </div>
 
-            <div className="bg-neutral-100 px-16 pb-32" ref={compareBoxRef}>
-              <h3 className="font-display text-xl font-bold leading-tight text-neutral-700">
+            <div className='bg-neutral-100 px-16 pb-32' ref={compareBoxRef}>
+              <h3 className='font-display text-xl font-bold leading-tight text-neutral-700'>
                 Compare Building Performance
               </h3>
-              <p className="mt-8 text-lg">
-                Initially when our Building Energy Estimator was created it was
-                to quickly and easily enable you to get a quick overview of the
-                current state of your building compared to current building
-                regulations and what’s the best energy and CO2 performance you
-                could get from your building.
+              <p className='mt-8 text-lg'>
+                Identify potential energy performance improvements achievable
+                for each building along with key energy, emissions and financial
+                metrics. Analyse multiple scenarios and optimise improvement
+                measures to suit your business needs. Easily share reports so
+                everyone can work with the same dataset.
               </p>
             </div>
 
-            <div className="bg-neutral-100 px-16 pb-32" ref={improveBoxRef}>
-              <h3 className="font-display text-xl font-bold leading-tight text-neutral-700">
+            <div className='bg-neutral-100 px-16 pb-32' ref={improveBoxRef}>
+              <h3 className='font-display text-xl font-bold leading-tight text-neutral-700'>
                 Improve Building Performance
               </h3>
-              <p className="mt-8 text-lg">
-                Initially when our Building Energy Estimator was created it was
-                to quickly and easily enable you to get a quick overview of the
-                current state of your building compared to current building
-                regulations and what’s the best energy and CO2 performance you
-                could get from your building.
+              <p className='mt-8 text-lg'>
+                Monitor the health of critical assets and receive alerts when
+                potential issues are detected. Understand the factors affecting
+                each equipment’s reliability to optimise your maintenance
+                efforts. Analyse asset replacements to understand the energy
+                savings and financial returns and determine the ones that meets
+                your business priorities.
               </p>
             </div>
 
-            <div className="bg-neutral-100 px-16 pb-52" ref={assetReliabilityBoxRef}>
-              <h3 className="font-display text-xl font-bold leading-tight text-neutral-700">
+            <div
+              className='bg-neutral-100 px-16 pb-52'
+              ref={assetReliabilityBoxRef}
+            >
+              <h3 className='font-display text-xl font-bold leading-tight text-neutral-700'>
                 Asset Reliability
               </h3>
-              <p className="mt-8 text-lg">
+              <p className='mt-8 text-lg'>
                 Initially when our Building Energy Estimator was created it was
                 to quickly and easily enable you to get a quick overview of the
                 current state of your building compared to current building
@@ -237,8 +244,8 @@ export default function SecondFeature () {
               </p>
             </div>
           </div>
-          <div className="self-center mt-[7%] h-[90%] px-4">
-            <div className="stack-layer relative sticky top-[250px] flex h-[230px] flex-col">
+          <div className='mt-[7%] h-[90%] self-center px-4'>
+            <div className='stack-layer relative sticky top-[250px] flex h-[230px] flex-col'>
               <CurrentBuildingStack
                 className={
                   activePerformanceStack
@@ -246,12 +253,12 @@ export default function SecondFeature () {
                     : 'absolute z-50 grid w-full grid-cols-2 items-center gap-2 opacity-100'
                 }
               >
-                <div className="stack-label">
-                  <p className="text-h-200 title border-t-2 border-t-gray-200 pb-2 text-sm leading-tight">
+                <div className='stack-label'>
+                  <p className='text-h-200 title border-t-2 border-t-gray-200 pb-2 text-sm leading-tight'>
                     Current Building Performance
                   </p>
                 </div>
-                <ColorDishSVG color="#87972fde"/>
+                <ColorDishSVG color='#87972fde' />
               </CurrentBuildingStack>
 
               <CompareStack
@@ -261,32 +268,44 @@ export default function SecondFeature () {
                     : 'absolute z-40 grid w-full grid-cols-2 items-center gap-2'
                 }
               >
-                <div className="stack-label">
-                  <p className="text-h-200 title border-t-2 border-t-gray-200 pb-2 text-sm leading-tight">
+                <div className='stack-label'>
+                  <p className='text-h-200 title border-t-2 border-t-gray-200 pb-2 text-sm leading-tight'>
                     Compare Building Performance
                   </p>
                 </div>
-                <ColorDishSVG color="#BF4E03de"/>
+                <ColorDishSVG color='#BF4E03de' />
               </CompareStack>
 
               <ImproveStack
-                className={activeImproveStack ? 'active absolute z-30 grid w-full grid-cols-2 items-center gap-2' : 'absolute z-30 grid w-full grid-cols-2 items-center gap-2'}>
-                <div className="stack-label">
-                  <p className="text-h-200 border-t-2 border-t-gray-200 title text-sm leading-tight">Improve Building Performance</p>
+                className={
+                  activeImproveStack
+                    ? 'active absolute z-30 grid w-full grid-cols-2 items-center gap-2'
+                    : 'absolute z-30 grid w-full grid-cols-2 items-center gap-2'
+                }
+              >
+                <div className='stack-label'>
+                  <p className='text-h-200 title border-t-2 border-t-gray-200 text-sm leading-tight'>
+                    Improve Building Performance
+                  </p>
                 </div>
-                <ColorDishSVG color="#3f3cbbde"/>
+                <ColorDishSVG color='#3f3cbbde' />
               </ImproveStack>
 
               <AssetReliabilityStack
-                className={activeAssetReliabilityStack ? 'active absolutez-20 grid w-full grid-cols-2 items-center gap-2' : 'absolute z-20 grid w-full grid-cols-2 items-center gap-2'}>
-                <div className="stack-label">
-                  <p className="text-h-200 border-t-2 border-t-gray-200 title text-sm leading-tight">
+                className={
+                  activeAssetReliabilityStack
+                    ? 'active absolutez-20 grid w-full grid-cols-2 items-center gap-2'
+                    : 'absolute z-20 grid w-full grid-cols-2 items-center gap-2'
+                }
+              >
+                <div className='stack-label'>
+                  <p className='text-h-200 title border-t-2 border-t-gray-200 text-sm leading-tight'>
                     Asset Reliability
                   </p>
                 </div>
-                <div className="stack-layer-end">
+                <div className='stack-layer-end'>
                   {/*<BlackDishSVG/>*/}
-                  <ColorDishSVG color="#2E424D"/>
+                  <ColorDishSVG color='#2E424D' />
                 </div>
               </AssetReliabilityStack>
             </div>
