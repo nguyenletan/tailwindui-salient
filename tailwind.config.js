@@ -4,7 +4,6 @@ const colors = require('tailwindcss/colors')
 module.exports = {
   content: ['./src/**/*.{js,jsx}'],
   theme: {
-
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
       sm: ['0.875rem', { lineHeight: '1.5rem' }],
@@ -24,29 +23,29 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        'primary': '#87972f',
+        primary: '#87972f',
         'deep-dark': '#2E424D',
-        'white': '#ffffff',
-        'purple': '#3f3cbb',
-        'midnight': '#121063',
-        'metal': '#565584',
-        'tahiti': '#3ab7bf',
-        'silver': '#ecebff',
+        white: '#ffffff',
+        purple: '#3f3cbb',
+        midnight: '#121063',
+        metal: '#565584',
+        tahiti: '#3ab7bf',
+        silver: '#ecebff',
         'bubble-gum': '#ff77e9',
-        'bermuda': '#78dcca',
-        'red': '#B81237',
+        bermuda: '#78dcca',
+        red: '#B81237',
       },
       borderRadius: {
         '4xl': '2rem',
       },
       fontFamily: {
         sans: ['DM Sans', 'Inter', ...defaultTheme.fontFamily.sans],
-        display: [ 'Lexend', ...defaultTheme.fontFamily.sans],
+        display: ['Lexend', ...defaultTheme.fontFamily.sans],
       },
       maxWidth: {
         '2xl': '40rem',
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/forms')],
 }

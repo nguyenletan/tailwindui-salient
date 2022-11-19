@@ -11,10 +11,11 @@ import { Testimonials } from '@/components/Testimonials'
 import { Solutions } from '@/components/Solutions'
 import SecondFeature from '@/components/SecondFeature'
 import { FirstFeatures } from '@/components/FirstFeature'
-import {FirstBFeatures} from "@/components/FirstBFeature";
-import {FirstCFeatures} from "@/components/FirstCFeature";
-import {FirstDFeatures} from "@/components/FirstDFeature";
-import {FirstEFeatures} from "@/components/FirstEFeature";
+import { FirstBFeatures } from '@/components/FirstBFeature'
+import { FirstCFeatures } from '@/components/FirstCFeature'
+import { FirstDFeatures } from '@/components/FirstDFeature'
+import { FirstEFeatures } from '@/components/FirstEFeature'
+import { FirstFFeatures } from '@/components/FirstFFeature'
 
 export default function Home() {
   return (
@@ -37,14 +38,15 @@ export default function Home() {
         <FirstDFeatures />
         <FirstEFeatures />
         <SecondFeature />
-        <Solutions />
-        <PrimaryFeatures />
-        <ThirdFeature />
+        <FirstFFeatures />
+        {/*<Solutions />*/}
+        {/*<PrimaryFeatures />*/}
+        {/*<ThirdFeature />*/}
 
-        <CallToAction />
-        <Testimonials />
-        <Pricing />
-        <Faqs />
+        {/*<CallToAction />*/}
+        {/*<Testimonials />*/}
+        {/*<Pricing />*/}
+        {/*<Faqs />*/}
       </main>
       <Footer />
     </>
