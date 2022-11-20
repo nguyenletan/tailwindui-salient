@@ -15,7 +15,7 @@ export function Hero() {
   return (
     <>
       <div
-        className='relative mt-[80px] mb-16 flex h-[720px] items-center justify-between bg-cover text-left'
+        className='relative mt-[79px] mb-16 flex h-[720px] items-center justify-between bg-cover text-left'
         style={{
           backgroundImage: `url(/background-images/video-sec0.jpg)`,
         }}

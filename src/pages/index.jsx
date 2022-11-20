@@ -16,6 +16,7 @@ import { FirstCFeatures } from '@/components/FirstCFeature'
 import { FirstDFeatures } from '@/components/FirstDFeature'
 import { FirstEFeatures } from '@/components/FirstEFeature'
 import { FirstFFeatures } from '@/components/FirstFFeature'
+import Header2 from '@/components/Header2'
 
 export default function Home() {
   return (
@@ -29,7 +30,8 @@ export default function Home() {
           content='Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.'
         />
       </Head>
-      <Header />
+      <Header2 />
+
       <main>
         <Hero />
         <FirstFeatures />
