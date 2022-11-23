@@ -14,9 +14,21 @@ export function FirstCFeatures() {
       aria-label='Features for running your books'
       className='relative overflow-hidden pt-12 pb-28 sm:pb-24'
     >
-      <Container className='flex gap-8 align-top'>
-        <div ref={ref} className='flex w-1/2'>
-          <div className=' text-center md:text-left xl:max-w-none'>
+      <Container className='flex flex-wrap gap-8 align-top lg:flex-nowrap pb-5'>
+        <div className='flex w-full justify-start lg:hidden'>
+          <div className='relative flex justify-end self-center'>
+            <Image
+              placeholder='blur'
+              quality={100}
+              className=''
+              src={feature}
+              alt=''
+            />
+          </div>
+        </div>
+
+        <div ref={ref} className='flex w-full lg:w-1/2'>
+          <div className='md:text-left xl:max-w-none'>
             <h2 className='font-display text-3xl font-extrabold !leading-tight tracking-tight text-deep-dark sm:text-4xl md:text-4xl'>
               A single platform to manage your property’s ESG requirements
             </h2>
@@ -73,7 +85,7 @@ export function FirstCFeatures() {
             opacity: isInView ? 1 : 0,
             transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
           }}
-          className='flex w-1/2 justify-start'
+          className='flex hidden w-1/2 justify-start lg:block'
         >
           <div className='relative flex justify-end self-center'>
             <Image

@@ -15,19 +15,19 @@ export function FirstFFeatures() {
       aria-label='Features for running your books'
       className='relative overflow-hidden pt-12 pb-28 sm:pb-24'
     >
-      <Container className='flex gap-8 align-top'>
+      <Container className='flex gap-8 align-top flex-wrap lg:flex-nowrap'>
         <motion.div
           style={{
             transform: isInView ? 'none' : 'translateX(-200px)',
             opacity: isInView ? 1 : 0,
             transition: 'all 1.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
           }}
-          className='flex w-3/5'
+          className='flex w-full lg:w-3/5 pb-5 lg:pb-0'
         >
           <GermanWholeSaleLineChart />
         </motion.div>
-        <div className='flex w-2/5' ref={ref}>
-          <div className=' text-center md:text-left xl:max-w-none'>
+        <div className='flex w-full lg:w-2/5' ref={ref}>
+          <div className='md:text-left xl:max-w-none'>
             <h2 className='font-display text-3xl font-extrabold !leading-tight tracking-tight text-deep-dark sm:text-4xl md:text-4xl'>
               Average German wholesale electricity monthly price from Jan 2019
               to Sept 2022 (in euros per megawatt-hour)

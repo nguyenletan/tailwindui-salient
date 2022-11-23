@@ -162,9 +162,9 @@ export default function SecondFeature() {
       //className="lg:grid lg:grid-cols-2 lg:gap-8"
     >
       <Container>
-        <div className='lg:grid lg:grid-cols-2 lg:gap-10'>
+        <div className='lg:grid cols-1 lg:grid-cols-2 lg:gap-10'>
           <div>
-            <div className='bg-neutral-100 px-16 pt-14 pb-[150px]'>
+            <div className='bg-neutral-100 px-8 lg:px-16 pt-14 pb-[150px]'>
               <h2 className='font-display text-3xl font-bold leading-tight text-deep-dark'>
                 How BEE helps with your building energy costs whilst supporting
                 your ESG requirements
@@ -185,7 +185,7 @@ export default function SecondFeature() {
             </div>
 
             <div
-              className='bg-neutral-100 px-16 pb-32'
+              className='bg-neutral-100 px-8 lg:px-16 pb-32'
               ref={currentBuildingPerformanceBoxRef}
             >
               <h3 className='font-display text-xl font-bold leading-tight text-neutral-700'>
@@ -201,7 +201,7 @@ export default function SecondFeature() {
               </p>
             </div>
 
-            <div className='bg-neutral-100 px-16 pb-32' ref={compareBoxRef}>
+            <div className='bg-neutral-100 px-8 lg:px-16 pb-32' ref={compareBoxRef}>
               <h3 className='font-display text-xl font-bold leading-tight text-neutral-700'>
                 Compare Building Performance
               </h3>
@@ -214,7 +214,7 @@ export default function SecondFeature() {
               </p>
             </div>
 
-            <div className='bg-neutral-100 px-16 pb-32' ref={improveBoxRef}>
+            <div className='bg-neutral-100 px-8 lg:px-16 pb-32' ref={improveBoxRef}>
               <h3 className='font-display text-xl font-bold leading-tight text-neutral-700'>
                 Improve Building Performance
               </h3>
@@ -229,7 +229,7 @@ export default function SecondFeature() {
             </div>
 
             <div
-              className='bg-neutral-100 px-16 pb-52'
+              className='bg-neutral-100 px-8 lg:px-16 pb-52'
               ref={assetReliabilityBoxRef}
             >
               <h3 className='font-display text-xl font-bold leading-tight text-neutral-700'>
@@ -244,7 +244,7 @@ export default function SecondFeature() {
               </p>
             </div>
           </div>
-          <div className='mt-[7%] h-[90%] self-center px-4'>
+          <div className='mt-[7%] h-[90%] self-center px-4 hidden lg:block'>
             <div className='stack-layer relative sticky top-[250px] flex h-[230px] flex-col'>
               <CurrentBuildingStack
                 className={

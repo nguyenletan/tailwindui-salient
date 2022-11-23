@@ -25,13 +25,32 @@ export function FirstFeatures() {
       {/*  height={1636}*/}
       {/*  unoptimized*/}
       {/*/>*/}
-      <Container className='flex'>
-        <div className='flex w-2/5' ref={ref}>
-          <div className=' text-center md:text-left xl:max-w-none'>
+      <Container className='flex flex-wrap lg:flex-nowrap'>
+        <motion.div
+          style={{
+            transform: isInView ? 'none' : 'translateX(200px)',
+            opacity: isInView ? 1 : 0,
+            transition: 'all 1.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+          }}
+          className='flex w-full lg:w-3/5 justify-end pb-5 lg:pb-0'
+        >
+          <div className='relative flex justify-end self-end lg:hidden'>
+            <Image
+              placeholder='blur'
+              quality={100}
+              className=''
+              src={feature}
+              alt=''
+            />
+          </div>
+        </motion.div>
+
+        <div className='flex w-full justify-center lg:w-2/5' ref={ref}>
+          <div className='md:text-left xl:max-w-none'>
             <span className='block pb-3 text-sm text-gray-500'>
               Solution | Introduction
             </span>
-            <h2 className='font-display text-3xl font-extrabold !leading-tight tracking-tight text-deep-dark sm:w-3/5 sm:text-4xl md:text-4xl'>
+            <h2 className='font-display text-3xl font-extrabold !leading-tight tracking-tight text-deep-dark sm:w-3/5 sm:text-3xl md:text-4xl'>
               We run 24/7 so you can sleep in peace
             </h2>
             <p className='mt-6  text-lg tracking-tight text-deep-dark sm:w-3/5'>
@@ -47,7 +66,7 @@ export function FirstFeatures() {
             opacity: isInView ? 1 : 0,
             transition: 'all 1.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
           }}
-          className='flex w-3/5 justify-end'
+          className='flex w-full lg:w-3/5 justify-end hidden lg:block'
         >
           <div className='relative flex justify-end self-end'>
             {/*<div className='absolute top-[190px] left-[-150px] flex flex-col gap-0 rounded-xl bg-white px-3 pt-2 pb-0 shadow-lg'>*/}

@@ -10,13 +10,13 @@ import logoStaticKit from '@/images/logos/statickit.svg'
 import logoTransistor from '@/images/logos/transistor.svg'
 import logoTuple from '@/images/logos/tuple.svg'
 
-
 export function Hero() {
   return (
     <>
       <div
-        className='relative mt-[79px] mb-16 flex h-[720px] items-center justify-between bg-cover text-left'
+        className='relative w-full mt-[79px] mb-16 flex h-[720px] items-center justify-between bg-cover text-left'
         style={{
+          objectFit: 'cover',
           backgroundImage: `url(/background-images/video-sec0.jpg)`,
         }}
       >
@@ -24,7 +24,7 @@ export function Hero() {
           muted
           autoPlay
           loop
-          className='absolute z[1] top-0 left-0 h-full w-full object-cover'
+          className=' z[1] absolute top-0 left-0 h-full w-full object-cover hidden md:block'
         >
           <source
             src='https://raw.githubusercontent.com/BEEUK/cdn/master/BEE/DayNight-MBS%20Dial%20V1.mp4?raw=true'
@@ -32,8 +32,8 @@ export function Hero() {
           ></source>
         </video>
         <div className='items-left mx-auto flex flex-col '>
-          <div className='relative w-[680px] py-5 px-14'>
-            <h1 className='max-w-2xl font-display text-4xl font-bold !leading-tight tracking-tight text-white sm:text-6xl'>
+          <div className='md:w-full lg:w-[680px] relative py-5 px-8 lg:px-14'>
+            <h1 className='max-w-2xl font-display text-4xl font-bold !leading-tight tracking-tight text-white lg:text-6xl'>
               {/*<span className='relative whitespace-nowrap text-lime-500'>*/}
               {/*  <svg*/}
               {/*    aria-hidden='true'*/}
@@ -49,21 +49,23 @@ export function Hero() {
               We run 24/7 so you can sleep in peace
             </h1>
             <p className='mx-auto mt-6 text-xl tracking-tight text-white'>
-              Transform your energy management needs  with one flexible, powerful, robust software suite that has solutions for a myriad of business needs.
+              Transform your energy management needs with one flexible,
+              powerful, robust software suite that has solutions for a myriad of
+              business needs.
             </p>
             <div className='justify-left mt-10 flex gap-x-6'>
-              <Button href='/register' className='text-lg' color="primary">
+              <Button href='/register' className='text-lg' color='primary'>
                 Get Started
               </Button>
             </div>
           </div>
         </div>
-        <div className='mx-auto w-2/5'>
+        <div className='mx-auto w-2/5 hidden lg:block'>
           {/*<Image src={circle} alt='circle' width='200px' />*/}
         </div>
       </div>
 
-      <div></div>
+
 
       {/*<Container className="text-center pb-16">*/}
       {/*  <div className="mt-32">*/}
