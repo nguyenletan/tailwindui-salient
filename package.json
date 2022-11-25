@@ -19,7 +19,7 @@
     "autoprefixer": "^10.4.13",
     "clsx": "^1.2.1",
     "focus-visible": "^5.2.0",
-    "framer-motion": "^7.6.8",
+    "framer-motion": "^7.6.12",
     "next": "^13.0.4",
     "postcss-focus-visible": "^7.1.0",
     "react": "18.2.0",
@@ -29,9 +29,9 @@
   },
   "devDependencies": {
     "eslint": "8.28.0",
-    "eslint-config-next": "13.0.4",
+    "eslint-config-next": "13.0.5",
     "postcss": "^8.4.19",
-    "prettier": "^2.7.1",
+    "prettier": "^2.8.0",
     "prettier-plugin-tailwindcss": "^0.1.13"
   }
 }

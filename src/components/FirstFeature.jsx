@@ -32,9 +32,9 @@ export function FirstFeatures() {
             opacity: isInView ? 1 : 0,
             transition: 'all 1.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
           }}
-          className='flex w-full lg:w-3/5 justify-end pb-5 lg:pb-0'
+          className='flex w-full lg:w-3/5 justify-end pb-5 lg:pb-0 lg:hidden'
         >
-          <div className='relative flex justify-end self-end lg:hidden'>
+          <div className='relative flex justify-end self-end'>
             <Image
               placeholder='blur'
               quality={100}
