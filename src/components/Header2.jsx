@@ -1,4 +1,4 @@
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import {
   Bars3Icon,
@@ -20,39 +20,320 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import {
+  ArrowDownOnSquareStackIcon,
+  CurrencyPoundIcon,
+  BoltIcon,
+  GlobeEuropeAfricaIcon,
+  BanknotesIcon,
+  BoltSlashIcon,
+  ArrowTrendingUpIcon,
+  ScaleIcon,
+  PencilSquareIcon,
+  ChartPieIcon,
+  DocumentArrowUpIcon,
+} from '@heroicons/react/24/solid'
+
 import { Logo } from '@/components/Logo'
 import { Button } from '@/components/Button'
+import Link from 'next/link'
 
 const software = [
   {
-    name: 'Analytics',
+    name: 'Current Performance ',
     description:
-      'Get a better understanding of where your traffic is coming from.',
+      'The building performance is based on the current state of your building and how it reacts to the environment.',
+    href: '#',
+    icon: ChartBarIcon,
+    subItems: [
+      {
+        title: 'New project input',
+        icon: ArrowDownOnSquareStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Cost Breakdown',
+        icon: CurrencyPoundIcon,
+        href: '#',
+      },
+      {
+        title: 'Total Energy Consumption',
+        icon: BoltIcon,
+        href: '#',
+      },
+      {
+        title: 'CO2 Breakdown',
+        icon: GlobeEuropeAfricaIcon,
+        href: '#',
+      },
+      {
+        title: 'Total Energy Cost',
+        icon: BanknotesIcon,
+        href: '#',
+      },
+      {
+        title: 'Electrical Systems Information',
+        icon: BoltSlashIcon,
+        href: '#',
+      },
+      {
+        title: 'Total Carbon Emissions',
+        icon: GlobeAltIcon,
+        href: '#',
+      },
+      {
+        title: 'Incidental Gains Information',
+        icon: ArrowTrendingUpIcon,
+        href: '#',
+      },
+      {
+        title: 'Historical Comparison',
+        icon: ScaleIcon,
+        href: '#',
+      },
+      {
+        title: 'Edit Input',
+        icon: PencilSquareIcon,
+        href: '#',
+      },
+      {
+        title: 'Consumption Breakdown',
+        icon: ChartPieIcon,
+        href: '#',
+      },
+      {
+        title: 'Save and Export',
+        icon: DocumentArrowUpIcon,
+        href: '#',
+      },
+    ],
+  },
+  {
+    name: 'Comparison',
+    description:
+      'The building performance is based on the current state of your building and how it reacts to the environment.',
+    href: '#',
+    icon: ScaleIcon,
+    subItems: [
+      {
+        title: 'Building Energy Performance',
+        icon: ArrowDownOnSquareStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Best-in-Class Comparison',
+        icon: CurrencyPoundIcon,
+        href: '#',
+      },
+      {
+        title: 'CO2 Emission Performance',
+        icon: BoltIcon,
+        href: '#',
+      },
+      {
+        title: 'Multi-Building Comparison',
+        icon: GlobeEuropeAfricaIcon,
+        href: '#',
+      },
+      {
+        title: 'Sub-system Performance',
+        icon: BanknotesIcon,
+        href: '#',
+      },
+      {
+        title: 'Multi-Sub-System Comparison',
+        icon: BoltSlashIcon,
+        href: '#',
+      },
+      {
+        title: 'Envelope Performance Comparison',
+        icon: GlobeAltIcon,
+        href: '#',
+      },
+      {
+        title: 'Facilities Selection',
+        icon: ArrowTrendingUpIcon,
+        href: '#',
+      },
+      {
+        title: 'Sub-system Comparison',
+        icon: ScaleIcon,
+        href: '#',
+      },
+      {
+        title: 'Edit Input',
+        icon: PencilSquareIcon,
+        href: '#',
+      },
+      {
+        title: 'Regulatory  Comparison',
+        icon: ChartPieIcon,
+        href: '#',
+      },
+      {
+        title: 'Save and Export',
+        icon: DocumentArrowUpIcon,
+        href: '#',
+      },
+    ],
+  },
+  {
+    name: 'Improvements',
+    description:
+      'The building performance is based on the current state of your building and how it reacts to the environment.',
+    href: '#',
+    icon: ArrowTrendingUpIcon,
+    subItems: [
+      {
+        title: 'Annual Energy Savings',
+        icon: ArrowDownOnSquareStackIcon,
+        href: '#',
+      },
+      {
+        title: 'CO2 Emissions improvements',
+        icon: CurrencyPoundIcon,
+        href: '#',
+      },
+      {
+        title: 'Annual energy cost savings',
+        icon: BoltIcon,
+        href: '#',
+      },
+      {
+        title: 'Energy savings breakdown',
+        icon: GlobeEuropeAfricaIcon,
+        href: '#',
+      },
+      {
+        title: 'Annual CO2 emissions avoided',
+        icon: BanknotesIcon,
+        href: '#',
+      },
+      {
+        title: 'Cost savings breakdown',
+        icon: BoltSlashIcon,
+        href: '#',
+      },
+      {
+        title: 'Investment cost and payback',
+        icon: GlobeAltIcon,
+        href: '#',
+      },
+      {
+        title: 'CO2 Emissions breakdown',
+        icon: ArrowTrendingUpIcon,
+        href: '#',
+      },
+      {
+        title: 'Energy usage intensity reduction',
+        icon: ScaleIcon,
+        href: '#',
+      },
+      {
+        title: 'Breakdown of improvements',
+        icon: PencilSquareIcon,
+        href: '#',
+      },
+      {
+        title: 'Building energy improvements',
+        icon: ChartPieIcon,
+        href: '#',
+      },
+      {
+        title: 'Improvement measures',
+        icon: DocumentArrowUpIcon,
+        href: '#',
+      },
+    ],
+  },
+  {
+    name: 'Asset Reliability',
+    description:
+      'The building performance is based on the current state of your building and how it reacts to the environment.',
+    href: '#',
+    icon: Squares2X2Icon,
+    subItems: [
+      {
+        title: 'Asset health',
+        icon: ArrowDownOnSquareStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Annual energy consumption ',
+        icon: CurrencyPoundIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential issues and risks',
+        icon: BoltIcon,
+        href: '#',
+      },
+      {
+        title: 'Parts and reliability',
+        icon: GlobeEuropeAfricaIcon,
+        href: '#',
+      },
+      {
+        title: 'Sub-system health',
+        icon: BanknotesIcon,
+        href: '#',
+      },
+      {
+        title: 'Depreciation',
+        icon: BoltSlashIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential Issues',
+        icon: GlobeAltIcon,
+        href: '#',
+      },
+      {
+        title: 'Asset parts and services',
+        icon: ArrowTrendingUpIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential Faults',
+        icon: ScaleIcon,
+        href: '#',
+      },
+      {
+        title: 'Alerts',
+        icon: PencilSquareIcon,
+        href: '#',
+      },
+      {
+        title: 'Maintenance budget by sub-system',
+        icon: ChartPieIcon,
+        href: '#',
+      },
+      {
+        title: 'Maintenance & sensor logs',
+        icon: DocumentArrowUpIcon,
+        href: '#',
+      },
+    ],
+  },
+]
+const services = [
+  {
+    name: 'Consultancy',
+    description: 'Our expertise goes beyond software we work with you to find the most suitable solution that works for your building’s operations and your business.',
     href: '#',
     icon: ChartBarIcon,
   },
   {
-    name: 'Engagement',
-    description: 'Speak directly to your customers in a more meaningful way.',
+    name: 'Service overview',
+    description: 'The building performance is based on the current state of your building and how it reacts to the environment.',
     href: '#',
     icon: CursorArrowRaysIcon,
   },
-  {
-    name: 'Security',
-    description: "Your customers' data will be safe and secure.",
-    href: '#',
-    icon: ShieldCheckIcon,
-  },
-  {
-    name: 'Integrations',
-    description: "Connect with third-party tools that you're already using.",
-    href: '#',
-    icon: Squares2X2Icon,
-  },
+  { name: 'Security', description: "Your customers' data will be safe and secure.", href: '#', icon: ShieldCheckIcon },
 ]
+
 const callsToAction = [
   { name: 'Watch Demo', href: '#', icon: PlayIcon },
-  { name: 'View All Products', href: '#', icon: CheckCircleIcon },
   { name: 'Contact Sales', href: '#', icon: PhoneIcon },
 ]
 const company = [
@@ -94,6 +375,8 @@ function classNames(...classes) {
 }
 
 export default function Header2() {
+  const [softwareSelectedItem, setSoftwareSelectedItem] = useState(0)
+
   return (
     <div className='fixed z-10 w-full'>
       <Popover className='relative bg-white'>
@@ -141,192 +424,71 @@ export default function Header2() {
                         leaveTo='opacity-0 -translate-y-1'
                       >
                         <Popover.Panel className='absolute inset-x-0 top-full z-10 hidden transform bg-white shadow-lg md:block'>
-                          <div className='mx-auto grid max-w-7xl gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16'>
-                            {software.map((item) => (
-                              <a
-                                key={item.name}
-                                href={item.href}
-                                className='-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-gray-50'
-                              >
-                                <div className='flex md:h-full lg:flex-col'>
-                                  <div className='flex-shrink-0'>
-                                    <span className='inline-flex h-10 w-10 items-center justify-center rounded-md bg-primary text-white sm:h-12 sm:w-12'>
-                                      <item.icon
-                                        className='h-6 w-6'
-                                        aria-hidden='true'
-                                      />
-                                    </span>
-                                  </div>
-                                  <div className='ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0 lg:mt-4'>
-                                    <div>
-                                      <p className='text-base font-medium text-gray-900'>
-                                        {item.name}
-                                      </p>
-                                      <p className='mt-1 text-sm text-gray-500'>
-                                        {item.description}
-                                      </p>
+                          <div className='grid h-full grid-cols-3 gap-8 overflow-auto'>
+                            <div className='mx-auto flex max-w-7xl flex-col gap-8 overflow-auto bg-stone-50 px-4 py-6 pb-8 sm:px-6 sm:py-8 lg:px-8 lg:py-8 xl:py-10'>
+                              {software.map((item, index) => (
+                                <a
+                                  key={item.name}
+                                  href={item.href}
+                                  className={
+                                    '-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-stone-100' +
+                                    (index === softwareSelectedItem
+                                      ? ' bg-gray-100'
+                                      : '')
+                                  }
+                                  onClick={() => setSoftwareSelectedItem(index)}
+                                >
+                                  <div className='flex gap-4 md:h-full'>
+                                    <div className='mt-1 flex-shrink-0'>
+                                      <span className='inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary text-white sm:h-8 sm:w-8'>
+                                        <item.icon
+                                          className='h-6 w-6'
+                                          aria-hidden='true'
+                                        />
+                                      </span>
                                     </div>
-                                    <p className='mt-2 text-sm font-medium text-primary lg:mt-4'>
-                                      Learn more
-                                      <span aria-hidden='true'> &rarr;</span>
-                                    </p>
+                                    <div className='ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0'>
+                                      <div>
+                                        <p className='text-base font-medium text-gray-900'>
+                                          {item.name}
+                                        </p>
+                                        <p className='mt-1 text-sm text-gray-500'>
+                                          {item.description}
+                                        </p>
+                                      </div>
+                                      {/*<p className='mt-2 text-sm font-medium text-primary lg:mt-4'>*/}
+                                      {/*  Learn more*/}
+                                      {/*  <span aria-hidden='true'> &rarr;</span>*/}
+                                      {/*</p>*/}
+                                    </div>
                                   </div>
-                                </div>
-                              </a>
-                            ))}
-                          </div>
-                          <div className='bg-gray-50'>
-                            <div className='mx-auto max-w-7xl space-y-6 px-4 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-6 lg:px-8'>
-                              {callsToAction.map((item) => (
-                                <div key={item.name} className='flow-root'>
-                                  <a
-                                    href={item.href}
-                                    className='-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100'
-                                  >
-                                    <item.icon
-                                      className='h-6 w-6 flex-shrink-0 text-gray-400'
-                                      aria-hidden='true'
-                                    />
-                                    <span className='ml-3'>{item.name}</span>
-                                  </a>
-                                </div>
+                                </a>
                               ))}
                             </div>
-                          </div>
-                        </Popover.Panel>
-                      </Transition>
-                    </>
-                  )}
-                </Popover>
-                <a
-                  href='#'
-                  className='text-base font-medium text-gray-500 hover:text-gray-900'
-                >
-                  Products
-                </a>
-                <Popover>
-                  {({ open }) => (
-                    <>
-                      <Popover.Button
-                        className={classNames(
-                          open ? 'text-gray-900' : 'text-gray-500',
-                          'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
-                        )}
-                      >
-                        <span>Services</span>
-                        <ChevronDownIcon
-                          className={classNames(
-                            open ? 'text-gray-600' : 'text-gray-400',
-                            'ml-2 h-5 w-5 group-hover:text-gray-500'
-                          )}
-                          aria-hidden='true'
-                        />
-                      </Popover.Button>
-
-                      <Transition
-                        as={Fragment}
-                        enter='transition ease-out duration-200'
-                        enterFrom='opacity-0 -translate-y-1'
-                        enterTo='opacity-100 translate-y-0'
-                        leave='transition ease-in duration-150'
-                        leaveFrom='opacity-100 translate-y-0'
-                        leaveTo='opacity-0 -translate-y-1'
-                      >
-                        <Popover.Panel className='absolute inset-x-0 top-full z-10 hidden transform shadow-lg md:block'>
-                          <div className='absolute inset-0 flex'>
-                            <div className='w-1/2 bg-white' />
-                            <div className='w-1/2 bg-gray-50' />
-                          </div>
-                          <div className='relative mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2'>
-                            <nav className='grid gap-y-10 bg-white px-4 py-8 sm:grid-cols-2 sm:gap-x-8 sm:py-12 sm:px-6 lg:px-8 xl:pr-12'>
-                              <div>
-                                <h3 className='text-base font-medium text-gray-500'>
-                                  Company
-                                </h3>
-                                <ul role='list' className='mt-5 space-y-6'>
-                                  {company.map((item) => (
-                                    <li key={item.name} className='flow-root'>
-                                      <a
-                                        href={item.href}
-                                        className='-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-50'
+                            <div className='col-span-2 mx-auto max-w-7xl overflow-auto px-4 py-6 pb-8 sm:px-6 sm:py-8 lg:px-8 lg:py-8 xl:py-9'>
+                              <p className='pb-8 font-display text-lg'>
+                                Manage every aspect of your infrastructure real
+                                estate from accounting and operations to
+                                sustainability and energy consumption:{' '}
+                              </p>
+                              <ul className='grid grid-cols-2 gap-x-6 gap-y-8 2xl:grid-cols-3'>
+                                {software[softwareSelectedItem].subItems?.map(
+                                  (subItem) => (
+                                    <li key={subItem.title} className=''>
+                                      <subItem.icon
+                                        className='mr-2 inline-block h-6 w-6 text-primary'
+                                        aria-hidden='true'
+                                      />
+                                      <Link
+                                        href={subItem.href}
+                                        className='align-bottom leading-[24px] hover:underline'
                                       >
-                                        <item.icon
-                                          className='h-6 w-6 flex-shrink-0 text-gray-400'
-                                          aria-hidden='true'
-                                        />
-                                        <span className='ml-4'>
-                                          {item.name}
-                                        </span>
-                                      </a>
+                                        {subItem.title}
+                                      </Link>
                                     </li>
-                                  ))}
-                                </ul>
-                              </div>
-                              <div>
-                                <h3 className='text-base font-medium text-gray-500'>
-                                  Resources
-                                </h3>
-                                <ul role='list' className='mt-5 space-y-6'>
-                                  {resources.map((item) => (
-                                    <li key={item.name} className='flow-root'>
-                                      <a
-                                        href={item.href}
-                                        className='-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-50'
-                                      >
-                                        <item.icon
-                                          className='h-6 w-6 flex-shrink-0 text-gray-400'
-                                          aria-hidden='true'
-                                        />
-                                        <span className='ml-4'>
-                                          {item.name}
-                                        </span>
-                                      </a>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            </nav>
-                            <div className='bg-gray-50 px-4 py-8 sm:py-12 sm:px-6 lg:px-8 xl:pl-12'>
-                              <div>
-                                <h3 className='text-base font-medium text-gray-500'>
-                                  From the blog
-                                </h3>
-                                <ul role='list' className='mt-6 space-y-6'>
-                                  {blogPosts.map((post) => (
-                                    <li key={post.id} className='flow-root'>
-                                      <a
-                                        href={post.href}
-                                        className='-m-3 flex rounded-lg p-3 hover:bg-gray-100'
-                                      >
-                                        <div className='hidden flex-shrink-0 sm:block'>
-                                          <img
-                                            className='h-20 w-32 rounded-md object-cover'
-                                            src={post.imageUrl}
-                                            alt=''
-                                          />
-                                        </div>
-                                        <div className='w-0 flex-1 sm:ml-8'>
-                                          <h4 className='truncate text-base font-medium text-gray-900'>
-                                            {post.name}
-                                          </h4>
-                                          <p className='mt-1 text-sm text-gray-500'>
-                                            {post.preview}
-                                          </p>
-                                        </div>
-                                      </a>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                              <div className='mt-6 text-sm font-medium'>
-                                <a
-                                  href='#'
-                                  className='text-primary text-green-500'
-                                >
-                                  View all posts
-                                  <span aria-hidden='true'> &rarr;</span>
-                                </a>
-                              </div>
+                                  )
+                                )}
+                              </ul>
                             </div>
                           </div>
                         </Popover.Panel>
@@ -334,13 +496,94 @@ export default function Header2() {
                     </>
                   )}
                 </Popover>
+
+                <Popover.Button
+                  className={classNames(
+                    open ? 'text-gray-900' : 'text-gray-500',
+                    'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
+                  )}
+                >
+                  <span>Services</span>
+                  <ChevronDownIcon
+                    className={classNames(
+                      open ? 'text-gray-600' : 'text-gray-400',
+                      'ml-2 h-5 w-5 group-hover:text-gray-500'
+                    )}
+                    aria-hidden='true'
+                  />
+                </Popover.Button>
+
+                <Transition
+                  as={Fragment}
+                  enter='transition ease-out duration-200'
+                  enterFrom='opacity-0 -translate-y-1'
+                  enterTo='opacity-100 translate-y-0'
+                  leave='transition ease-in duration-150'
+                  leaveFrom='opacity-100 translate-y-0'
+                  leaveTo='opacity-0 -translate-y-1'
+                >
+                  <Popover.Panel className='absolute inset-x-0 top-full z-10 hidden transform bg-white shadow-lg md:block'>
+                    <div className='mx-auto grid max-w-7xl gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-3 lg:px-8 lg:py-12 xl:py-16'>
+                      {services.map((item) => (
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          className='-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-gray-50'
+                        >
+                          <div className='flex md:h-full lg:flex-col'>
+                            <div className='flex-shrink-0'>
+                              <span className='inline-flex h-10 w-10 items-center justify-center rounded-md bg-primary text-white sm:h-12 sm:w-12'>
+                                <item.icon
+                                  className='h-6 w-6'
+                                  aria-hidden='true'
+                                />
+                              </span>
+                            </div>
+                            <div className='ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0 lg:mt-4'>
+                              <div>
+                                <p className='text-base font-medium text-gray-900'>
+                                  {item.name}
+                                </p>
+                                <p className='mt-1 text-sm text-gray-500'>
+                                  {item.description}
+                                </p>
+                              </div>
+                              <p className='mt-2 text-sm font-semibold text-primary lg:mt-4'>
+                                Learn more
+                                <span aria-hidden='true'> &rarr;</span>
+                              </p>
+                            </div>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                    <div className='bg-gray-50'>
+                      <div className='mx-auto max-w-7xl space-y-6 px-4 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-6 lg:px-8'>
+                        {callsToAction.map((item) => (
+                          <div key={item.name} className='flow-root'>
+                            <a
+                              href={item.href}
+                              className='-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100'
+                            >
+                              <item.icon
+                                className='h-6 w-6 flex-shrink-0 text-gray-400'
+                                aria-hidden='true'
+                              />
+                              <span className='ml-3'>{item.name}</span>
+                            </a>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </Popover.Panel>
+                </Transition>
+
                 <a
                   href='#'
                   className='text-base font-medium text-gray-500 hover:text-gray-900'
                 >
                   Contact Us
                 </a>
-
               </Popover.Group>
               <div className='flex items-center md:ml-12'>
                 <a
@@ -350,7 +593,11 @@ export default function Header2() {
                   Sign in
                 </a>
 
-                <Button className="ml-8 text-base font-medium text-white shadow-sm" href='/register' color='primary'>
+                <Button
+                  className='ml-8 text-base font-medium text-white shadow-sm'
+                  href='/register'
+                  color='primary'
+                >
                   <span>
                     Get started <span className='hidden lg:inline'>today</span>
                   </span>
@@ -406,7 +653,7 @@ export default function Header2() {
                           href={item.href}
                           className='-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50'
                         >
-                          <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md focus:bg-primary text-white sm:h-12 sm:w-12'>
+                          <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md text-white focus:bg-primary sm:h-12 sm:w-12'>
                             <item.icon className='h-6 w-6' aria-hidden='true' />
                           </div>
                           <div className='ml-4 text-base font-medium text-gray-900'>
