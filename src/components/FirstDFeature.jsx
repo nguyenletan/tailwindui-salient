@@ -23,15 +23,18 @@ export function FirstDFeatures() {
           }}
           className='flex w-full lg:w-2/5 pb-5 lg:pb-0'
         >
-          <div className='relative flex'>
-            <Image
-              placeholder='blur'
-              quality={100}
-              className=''
-              src={feature}
-              alt=''
-            />
-          </div>
+          {/*<div className='relative flex'>*/}
+          {/*  <Image*/}
+          {/*    placeholder='blur'*/}
+          {/*    quality={100}*/}
+          {/*    className=''*/}
+          {/*    src={feature}*/}
+          {/*    alt=''*/}
+          {/*/>*/}
+          {/*</div>*/}
+
+            <iframe className="w-full" src="https://www.lastingfootprint.io/iframe/improve-subsystem-performance" frameBorder="0" scrolling="no" allowFullScreen></iframe>
+
         </motion.div>
         <div className='flex w-full lg:w-3/5' ref={ref}>
           <div className='md:text-left xl:max-w-none'>
