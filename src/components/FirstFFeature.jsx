@@ -7,7 +7,7 @@ import GermanWholeSaleLineChart from '@/components/Charts/GermanWholeSaleLineCha
 
 export function FirstFFeatures() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
+  const isInView = useInView(ref, { once: false })
 
   return (
     <section

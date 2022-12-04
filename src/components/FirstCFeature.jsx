@@ -6,7 +6,7 @@ import { useRef } from 'react'
 
 export function FirstCFeatures() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
+  const isInView = useInView(ref, { once: false })
 
   return (
     <section

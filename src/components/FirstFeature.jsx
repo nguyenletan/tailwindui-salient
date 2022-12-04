@@ -9,7 +9,7 @@ import { useRef } from 'react'
 
 export function FirstFeatures() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
+  const isInView = useInView(ref, { once: false })
 
   return (
     <section

@@ -17,6 +17,7 @@ import { FirstDFeatures } from '@/components/FirstDFeature'
 import { FirstEFeatures } from '@/components/FirstEFeature'
 import { FirstFFeatures } from '@/components/FirstFFeature'
 import Header2 from '@/components/Header2'
+import AsanaFeature from '@/components/AsanaFeature'
 
 export default function Home() {
   return (
@@ -41,6 +42,7 @@ export default function Home() {
         <FirstEFeatures />
         <SecondFeature />
         <FirstFFeatures />
+        <AsanaFeature/>
         {/*<Solutions />*/}
         {/*<PrimaryFeatures />*/}
         {/*<ThirdFeature />*/}
