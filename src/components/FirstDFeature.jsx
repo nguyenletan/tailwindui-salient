@@ -14,29 +14,36 @@ export function FirstDFeatures() {
       aria-label='Features for running your books'
       className='relative overflow-hidden pt-12 pb-28 sm:pb-24'
     >
-      <Container className='flex gap-8 align-top flex-wrap lg:flex-nowrap'>
+      <Container className='flex flex-wrap gap-8 align-top lg:flex-nowrap'>
         <motion.div
           style={{
             transform: isInView ? 'none' : 'translateX(-200px)',
             opacity: isInView ? 1 : 0,
             transition: 'all 1.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
           }}
-          className='flex w-full lg:w-2/5 pb-5 lg:pb-0'
+          className='flex w-full pb-5 lg:w-4/6 lg:pb-0 gap-1'
         >
-          {/*<div className='relative flex'>*/}
-          {/*  <Image*/}
-          {/*    placeholder='blur'*/}
-          {/*    quality={100}*/}
-          {/*    className=''*/}
-          {/*    src={feature}*/}
-          {/*    alt=''*/}
-          {/*/>*/}
-          {/*</div>*/}
 
-            <iframe className="w-full" src="https://www.lastingfootprint.io/iframe/improve-subsystem-performance" frameBorder="0" scrolling="no" allowFullScreen></iframe>
+            <div className='h-[500px] w-2/5'>
+              <Image
+                placeholder='blur'
+                quality={100}
+                className=''
+                src={feature}
+                alt=''
+              />
+            </div>
+
+            <div className='h-[700px] w-3/5'>
+              <iframe
+                className='h-full w-full'
+                src='https://www.lastingfootprint.io/iframe/improve-subsystem-performance'
+                allowFullScreen
+              ></iframe>
+            </div>
 
         </motion.div>
-        <div className='flex w-full lg:w-3/5' ref={ref}>
+        <div className='flex w-full lg:w-2/6' ref={ref}>
           <div className='md:text-left xl:max-w-none'>
             <h2 className='font-display text-3xl font-extrabold !leading-tight tracking-tight text-deep-dark sm:text-4xl md:text-4xl'>
               The most user friendly energy management software for managing

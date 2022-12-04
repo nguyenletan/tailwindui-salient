@@ -164,28 +164,28 @@ export default function SecondFeature() {
       <Container>
         <div className='lg:grid cols-1 lg:grid-cols-2 lg:gap-10'>
           <div>
-            <div className='bg-neutral-100 px-8 lg:px-16 pt-14 pb-[150px]'>
-              <h2 className='font-display text-3xl font-bold leading-tight text-deep-dark'>
-                How BEE helps with your building energy costs whilst supporting
-                your ESG requirements
+            <div className='bg-neutral-100 px-8 lg:px-16 pt-14 pb-64'>
+              <p className='text-lg text-gray-500 pb-4'>SOLUTION METHODOLOGY</p>
+              <h2 className='font-display text-4xl font-bold leading-tight text-deep-dark'>
+                Here’s how it all comes together
               </h2>
 
-              <h3 className='mt-8 font-display text-2xl font-bold text-neutral-700'>
-                Here’s how it all comes together
-              </h3>
+              {/*<h3 className='mt-8 font-display text-2xl font-bold text-neutral-700'>*/}
+              {/*  Here’s how it all comes together*/}
+              {/*</h3>*/}
 
-              <p className='mt-6 text-lg'>
-                Using building information and sub-meter readings, track key
-                energy and emission numbers to see which sub-systems have the
-                largest impacts. Drill down to critical plant and equipment and
-                see the factors that influence your building’s energy
-                consumption. Track key building information to understand and
-                make informed decisions.
-              </p>
+              {/*<p className='mt-6 text-lg'>*/}
+              {/*  Using building information and sub-meter readings, track key*/}
+              {/*  energy and emission numbers to see which sub-systems have the*/}
+              {/*  largest impacts. Drill down to critical plant and equipment and*/}
+              {/*  see the factors that influence your building’s energy*/}
+              {/*  consumption. Track key building information to understand and*/}
+              {/*  make informed decisions.*/}
+              {/*</p>*/}
             </div>
 
             <div
-              className='bg-neutral-100 px-8 lg:px-16 pb-32'
+              className='bg-neutral-100 px-8 lg:px-16 pb-64'
               ref={currentBuildingPerformanceBoxRef}
             >
               <h3 className='font-display text-xl font-bold leading-tight text-neutral-700'>
@@ -201,7 +201,7 @@ export default function SecondFeature() {
               </p>
             </div>
 
-            <div className='bg-neutral-100 px-8 lg:px-16 pb-32' ref={compareBoxRef}>
+            <div className='bg-neutral-100 px-8 lg:px-16 pb-64' ref={compareBoxRef}>
               <h3 className='font-display text-xl font-bold leading-tight text-neutral-700'>
                 Compare Building Performance
               </h3>
@@ -214,7 +214,7 @@ export default function SecondFeature() {
               </p>
             </div>
 
-            <div className='bg-neutral-100 px-8 lg:px-16 pb-32' ref={improveBoxRef}>
+            <div className='bg-neutral-100 px-8 lg:px-16 pb-64' ref={improveBoxRef}>
               <h3 className='font-display text-xl font-bold leading-tight text-neutral-700'>
                 Improve Building Performance
               </h3>
@@ -229,7 +229,7 @@ export default function SecondFeature() {
             </div>
 
             <div
-              className='bg-neutral-100 px-8 lg:px-16 pb-52'
+              className='bg-neutral-100 px-8 lg:px-16 pb-64'
               ref={assetReliabilityBoxRef}
             >
               <h3 className='font-display text-xl font-bold leading-tight text-neutral-700'>

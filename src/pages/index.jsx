@@ -10,9 +10,9 @@ import { ThirdFeature } from '@/components/ThirdFeature'
 import { Testimonials } from '@/components/Testimonials'
 import { Solutions } from '@/components/Solutions'
 import SecondFeature from '@/components/SecondFeature'
-import { FirstFeatures } from '@/components/FirstFeature'
-import { FirstBFeatures } from '@/components/FirstBFeature'
-import { FirstCFeatures } from '@/components/FirstCFeature'
+import { Run247Feature } from '@/components/Run247Feature'
+import { EnergyConsumptionFeature } from '@/components/EnergyConsumptionFeature'
+import { ESGRequirementsFeature } from '@/components/ESGRequirementsFeature'
 import { FirstDFeatures } from '@/components/FirstDFeature'
 import { FirstEFeatures } from '@/components/FirstEFeature'
 import { FirstFFeatures } from '@/components/FirstFFeature'
@@ -35,14 +35,14 @@ export default function Home() {
 
       <main>
         <Hero />
-        <FirstFeatures />
-        <FirstBFeatures />
-        <FirstCFeatures />
-        <FirstDFeatures />
-        <FirstEFeatures />
+        <Run247Feature />
+        <EnergyConsumptionFeature />
+        <ESGRequirementsFeature />
+        {/*<FirstDFeatures />*/}
+        {/*<FirstEFeatures />*/}
         <SecondFeature />
         <FirstFFeatures />
-        <AsanaFeature/>
+        <AsanaFeature />
         {/*<Solutions />*/}
         {/*<PrimaryFeatures />*/}
         {/*<ThirdFeature />*/}
