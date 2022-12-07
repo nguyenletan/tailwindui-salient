@@ -32,6 +32,18 @@ import {
   PencilSquareIcon,
   ChartPieIcon,
   DocumentArrowUpIcon,
+  BuildingLibraryIcon,
+  HandThumbUpIcon,
+  TruckIcon,
+  BuildingOffice2Icon,
+  DocumentChartBarIcon,
+  PauseIcon,
+  PresentationChartLineIcon,
+  DocumentCheckIcon,
+  PresentationChartBarIcon,
+  DocumentPlusIcon,
+  Bars2Icon,
+  CloudArrowUpIcon
 } from '@heroicons/react/24/solid'
 
 import { Logo } from '@/components/Logo'
@@ -117,62 +129,62 @@ const software = [
     subItems: [
       {
         title: 'Building Energy Performance',
-        icon: ArrowDownOnSquareStackIcon,
+        icon: BuildingLibraryIcon,
         href: '#',
       },
       {
         title: 'Best-in-Class Comparison',
-        icon: CurrencyPoundIcon,
+        icon: HandThumbUpIcon,
         href: '#',
       },
       {
         title: 'CO2 Emission Performance',
-        icon: BoltIcon,
+        icon: TruckIcon,
         href: '#',
       },
       {
         title: 'Multi-Building Comparison',
-        icon: GlobeEuropeAfricaIcon,
+        icon: BuildingOffice2Icon,
         href: '#',
       },
       {
         title: 'Sub-system Performance',
-        icon: BanknotesIcon,
+        icon: DocumentChartBarIcon,
         href: '#',
       },
       {
         title: 'Multi-Sub-System Comparison',
-        icon: BoltSlashIcon,
+        icon: PauseIcon,
         href: '#',
       },
       {
         title: 'Envelope Performance Comparison',
-        icon: GlobeAltIcon,
+        icon: PresentationChartLineIcon,
         href: '#',
       },
       {
         title: 'Facilities Selection',
-        icon: ArrowTrendingUpIcon,
+        icon: DocumentCheckIcon,
         href: '#',
       },
       {
         title: 'Sub-system Comparison',
-        icon: ScaleIcon,
+        icon: PresentationChartBarIcon,
         href: '#',
       },
       {
         title: 'Edit Input',
-        icon: PencilSquareIcon,
+        icon: DocumentPlusIcon,
         href: '#',
       },
       {
         title: 'Regulatory  Comparison',
-        icon: ChartPieIcon,
+        icon: Bars2Icon,
         href: '#',
       },
       {
         title: 'Save and Export',
-        icon: DocumentArrowUpIcon,
+        icon: CloudArrowUpIcon,
         href: '#',
       },
     ],
@@ -486,12 +498,12 @@ export default function Header2() {
                                         className='mr-2 inline-block h-6 w-6 text-primary'
                                         aria-hidden='true'
                                       />
-                                      <Link
-                                        href={subItem.href}
-                                        className='align-bottom leading-[24px] hover:underline'
+                                      <span
+                                        //href={subItem.href}
+                                        className='align-bottom leading-[24px]'
                                       >
                                         {subItem.title}
-                                      </Link>
+                                      </span>
                                     </li>
                                   )
                                 )}

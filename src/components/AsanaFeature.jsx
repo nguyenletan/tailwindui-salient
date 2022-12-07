@@ -4,6 +4,8 @@ import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import { useRef, useState } from 'react'
 import styled from 'styled-components'
 import ColorDishSVG from '@/components/ColorDishSVG'
+import asana01 from '@/images/asana01.webp'
+import Image from 'next/image'
 
 const CurrentBuildingStack = styled.div`
   transition: opacity 0.8s ease-in-out;
@@ -174,56 +176,33 @@ export default function AsanaFeature() {
       <Container>
         <div className='cols-1 lg:grid lg:grid-cols-2 lg:gap-10'>
           <div>
-            <div className='bg-neutral-100 px-8 pt-14 pb-[150px] lg:px-16'>
-              <h2 className='font-display text-3xl font-bold leading-tight text-deep-dark'>
-                How BEE helps with your building energy costs whilst supporting
-                your ESG requirements
-              </h2>
-
-              <h3 className='mt-8 font-display text-2xl font-bold text-neutral-700'>
-                Here’s how it all comes together
-              </h3>
-
-              <p className='mt-6 text-lg'>
-                Using building information and sub-meter readings, track key
-                energy and emission numbers to see which sub-systems have the
-                largest impacts. Drill down to critical plant and equipment and
-                see the factors that influence your building’s energy
-                consumption. Track key building information to understand and
-                make informed decisions.
-              </p>
-            </div>
-
             <div
-              className='bg-neutral-100 px-8 pb-32 lg:px-16'
+              className='bg-neutral-100 px-8 pb-64 pt-16 lg:px-16'
               ref={currentBuildingPerformanceBoxRef}
             >
               <h3 className='font-display text-xl font-bold leading-tight text-neutral-700'>
                 Current Building Performance
               </h3>
               <p className='mt-8 text-lg'>
-                Compare each building’s performance with similar ones in your
-                portfolio, minimum legislative requirements and potential
-                best-in-class. Understand the gaps and the best possible
-                performance achievable. Look at individual spaces and identify
-                where improvements can be made. Receive alerts when compliance
-                requirements are not met.
+                The animation aims to show users that through our software, they
+                are able to track their building’s energy use. They can track
+                the efficiency down to each critical equipment. Performance gaps
+                are analysed and improvement measures generated, allowing users
+                to decide how the best way to improve their energy performance.
+              </p>
+              <p className='mt-8 text-lg'>
+                The animation starts with the energy usage bar chart showing
+                that the energy use is actively monitored.
               </p>
             </div>
 
             <div
-              className='bg-neutral-100 px-8 pb-32 lg:px-16'
+              className='bg-neutral-100 px-8 pb-64 lg:px-16'
               ref={compareBoxRef}
             >
-              <h3 className='font-display text-xl font-bold leading-tight text-neutral-700'>
-                Compare Building Performance
-              </h3>
-              <p className='mt-8 text-lg'>
-                Identify potential energy performance improvements achievable
-                for each building along with key energy, emissions and financial
-                metrics. Analyse multiple scenarios and optimise improvement
-                measures to suit your business needs. Easily share reports so
-                everyone can work with the same dataset.
+              <p className='text-lg'>
+                A single bar for 1 month changes into the donut chart showing
+                the potential for drilling down into each critical equipment
               </p>
             </div>
 
@@ -231,16 +210,8 @@ export default function AsanaFeature() {
               className='bg-neutral-100 px-8 pb-32 lg:px-16'
               ref={improveBoxRef}
             >
-              <h3 className='font-display text-xl font-bold leading-tight text-neutral-700'>
-                Improve Building Performance
-              </h3>
-              <p className='mt-8 text-lg'>
-                Monitor the health of critical assets and receive alerts when
-                potential issues are detected. Understand the factors affecting
-                each equipment’s reliability to optimise your maintenance
-                efforts. Analyse asset replacements to understand the energy
-                savings and financial returns and determine the ones that meets
-                your business priorities.
+              <p className='text-lg'>
+                The part for the cooling subsystem is moved into the compare chart to show how it’s performing now.
               </p>
             </div>
 
@@ -260,6 +231,7 @@ export default function AsanaFeature() {
               </p>
             </div>
           </div>
+
           <div className='hidden h-[100%] lg:block'>
             <div className='stack-layer relative sticky top-[120px] flex h-[230px] flex-col'>
               <CurrentBuildingStack
@@ -269,10 +241,7 @@ export default function AsanaFeature() {
                     : 'absolute z-50 w-full gap-2 opacity-0'
                 }
               >
-                <iframe
-                  src='https://www.lastingfootprint.io/iframe/improve-building-energy-performance'
-                  className='h-[500px] w-full'
-                />
+                <Image src={asana01} />
               </CurrentBuildingStack>
 
               <CompareStack
