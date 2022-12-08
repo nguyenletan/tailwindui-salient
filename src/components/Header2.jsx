@@ -1,26 +1,35 @@
 import { Fragment, useState } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import {
-  Bars3Icon,
+  ArrowUturnUpIcon,
+  Bars3Icon, BookmarkSlashIcon,
   BookmarkSquareIcon,
   BriefcaseIcon,
   BuildingOfficeIcon,
   ChartBarIcon,
   CheckCircleIcon,
+  CircleStackIcon,
   ComputerDesktopIcon,
   CursorArrowRaysIcon,
+  DocumentMinusIcon,
+  ExclamationCircleIcon,
+  ExclamationTriangleIcon,
   GlobeAltIcon,
+  HeartIcon,
+  InboxStackIcon,
   InformationCircleIcon,
   NewspaperIcon,
   PhoneIcon,
   PlayIcon,
-  ShieldCheckIcon,
+  ShieldCheckIcon, ShieldExclamationIcon,
   Squares2X2Icon,
-  UserGroupIcon,
-  XMarkIcon,
+  UserGroupIcon, WrenchIcon, WrenchScrewdriverIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+
 import {
+  RectangleStackIcon,
+  ChevronDownIcon,
+  PuzzlePieceIcon,
   ArrowDownOnSquareStackIcon,
   CurrencyPoundIcon,
   BoltIcon,
@@ -43,12 +52,18 @@ import {
   PresentationChartBarIcon,
   DocumentPlusIcon,
   Bars2Icon,
-  CloudArrowUpIcon
+  CloudArrowUpIcon,
+  BarsArrowDownIcon,
+  BarsArrowUpIcon,
+  XMarkIcon,
+  Square3Stack3DIcon,
+  XCircleIcon,
+  CurrencyDollarIcon
 } from '@heroicons/react/24/solid'
 
 import { Logo } from '@/components/Logo'
 import { Button } from '@/components/Button'
-import Link from 'next/link'
+
 
 const software = [
   {
@@ -198,42 +213,42 @@ const software = [
     subItems: [
       {
         title: 'Annual Energy Savings',
-        icon: ArrowDownOnSquareStackIcon,
+        icon: BarsArrowDownIcon,
         href: '#',
       },
       {
         title: 'CO2 Emissions improvements',
-        icon: CurrencyPoundIcon,
+        icon: BarsArrowUpIcon,
         href: '#',
       },
       {
         title: 'Annual energy cost savings',
-        icon: BoltIcon,
+        icon: XMarkIcon,
         href: '#',
       },
       {
         title: 'Energy savings breakdown',
-        icon: GlobeEuropeAfricaIcon,
+        icon: Square3Stack3DIcon,
         href: '#',
       },
       {
         title: 'Annual CO2 emissions avoided',
-        icon: BanknotesIcon,
+        icon: XCircleIcon,
         href: '#',
       },
       {
         title: 'Cost savings breakdown',
-        icon: BoltSlashIcon,
+        icon: CurrencyDollarIcon,
         href: '#',
       },
       {
         title: 'Investment cost and payback',
-        icon: GlobeAltIcon,
+        icon: BanknotesIcon,
         href: '#',
       },
       {
         title: 'CO2 Emissions breakdown',
-        icon: ArrowTrendingUpIcon,
+        icon: PuzzlePieceIcon,
         href: '#',
       },
       {
@@ -243,17 +258,17 @@ const software = [
       },
       {
         title: 'Breakdown of improvements',
-        icon: PencilSquareIcon,
+        icon: RectangleStackIcon,
         href: '#',
       },
       {
         title: 'Building energy improvements',
-        icon: ChartPieIcon,
+        icon: ArrowTrendingUpIcon,
         href: '#',
       },
       {
         title: 'Improvement measures',
-        icon: DocumentArrowUpIcon,
+        icon: ArrowUturnUpIcon,
         href: '#',
       },
     ],
@@ -267,62 +282,62 @@ const software = [
     subItems: [
       {
         title: 'Asset health',
-        icon: ArrowDownOnSquareStackIcon,
+        icon: HeartIcon,
         href: '#',
       },
       {
         title: 'Annual energy consumption ',
-        icon: CurrencyPoundIcon,
-        href: '#',
-      },
-      {
-        title: 'Potential issues and risks',
         icon: BoltIcon,
         href: '#',
       },
       {
+        title: 'Potential issues and risks',
+        icon: ExclamationTriangleIcon,
+        href: '#',
+      },
+      {
         title: 'Parts and reliability',
-        icon: GlobeEuropeAfricaIcon,
+        icon: CircleStackIcon,
         href: '#',
       },
       {
         title: 'Sub-system health',
-        icon: BanknotesIcon,
+        icon: InboxStackIcon,
         href: '#',
       },
       {
         title: 'Depreciation',
-        icon: BoltSlashIcon,
+        icon: DocumentMinusIcon,
         href: '#',
       },
       {
         title: 'Potential Issues',
-        icon: GlobeAltIcon,
+        icon: ExclamationCircleIcon,
         href: '#',
       },
       {
         title: 'Asset parts and services',
-        icon: ArrowTrendingUpIcon,
+        icon: WrenchIcon,
         href: '#',
       },
       {
         title: 'Potential Faults',
-        icon: ScaleIcon,
+        icon: ShieldExclamationIcon,
         href: '#',
       },
       {
         title: 'Alerts',
-        icon: PencilSquareIcon,
+        icon: BookmarkSlashIcon,
         href: '#',
       },
       {
         title: 'Maintenance budget by sub-system',
-        icon: ChartPieIcon,
+        icon: CurrencyDollarIcon,
         href: '#',
       },
       {
         title: 'Maintenance & sensor logs',
-        icon: DocumentArrowUpIcon,
+        icon: WrenchScrewdriverIcon,
         href: '#',
       },
     ],
