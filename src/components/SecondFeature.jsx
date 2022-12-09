@@ -158,7 +158,7 @@ export default function SecondFeature() {
       id='features'
       aria-label='Features for running your books'
       //className="relative overflow-hidden bg-white  sm:py-32 h-[1601px]"
-      className='pt-20 pb-14 sm:pb-20 sm:pt-32 lg:pb-32'
+      className='pt-28 pb-28 sm:pb-24 sm:pt-24'
       //className="lg:grid lg:grid-cols-2 lg:gap-8"
     >
       <Container>

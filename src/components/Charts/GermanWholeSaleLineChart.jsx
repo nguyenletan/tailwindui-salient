@@ -24,7 +24,7 @@ export default function GermanWholeSaleLineChart() {
     animate: true,
     enableSlices: 'x',
     color: 'Set1',
-    colors: { scheme: 'set1' },
+    colors: { scheme: 'dark2' },
     enablePointLabel: true,
     pointSymbol: CustomSymbol,
     pointSize: 16,

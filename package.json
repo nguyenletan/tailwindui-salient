@@ -10,7 +10,7 @@
   },
   "browserslist": "defaults, not ie <= 12",
   "dependencies": {
-    "@headlessui/react": "^1.7.4",
+    "@headlessui/react": "^1.7.5",
     "@heroicons/react": "^2.0.13",
     "@n8tb1t/use-scroll-position": "^2.0.3",
     "@nivo/core": "^0.80.0",
@@ -32,6 +32,6 @@
     "eslint-config-next": "13.0.6",
     "postcss": "^8.4.19",
     "prettier": "^2.8.1",
-    "prettier-plugin-tailwindcss": "^0.2.0"
+    "prettier-plugin-tailwindcss": "^0.2.1"
   }
 }

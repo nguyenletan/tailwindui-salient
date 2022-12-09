@@ -12,7 +12,7 @@ export function ESGRequirementsFeature() {
     <section
       id='features'
       aria-label='Features for running your books'
-      className='relative overflow-hidden pt-12 pb-28 sm:pb-24'
+      className='relative overflow-hidden pt-28 pb-28 sm:pb-24 sm:pt-24'
     >
       <Container className='flex flex-wrap gap-8 align-top lg:flex-nowrap pb-5'>
         <div className='flex w-full justify-start lg:hidden'>

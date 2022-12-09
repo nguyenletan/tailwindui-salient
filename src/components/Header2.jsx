@@ -1,16 +1,16 @@
 import { Fragment, useState } from 'react'
 import { Popover, Transition } from '@headlessui/react'
+
+
 import {
   ArrowUturnUpIcon,
-  Bars3Icon, BookmarkSlashIcon,
+  Bars3Icon,
+  BookmarkSlashIcon,
   BookmarkSquareIcon,
   BriefcaseIcon,
   BuildingOfficeIcon,
   ChartBarIcon,
-  CheckCircleIcon,
   CircleStackIcon,
-  ComputerDesktopIcon,
-  CursorArrowRaysIcon,
   DocumentMinusIcon,
   ExclamationCircleIcon,
   ExclamationTriangleIcon,
@@ -21,12 +21,12 @@ import {
   NewspaperIcon,
   PhoneIcon,
   PlayIcon,
-  ShieldCheckIcon, ShieldExclamationIcon,
+  ShieldCheckIcon,
+  ShieldExclamationIcon,
   Squares2X2Icon,
-  UserGroupIcon, WrenchIcon, WrenchScrewdriverIcon,
-} from '@heroicons/react/24/outline'
-
-import {
+  UserGroupIcon,
+  WrenchIcon,
+  WrenchScrewdriverIcon,
   RectangleStackIcon,
   ChevronDownIcon,
   PuzzlePieceIcon,
@@ -58,12 +58,12 @@ import {
   XMarkIcon,
   Square3Stack3DIcon,
   XCircleIcon,
-  CurrencyDollarIcon
+  CurrencyDollarIcon,
+  ComputerDesktopIcon
 } from '@heroicons/react/24/solid'
 
 import { Logo } from '@/components/Logo'
 import { Button } from '@/components/Button'
-
 
 const software = [
   {
@@ -138,7 +138,7 @@ const software = [
   {
     name: 'Comparison',
     description:
-      'The building performance is based on the current state of your building and how it reacts to the environment.',
+      'Have a clear understanding of your energy consumption about where  and what is being used to be able to make informed choices for energy procurement.',
     href: '#',
     icon: ScaleIcon,
     subItems: [
@@ -207,7 +207,7 @@ const software = [
   {
     name: 'Improvements',
     description:
-      'The building performance is based on the current state of your building and how it reacts to the environment.',
+      'Forecasting your future energy usage with and without improvements have been implemented.',
     href: '#',
     icon: ArrowTrendingUpIcon,
     subItems: [
@@ -347,22 +347,28 @@ const services = [
   {
     name: 'Consultancy',
     description:
-      'Our expertise goes beyond software we work with you to find the most suitable solution that works for your building’s operations and your business.',
+      'Our expertise goes beyond software we work with you to find the most suitable solution that works best for your building’s operation and business objectives.',
     href: '#',
-    icon: ChartBarIcon,
+    icon: DocumentCheckIcon,
   },
   {
-    name: 'Service overview',
+    name: 'Building Condition Assessment',
     description:
-      'The building performance is based on the current state of your building and how it reacts to the environment.',
+      'Get visibility on the energy performance of all your buildings at the system and subsystem level and develop an energy savings plan that is sustainable and meets your organisation’s ESG objectives.',
     href: '#',
-    icon: CursorArrowRaysIcon,
+    icon: BuildingOffice2Icon,
   },
   {
-    name: 'Security',
-    description: "Your customers' data will be safe and secure.",
+    name: 'Building Plant and Equipment Audit',
+    description: "Understanding the current state of your facility’s plant and equipment helps with the rolling out your building maintenance strategies.",
     href: '#',
     icon: ShieldCheckIcon,
+  },
+  {
+    name: 'Software Service Consulting',
+    description: "Provide the integration of your building and critical plant and equipment data and APIs of your building’s and existing BMS, BEMS, IWMS and Billing and Consumption information onto one easy to use solution.",
+    href: '#',
+    icon: ComputerDesktopIcon,
   },
 ]
 
@@ -434,7 +440,6 @@ export default function Header2() {
                     <>
                       <Popover.Button
                         className={classNames(
-                          open ? 'text-gray-900' : 'text-gray-500',
                           'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
                         )}
                       >

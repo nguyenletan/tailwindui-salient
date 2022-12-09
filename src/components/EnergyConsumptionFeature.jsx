@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Container } from '@/components/Container'
-import buildingEngergyImage from '@/images/building-energy-consumption.webp'
+import buildingEnergyImage from '@/images/building-energy-consumption.webp'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 
@@ -12,7 +12,7 @@ export function EnergyConsumptionFeature() {
     <section
       id='features'
       aria-label='The most user friendly energy management software for managing your building portfolio'
-      className='relative overflow-hidden pt-12 pb-28 sm:pb-24'
+      className='relative overflow-hidden pt-28 pb-28 sm:pb-24 sm:pt-24 bg-stone-100'
     >
       <Container className='flex flex-wrap gap-2 align-top lg:flex-nowrap'>
         <motion.div
@@ -29,7 +29,7 @@ export function EnergyConsumptionFeature() {
               quality={100}
               className=''
               backgroundColor='#fff'
-              src={buildingEngergyImage}
+              src={buildingEnergyImage}
               alt=''
             />
           </div>

@@ -13,7 +13,7 @@ export function FirstFFeatures() {
     <section
       id='features'
       aria-label='Features for running your books'
-      className='relative overflow-hidden pt-12 pb-28 sm:pb-24'
+      className='relative overflow-hidden pt-28 pb-28 sm:pb-24 sm:pt-24'
     >
       <Container className='flex gap-8 align-top flex-wrap lg:flex-nowrap'>
         <motion.div

@@ -12,7 +12,7 @@ export function Run247Feature() {
     <section
       id='features'
       aria-label='We run 24/7 so you can sleep in peace'
-      className='relative overflow-hidden pt-12 pb-28 sm:pb-24'
+      className='relative overflow-hidden pt-28 pb-28 sm:pb-24 sm:pt-24'
     >
       <Container className='flex flex-wrap lg:flex-nowrap'>
         <motion.div
