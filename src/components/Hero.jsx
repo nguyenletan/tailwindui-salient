@@ -54,7 +54,7 @@ export function Hero() {
               business needs.
             </p>
             <div className='justify-left mt-10 flex gap-x-6'>
-              <Button href='/register' className='text-lg' color='primary'>
+              <Button href='/contact-us' className='text-lg' color='primary'>
                 Get Started
               </Button>
             </div>

@@ -1,16 +1,15 @@
 import Head from 'next/head'
 import Link from 'next/link'
-
 import { AuthLayout } from '@/components/AuthLayout'
 import { Button } from '@/components/Button'
-import { SelectField, TextField } from '@/components/Fields'
+import { TextField } from '@/components/Fields'
 import { Logo } from '@/components/Logo'
 
-export default function Register() {
+export default function ContactUs() {
   return (
     <>
       <Head>
-        <title>Sign Up - LastFootprint</title>
+        <title>Contact Us - LastFootprint</title>
       </Head>
       <AuthLayout>
         <div className="flex flex-col">
@@ -21,16 +20,6 @@ export default function Register() {
             <h2 className="text-lg font-semibold text-gray-900">
               Get started for free
             </h2>
-            <p className="mt-2 text-sm text-gray-700">
-              Already registered?{' '}
-              <Link
-                href="/login"
-                className="font-medium text-blue-600 hover:underline"
-              >
-                Sign in
-              </Link>{' '}
-              to your account.
-            </p>
           </div>
         </div>
         <form
@@ -43,7 +32,6 @@ export default function Register() {
             name="first_name"
             type="text"
             autoComplete="given-name"
-            required
           />
           <TextField
             label="Last name"
@@ -51,7 +39,6 @@ export default function Register() {
             name="last_name"
             type="text"
             autoComplete="family-name"
-            required
           />
           <TextField
             className="col-span-full"
@@ -59,38 +46,23 @@ export default function Register() {
             id="email"
             name="email"
             type="email"
-            autoComplete="email"
-            required
           />
           <TextField
             className="col-span-full"
-            label="Password"
-            id="password"
-            name="password"
-            type="password"
-            autoComplete="new-password"
-            required
+            label="Phone number"
+            id="phone"
+            name="phone"
+            type="phone"
           />
-          <SelectField
-            className="col-span-full"
-            label="How did you hear about us?"
-            id="referral_source"
-            name="referral_source"
-          >
-            <option>AltaVista search</option>
-            <option>Super Bowl commercial</option>
-            <option>Our route 34 city bus ad</option>
-            <option>The “Never Use This” podcast</option>
-          </SelectField>
           <div className="col-span-full">
             <Button
               type="submit"
               variant="solid"
-              color="blue"
+              color="primary"
               className="w-full"
             >
               <span>
-                Sign up <span aria-hidden="true">&rarr;</span>
+                Submit <span aria-hidden="true">&rarr;</span>
               </span>
             </Button>
           </div>

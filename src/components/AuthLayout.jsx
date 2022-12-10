@@ -11,13 +11,13 @@ export function AuthLayout({ children }) {
             {children}
           </div>
         </div>
-        <div className="hidden sm:contents lg:relative lg:block lg:flex-1">
-          <Image
-            className="absolute inset-0 h-full w-full object-cover"
-            src={backgroundImage}
-            alt=""
-            unoptimized
-          />
+        <div className="hidden sm:contents lg:relative lg:block lg:flex-1 bg-primary/80">
+          {/*<Image*/}
+          {/*  className="absolute inset-0 h-full w-full object-cover"*/}
+          {/*  src={backgroundImage}*/}
+          {/*  alt=""*/}
+          {/*  unoptimized*/}
+          {/*/>*/}
         </div>
       </div>
     </>
