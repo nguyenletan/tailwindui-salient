@@ -60,7 +60,7 @@ import {
   Square3Stack3DIcon,
   XCircleIcon,
   CurrencyDollarIcon,
-  ComputerDesktopIcon
+  ComputerDesktopIcon,
 } from '@heroicons/react/24/solid'
 
 import { Logo } from '@/components/Logo'
@@ -71,12 +71,13 @@ const whyBEE = [
     name: 'Overview',
     description:
       'The building performance is based on the current state of your building and how it reacts to the environment.',
-    subDescription: 'Seeing and managing in real time your buildings energy consumption and emissions',
+    subDescription:
+      'Seeing and managing in real time your buildings energy consumption and emissions',
     href: '#',
     icon: ChartBarIcon,
     subItems: [
       {
-        title: 'New project input',
+        title: 'Overview of  your properties performance',
         icon: ArrowDownOnSquareStackIcon,
         href: '#',
       },
@@ -116,23 +117,28 @@ const whyBEE = [
         href: '#',
       },
       {
-        title: 'Historical Comparison',
+        title: 'Operational Efficiency',
         icon: ScaleIcon,
         href: '#',
       },
       {
-        title: 'Edit Input',
+        title: 'Historical  Comparison',
         icon: PencilSquareIcon,
         href: '#',
       },
       {
-        title: 'Consumption Breakdown',
+        title: 'Utilisation Overview',
         icon: ChartPieIcon,
         href: '#',
       },
       {
-        title: 'Save and Export',
+        title: 'Consumption Breakdown',
         icon: DocumentArrowUpIcon,
+        href: '#',
+      },
+      {
+        title: 'Save and Export',
+        icon: ChevronUpIcon,
         href: '#',
       },
     ],
@@ -141,7 +147,8 @@ const whyBEE = [
     name: 'For Transparency',
     description:
       'Have a clear understanding of your energy consumption about where  and what is being used to be able to make informed choices for energy procurement.',
-    subDescription: 'Seeing and managing in real time your buildings energy consumption and emissions',
+    subDescription:
+      'Seeing and managing in real time your buildings energy consumption and emissions',
     href: '#',
     icon: ScaleIcon,
     subItems: [
@@ -211,7 +218,8 @@ const whyBEE = [
     name: 'For Forecasting',
     description:
       'Forecasting your future energy usage with and without improvements have been implemented. ',
-    subDescription: 'Seeing and managing in real time your buildings energy consumption and emissions',
+    subDescription:
+      'Seeing and managing in real time your buildings energy consumption and emissions',
     href: '#',
     icon: ArrowTrendingUpIcon,
     subItems: [
@@ -281,7 +289,8 @@ const whyBEE = [
     name: 'For Compliance',
     description:
       'Ensure all  your buildings meet the current and future regulatory requirements for energy consumption and CO2 emissions.',
-    subDescription: 'Seeing and managing in real time your buildings energy consumption and emissions',
+    subDescription:
+      'Seeing and managing in real time your buildings energy consumption and emissions',
     href: '#',
     icon: Squares2X2Icon,
     subItems: [
@@ -420,7 +429,8 @@ const whyBEE = [
     name: 'For Informed Choice',
     description:
       'Ensure clarity and focus  on current and future needs for your building portfolio based on your business needs.',
-    subDescription: 'Seeing and managing in real time your buildings energy consumption and emissions',
+    subDescription:
+      'Seeing and managing in real time your buildings energy consumption and emissions',
     href: '#',
     icon: InformationCircleIcon,
     subItems: [
@@ -493,7 +503,8 @@ const features = [
     name: 'Current Performance ',
     description:
       'Get your to know the performance of your building portfolio in relation to the local regulatory and environmental conditions.',
-    subDescription: 'Manage every aspect of your infrastructure real estate from accounting and operations to sustainability and energy consumption: ',
+    subDescription:
+      'Manage every aspect of your infrastructure real estate from accounting and operations to sustainability and energy consumption: ',
     href: '#',
     icon: ChartBarIcon,
     subItems: [
@@ -503,22 +514,22 @@ const features = [
         href: '#',
       },
       {
-        title: 'Cost Breakdown',
+        title: 'System & Subsystem Breakdown',
         icon: CurrencyPoundIcon,
         href: '#',
       },
       {
-        title: 'Total Energy Consumption',
+        title: 'System and subsystem performance',
         icon: BoltIcon,
         href: '#',
       },
       {
-        title: 'CO2 Breakdown',
+        title: 'Plant & Equipment State',
         icon: GlobeEuropeAfricaIcon,
         href: '#',
       },
       {
-        title: 'Total Energy Cost',
+        title: 'Energy Usage and Cost',
         icon: BanknotesIcon,
         href: '#',
       },
@@ -528,7 +539,7 @@ const features = [
         href: '#',
       },
       {
-        title: 'Total Carbon Emissions',
+        title: 'Carbon Emissions',
         icon: GlobeAltIcon,
         href: '#',
       },
@@ -538,7 +549,7 @@ const features = [
         href: '#',
       },
       {
-        title: 'Historical Comparison',
+        title: 'Historical vs Current State',
         icon: ScaleIcon,
         href: '#',
       },
@@ -548,7 +559,7 @@ const features = [
         href: '#',
       },
       {
-        title: 'Consumption Breakdown',
+        title: 'Current state of consumption',
         icon: ChartPieIcon,
         href: '#',
       },
@@ -563,7 +574,8 @@ const features = [
     name: 'Comparison',
     description:
       'Compare the current state of your buildings against the regulatory standards as well as the best in class for your building type.',
-    subDescription: 'Manage every aspect of your infrastructure real estate from accounting and operations to sustainability and energy consumption: ',
+    subDescription:
+      'Manage every aspect of your infrastructure real estate from accounting and operations to sustainability and energy consumption: ',
     href: '#',
     icon: ScaleIcon,
     subItems: [
@@ -633,7 +645,8 @@ const features = [
     name: 'Improvements',
     description:
       'Identify and address the gaps with the best improvement measures  for your buildings and to your business needs.',
-    subDescription: 'Manage every aspect of your infrastructure real estate from accounting and operations to sustainability and energy consumption: ',
+    subDescription:
+      'Manage every aspect of your infrastructure real estate from accounting and operations to sustainability and energy consumption: ',
     href: '#',
     icon: ArrowTrendingUpIcon,
     subItems: [
@@ -703,7 +716,8 @@ const features = [
     name: 'Asset Reliability',
     description:
       'Identify your assets health across your building portfolio to know where best to focus your time and effort.',
-    subDescription: 'Manage every aspect of your infrastructure real estate from accounting and operations to sustainability and energy consumption: ',
+    subDescription:
+      'Manage every aspect of your infrastructure real estate from accounting and operations to sustainability and energy consumption: ',
     href: '#',
     icon: Squares2X2Icon,
     subItems: [
@@ -855,7 +869,7 @@ export default function Header2() {
           aria-hidden='true'
         />
         <div className='relative z-20'>
-          <div className='mx-auto flex max-w-8xl items-center justify-between py-5 pr-4 sm:px-6 sm:py-4 md:justify-start md:space-x-10 lg:pr-8'>
+          <div className='max-w-8xl mx-auto flex items-center justify-between py-5 pr-4 sm:px-6 sm:py-4 md:justify-start md:space-x-10 lg:pr-8'>
             <Logo />
             <div className='-my-2 -mr-2 md:hidden'>
               <Popover.Button className='inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary'>
@@ -905,7 +919,9 @@ export default function Header2() {
                         <Popover.Panel className='absolute inset-x-0 top-full z-10 hidden transform bg-white shadow-lg md:block'>
                           <div className='grid h-[86vh] grid-cols-3 gap-8 overflow-auto'>
                             <div className='mx-auto flex max-w-7xl flex-col gap-8 overflow-auto bg-stone-50 px-4 py-4 pb-8 sm:px-6 sm:py-4 lg:px-8 lg:py-6 xl:py-8'>
-                              <h3 className="font-display text-md text-primary font-bold uppercase">Why BEE?</h3>
+                              <h3 className='text-md font-display font-bold uppercase text-primary'>
+                                Why BEE?
+                              </h3>
 
                               {whyBEE.map((item, index) => (
                                 <a
@@ -1016,7 +1032,9 @@ export default function Header2() {
                         <Popover.Panel className='absolute inset-x-0 top-full z-10 hidden transform bg-white shadow-lg md:block'>
                           <div className='grid h-[86vh] grid-cols-3 gap-8 overflow-auto'>
                             <div className='mx-auto flex max-w-7xl flex-col gap-8 overflow-auto bg-stone-50 px-4 py-4 pb-8 sm:px-6 sm:py-4 lg:px-8 lg:py-6 xl:py-8'>
-                              <h3 className="font-display text-md text-primary font-bold uppercase">Features</h3>
+                              <h3 className='text-md font-display font-bold uppercase text-primary'>
+                                Features
+                              </h3>
 
                               {features.map((item, index) => (
                                 <a
@@ -1092,7 +1110,7 @@ export default function Header2() {
                     <>
                       <Popover.Button
                         className={classNames(
-                          'group inline-flex items-center border-0 border-white border-b-4 bg-white text-base font-medium hover:border-primary focus:border-primary focus:outline-none'
+                          'group inline-flex items-center border-0 border-b-4 border-white bg-white text-base font-medium hover:border-primary focus:border-primary focus:outline-none'
                         )}
                       >
                         <span className='font-display text-lg'>Services</span>
@@ -1184,7 +1202,7 @@ export default function Header2() {
                 </Popover>
                 <Link
                   href='/contact-us'
-                  className='font-display text-lg font-medium border-b-4 border-transparent hover:border-primary focus:border-primary'
+                  className='border-b-4 border-transparent font-display text-lg font-medium hover:border-primary focus:border-primary'
                 >
                   Contact Us
                 </Link>
