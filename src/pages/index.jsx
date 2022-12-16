@@ -42,14 +42,14 @@ export default function Home() {
         {/*<FirstEFeatures />*/}
         <SecondFeature />
         <FirstFFeatures />
-        <AsanaFeature />
+        {/*<AsanaFeature />*/}
         {/*<Solutions />*/}
         {/*<PrimaryFeatures />*/}
         {/*<ThirdFeature />*/}
 
         {/*<CallToAction />*/}
         {/*<Testimonials />*/}
-        {/*<Pricing />*/}
+        <Pricing />
         {/*<Faqs />*/}
       </main>
       <Footer />
