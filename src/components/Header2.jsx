@@ -73,7 +73,7 @@ const whyBEE = [
       'The building performance is based on the current state of your building and how it reacts to the environment.',
     subDescription:
       'Seeing and managing in real time your buildings energy consumption and emissions',
-    href: '#',
+    href: '/why-bee#overview',
     icon: ChartBarIcon,
     subItems: [
       {
@@ -149,7 +149,7 @@ const whyBEE = [
       'Have a clear understanding of your energy consumption about where  and what is being used to be able to make informed choices for energy procurement.',
     subDescription:
       'Seeing and managing in real time your buildings energy consumption and emissions',
-    href: '#',
+    href: '/why-bee#for-transparency',
     icon: ScaleIcon,
     subItems: [
       {
@@ -220,7 +220,7 @@ const whyBEE = [
       'Forecasting your future energy usage with and without improvements have been implemented. ',
     subDescription:
       'Seeing and managing in real time your buildings energy consumption and emissions',
-    href: '#',
+    href: '/why-bee#for-forecasting',
     icon: ArrowTrendingUpIcon,
     subItems: [
       {
@@ -291,7 +291,7 @@ const whyBEE = [
       'Ensure all  your buildings meet the current and future regulatory requirements for energy consumption and CO2 emissions.',
     subDescription:
       'Seeing and managing in real time your buildings energy consumption and emissions',
-    href: '#',
+    href: '/why-bee#for-compliance',
     icon: Squares2X2Icon,
     subItems: [
       {
@@ -360,7 +360,7 @@ const whyBEE = [
     name: 'For Efficiency',
     description:
       'Ensure all  your building’s critical plant and equipment are fully optimised and operating efficiently.',
-    href: '#',
+    href: '/why-bee#for-efficiency',
     icon: Square3Stack3DIcon,
     subItems: [
       {
@@ -431,7 +431,7 @@ const whyBEE = [
       'Ensure clarity and focus  on current and future needs for your building portfolio based on your business needs.',
     subDescription:
       'Seeing and managing in real time your buildings energy consumption and emissions',
-    href: '#',
+    href: '/why-bee#for-informed-choice',
     icon: InformationCircleIcon,
     subItems: [
       {
@@ -926,7 +926,7 @@ export default function Header2() {
                               {whyBEE.map((item, index) => (
                                 <a
                                   key={item.name}
-                                  href={item.href}
+                                  href='#'
                                   className={
                                     '-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-stone-100' +
                                     (index === softwareSelectedItem
@@ -953,10 +953,10 @@ export default function Header2() {
                                           {item.description}
                                         </p>
                                       </div>
-                                      {/*<p className='mt-2 text-sm font-medium text-primary lg:mt-4'>*/}
-                                      {/*  Learn more*/}
-                                      {/*  <span aria-hidden='true'> &rarr;</span>*/}
-                                      {/*</p>*/}
+                                      <Link href={item.href} className='mt-2 text-sm font-medium text-primary lg:mt-4'>
+                                        Learn more
+                                        <span aria-hidden='true'> &rarr;</span>
+                                      </Link>
                                     </div>
                                   </div>
                                 </a>

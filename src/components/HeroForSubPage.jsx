@@ -11,7 +11,7 @@ export function HeroForSubPage() {
       >
         <div className="self-center mx-auto max-w-2xl">
           <h5 className="text-primary font-bold font-display">BEE | WHY BEE</h5>
-          <h2 className='font-display text-4xl font-bold pb-4 pt-1'>Streamline your Building’s Management with BEE</h2>
+          <h2 className='font-display text-4xl font-extrabold pb-4 pt-1 leading-tight'>Streamline your Building’s Management with BEE</h2>
           <p className="text-lg">Transform your operations with one flexible, powerful, robust software suite that has solutions for a myriad of business needs.</p>
           <div className='justify-left mt-10  gap-x-6'>
             <Button href='/contact-us' className='text-lg' color='primary'>

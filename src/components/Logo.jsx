@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export function Logo() {
   return (
     <div className='flex items-center gap-1'>
@@ -29,7 +31,15 @@ export function Logo() {
       </svg>
 
       {/*<h1 className=" text-lg uppercase font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-primary">Last footprint</h1>*/}
-      <h1 className='text-4xl font-display font-extrabold text-primary'>Lastfootprint</h1>
+      <h1 className='font-display text-3xl '>
+        <Link className='text-primary font-extrabold' href='/'>
+          Lastfootprint
+        </Link>{' '}
+        |{' '}
+        <a target='_blank' href='https://lastingfootprint.ai' rel="noreferrer">
+          BEE
+        </a>
+      </h1>
     </div>
   )
 }
