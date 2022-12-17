@@ -505,7 +505,7 @@ const features = [
       'Get your to know the performance of your building portfolio in relation to the local regulatory and environmental conditions.',
     subDescription:
       'Manage every aspect of your infrastructure real estate from accounting and operations to sustainability and energy consumption: ',
-    href: '#',
+    href: '/features#current-performance',
     icon: ChartBarIcon,
     subItems: [
       {
@@ -576,7 +576,7 @@ const features = [
       'Compare the current state of your buildings against the regulatory standards as well as the best in class for your building type.',
     subDescription:
       'Manage every aspect of your infrastructure real estate from accounting and operations to sustainability and energy consumption: ',
-    href: '#',
+    href: '/features#comparison',
     icon: ScaleIcon,
     subItems: [
       {
@@ -647,7 +647,7 @@ const features = [
       'Identify and address the gaps with the best improvement measures  for your buildings and to your business needs.',
     subDescription:
       'Manage every aspect of your infrastructure real estate from accounting and operations to sustainability and energy consumption: ',
-    href: '#',
+    href: '/features#improvements',
     icon: ArrowTrendingUpIcon,
     subItems: [
       {
@@ -718,7 +718,7 @@ const features = [
       'Identify your assets health across your building portfolio to know where best to focus your time and effort.',
     subDescription:
       'Manage every aspect of your infrastructure real estate from accounting and operations to sustainability and energy consumption: ',
-    href: '#',
+    href: '/features#asset-reliability',
     icon: Squares2X2Icon,
     subItems: [
       {
@@ -1039,7 +1039,7 @@ export default function Header2() {
                               {features.map((item, index) => (
                                 <a
                                   key={item.name}
-                                  href={item.href}
+                                  href='#'
                                   className={
                                     '-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-stone-100' +
                                     (index === softwareSelectedItem
@@ -1066,10 +1066,10 @@ export default function Header2() {
                                           {item.description}
                                         </p>
                                       </div>
-                                      {/*<p className='mt-2 text-sm font-medium text-primary lg:mt-4'>*/}
-                                      {/*  Learn more*/}
-                                      {/*  <span aria-hidden='true'> &rarr;</span>*/}
-                                      {/*</p>*/}
+                                      <Link href={item.href} className='mt-2 text-sm font-medium text-primary lg:mt-4'>
+                                        Learn more
+                                        <span aria-hidden='true'> &rarr;</span>
+                                      </Link>
                                     </div>
                                   </div>
                                 </a>
