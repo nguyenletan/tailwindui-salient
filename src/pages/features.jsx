@@ -8,8 +8,13 @@ import { Forcasting } from '@/components/why-bee/Forcasting'
 import { Compliance } from '@/components/why-bee/Compliance'
 import { Effiency } from '@/components/why-bee/Effiency'
 import { InformacedChoice } from '@/components/why-bee/InformacedChoice'
+import { HeroForFeatures } from '@/components/Features/HeroForFeatures'
+import {
+  NotJustAnotherFeature
+} from '@/components/Features/NotJustAnotherFeature'
+import { BuildingPeformace } from '@/components/Features/BuildingPeformace'
 
-export default function WhyBee() {
+export default function Features() {
   return (
     <>
       <Head>
@@ -24,13 +29,10 @@ export default function WhyBee() {
       <Header2 />
 
       <main>
-        <HeroForSubPage />
-        <Overview />
-        <Transparent />
-        <Forcasting />
-        <Compliance />
-        <Effiency />
-        <InformacedChoice/>
+        <HeroForFeatures />
+        <NotJustAnotherFeature />
+        <BuildingPeformace />
+
       </main>
       <Footer />
     </>
