@@ -12,7 +12,7 @@ export function VideoContent() {
       aria-label='The most user friendly energy management software for managing your building portfolio'
       className='relative overflow-hidden pt-28 pb-28 sm:pb-24 sm:pt-24 bg-stone-100'
     >
-      <Container className='flex flex-wrap gap-2 align-top lg:flex-nowrap'>
+      <Container className='flex flex-wrap gap-2 align-top lg:flex-nowrap gap-12'>
         <motion.div
           style={{
             transform: isInView ? 'none' : 'translateX(-200px)',
