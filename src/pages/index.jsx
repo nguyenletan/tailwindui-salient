@@ -1,23 +1,16 @@
 import Head from 'next/head'
-import { CallToAction } from '@/components/CallToAction'
-import { Faqs } from '@/components/Faqs'
 import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
-import { Pricing } from '@/components/Pricing'
-import { PrimaryFeatures } from '@/components/PrimaryFeatures'
-import { ThirdFeature } from '@/components/ThirdFeature'
-import { Testimonials } from '@/components/Testimonials'
-import { Solutions } from '@/components/Solutions'
+
 import SecondFeature from '@/components/SecondFeature'
 import { Run247Feature } from '@/components/Run247Feature'
 import { EnergyConsumptionFeature } from '@/components/EnergyConsumptionFeature'
 import { ESGRequirementsFeature } from '@/components/ESGRequirementsFeature'
-import { FirstDFeatures } from '@/components/FirstDFeature'
-import { FirstEFeatures } from '@/components/FirstEFeature'
+
 import { FirstFFeatures } from '@/components/FirstFFeature'
 import Header2 from '@/components/Header2'
-import AsanaFeature from '@/components/AsanaFeature'
+
+import { VideoContent } from '@/components/VideoContent'
 
 export default function Home() {
   return (
@@ -40,6 +33,7 @@ export default function Home() {
         <ESGRequirementsFeature />
         {/*<FirstDFeatures />*/}
         {/*<FirstEFeatures />*/}
+        <VideoContent/>
         <SecondFeature />
         <FirstFFeatures />
         {/*<AsanaFeature />*/}
@@ -49,7 +43,7 @@ export default function Home() {
 
         {/*<CallToAction />*/}
         {/*<Testimonials />*/}
-        <Pricing />
+        {/*<Pricing />*/}
         {/*<Faqs />*/}
       </main>
       <Footer />
