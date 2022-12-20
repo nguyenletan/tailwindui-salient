@@ -1,126 +1,1269 @@
-import { Fragment } from 'react'
-import Link from 'next/link'
+import { Fragment, useState } from 'react'
 import { Popover, Transition } from '@headlessui/react'
-import clsx from 'clsx'
+import Link from 'next/link'
 
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
+import {
+  ArrowUturnUpIcon,
+  Bars3Icon,
+  BookmarkSlashIcon,
+  ChartBarIcon,
+  CircleStackIcon,
+  DocumentMinusIcon,
+  ExclamationCircleIcon,
+  ExclamationTriangleIcon,
+  GlobeAltIcon,
+  HeartIcon,
+  InboxStackIcon,
+  InformationCircleIcon,
+  PhoneIcon,
+  PlayIcon,
+  ShieldCheckIcon,
+  ShieldExclamationIcon,
+  Squares2X2Icon,
+  WrenchIcon,
+  WrenchScrewdriverIcon,
+  RectangleStackIcon,
+  ChevronDownIcon,
+  ChevronUpIcon,
+  PuzzlePieceIcon,
+  ArrowDownOnSquareStackIcon,
+  CurrencyPoundIcon,
+  BoltIcon,
+  GlobeEuropeAfricaIcon,
+  BanknotesIcon,
+  BoltSlashIcon,
+  ArrowTrendingUpIcon,
+  ScaleIcon,
+  PencilSquareIcon,
+  ChartPieIcon,
+  DocumentArrowUpIcon,
+  BuildingLibraryIcon,
+  HandThumbUpIcon,
+  TruckIcon,
+  BuildingOffice2Icon,
+  DocumentChartBarIcon,
+  PauseIcon,
+  PresentationChartLineIcon,
+  DocumentCheckIcon,
+  PresentationChartBarIcon,
+  DocumentPlusIcon,
+  Bars2Icon,
+  CloudArrowUpIcon,
+  BarsArrowDownIcon,
+  BarsArrowUpIcon,
+  XMarkIcon,
+  Square3Stack3DIcon,
+  XCircleIcon,
+  CurrencyDollarIcon,
+  ComputerDesktopIcon,
+} from '@heroicons/react/24/solid'
+
 import { Logo } from '@/components/Logo'
-import { NavLink } from '@/components/NavLink'
+import { Button } from '@/components/Button'
+import Image from 'next/image'
 
-function MobileNavLink({ href, children }) {
-  return (
-    <Popover.Button as={Link} href={href} className="block w-full p-2">
-      {children}
-    </Popover.Button>
-  )
+const whyBEE = [
+  {
+    name: 'Overview',
+    description:
+      'The building performance is based on the current state of your building and how it reacts to the environment.',
+    subDescription:
+      'Seeing and managing in real time your buildings energy consumption and emissions',
+    href: '/why-bee#overview',
+    icon: ChartBarIcon,
+    subItems: [
+      {
+        title: 'Overview of  your properties performance',
+        icon: ArrowDownOnSquareStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Cost Breakdown',
+        icon: CurrencyPoundIcon,
+        href: '#',
+      },
+      {
+        title: 'Total Energy Consumption',
+        icon: BoltIcon,
+        href: '#',
+      },
+      {
+        title: 'CO2 Breakdown',
+        icon: GlobeEuropeAfricaIcon,
+        href: '#',
+      },
+      {
+        title: 'Total Energy Cost',
+        icon: BanknotesIcon,
+        href: '#',
+      },
+      {
+        title: 'Electrical Systems Information',
+        icon: BoltSlashIcon,
+        href: '#',
+      },
+      {
+        title: 'Total Carbon Emissions',
+        icon: GlobeAltIcon,
+        href: '#',
+      },
+      {
+        title: 'Incidental Gains Information',
+        icon: ArrowTrendingUpIcon,
+        href: '#',
+      },
+      {
+        title: 'Operational Efficiency',
+        icon: ScaleIcon,
+        href: '#',
+      },
+      {
+        title: 'Historical  Comparison',
+        icon: PencilSquareIcon,
+        href: '#',
+      },
+      {
+        title: 'Utilisation Overview',
+        icon: ChartPieIcon,
+        href: '#',
+      },
+      {
+        title: 'Consumption Breakdown',
+        icon: DocumentArrowUpIcon,
+        href: '#',
+      },
+      {
+        title: 'Save and Export',
+        icon: ChevronUpIcon,
+        href: '#',
+      },
+    ],
+  },
+  {
+    name: 'For Transparency',
+    description:
+      'Have a clear understanding of your energy consumption about where  and what is being used to be able to make informed choices for energy procurement.',
+    subDescription:
+      'Seeing and managing in real time your buildings energy consumption and emissions',
+    href: '/why-bee#for-transparency',
+    icon: ScaleIcon,
+    subItems: [
+      {
+        title: 'Building Energy Performance',
+        icon: BuildingLibraryIcon,
+        href: '#',
+      },
+      {
+        title: 'Best-in-Class Comparison',
+        icon: HandThumbUpIcon,
+        href: '#',
+      },
+      {
+        title: 'CO2 Emission Performance',
+        icon: TruckIcon,
+        href: '#',
+      },
+      {
+        title: 'Multi-Building Comparison',
+        icon: BuildingOffice2Icon,
+        href: '#',
+      },
+      {
+        title: 'Sub-system Performance',
+        icon: DocumentChartBarIcon,
+        href: '#',
+      },
+      {
+        title: 'Multi-Sub-System Comparison',
+        icon: PauseIcon,
+        href: '#',
+      },
+      {
+        title: 'Envelope Performance Comparison',
+        icon: PresentationChartLineIcon,
+        href: '#',
+      },
+      {
+        title: 'Facilities Selection',
+        icon: DocumentCheckIcon,
+        href: '#',
+      },
+      {
+        title: 'Sub-system Comparison',
+        icon: PresentationChartBarIcon,
+        href: '#',
+      },
+      {
+        title: 'Edit Input',
+        icon: DocumentPlusIcon,
+        href: '#',
+      },
+      {
+        title: 'Regulatory  Comparison',
+        icon: Bars2Icon,
+        href: '#',
+      },
+      {
+        title: 'Save and Export',
+        icon: CloudArrowUpIcon,
+        href: '#',
+      },
+    ],
+  },
+  {
+    name: 'For Forecasting',
+    description:
+      'Forecasting your future energy usage with and without improvements have been implemented. ',
+    subDescription:
+      'Seeing and managing in real time your buildings energy consumption and emissions',
+    href: '/why-bee#for-forecasting',
+    icon: ArrowTrendingUpIcon,
+    subItems: [
+      {
+        title: 'Annual Energy Savings',
+        icon: BarsArrowDownIcon,
+        href: '#',
+      },
+      {
+        title: 'CO2 Emissions improvements',
+        icon: BarsArrowUpIcon,
+        href: '#',
+      },
+      {
+        title: 'Annual energy cost savings',
+        icon: XMarkIcon,
+        href: '#',
+      },
+      {
+        title: 'Energy savings breakdown',
+        icon: Square3Stack3DIcon,
+        href: '#',
+      },
+      {
+        title: 'Annual CO2 emissions avoided',
+        icon: XCircleIcon,
+        href: '#',
+      },
+      {
+        title: 'Cost savings breakdown',
+        icon: CurrencyDollarIcon,
+        href: '#',
+      },
+      {
+        title: 'Investment cost and payback',
+        icon: BanknotesIcon,
+        href: '#',
+      },
+      {
+        title: 'CO2 Emissions breakdown',
+        icon: PuzzlePieceIcon,
+        href: '#',
+      },
+      {
+        title: 'Energy usage intensity reduction',
+        icon: ScaleIcon,
+        href: '#',
+      },
+      {
+        title: 'Breakdown of improvements',
+        icon: RectangleStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Building energy improvements',
+        icon: ArrowTrendingUpIcon,
+        href: '#',
+      },
+      {
+        title: 'Improvement measures',
+        icon: ArrowUturnUpIcon,
+        href: '#',
+      },
+    ],
+  },
+  {
+    name: 'For Compliance',
+    description:
+      'Ensure all  your buildings meet the current and future regulatory requirements for energy consumption and CO2 emissions.',
+    subDescription:
+      'Seeing and managing in real time your buildings energy consumption and emissions',
+    href: '/why-bee#for-compliance',
+    icon: Squares2X2Icon,
+    subItems: [
+      {
+        title: 'Asset health',
+        icon: HeartIcon,
+        href: '#',
+      },
+      {
+        title: 'Annual energy consumption ',
+        icon: BoltIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential issues and risks',
+        icon: ExclamationTriangleIcon,
+        href: '#',
+      },
+      {
+        title: 'Parts and reliability',
+        icon: CircleStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Sub-system health',
+        icon: InboxStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Depreciation',
+        icon: DocumentMinusIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential Issues',
+        icon: ExclamationCircleIcon,
+        href: '#',
+      },
+      {
+        title: 'Asset parts and services',
+        icon: WrenchIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential Faults',
+        icon: ShieldExclamationIcon,
+        href: '#',
+      },
+      {
+        title: 'Alerts',
+        icon: BookmarkSlashIcon,
+        href: '#',
+      },
+      {
+        title: 'Maintenance budget by sub-system',
+        icon: CurrencyDollarIcon,
+        href: '#',
+      },
+      {
+        title: 'Maintenance & sensor logs',
+        icon: WrenchScrewdriverIcon,
+        href: '#',
+      },
+    ],
+  },
+  {
+    name: 'For Efficiency',
+    description:
+      'Ensure all  your building’s critical plant and equipment are fully optimised and operating efficiently.',
+    href: '/why-bee#for-efficiency',
+    icon: Square3Stack3DIcon,
+    subItems: [
+      {
+        title: 'Asset health',
+        icon: HeartIcon,
+        href: '#',
+      },
+      {
+        title: 'Annual energy consumption ',
+        icon: BoltIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential issues and risks',
+        icon: ExclamationTriangleIcon,
+        href: '#',
+      },
+      {
+        title: 'Parts and reliability',
+        icon: CircleStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Sub-system health',
+        icon: InboxStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Depreciation',
+        icon: DocumentMinusIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential Issues',
+        icon: ExclamationCircleIcon,
+        href: '#',
+      },
+      {
+        title: 'Asset parts and services',
+        icon: WrenchIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential Faults',
+        icon: ShieldExclamationIcon,
+        href: '#',
+      },
+      {
+        title: 'Alerts',
+        icon: BookmarkSlashIcon,
+        href: '#',
+      },
+      {
+        title: 'Maintenance budget by sub-system',
+        icon: CurrencyDollarIcon,
+        href: '#',
+      },
+      {
+        title: 'Maintenance & sensor logs',
+        icon: WrenchScrewdriverIcon,
+        href: '#',
+      },
+    ],
+  },
+  {
+    name: 'For Informed Choice',
+    description:
+      'Ensure clarity and focus  on current and future needs for your building portfolio based on your business needs.',
+    subDescription:
+      'Seeing and managing in real time your buildings energy consumption and emissions',
+    href: '/why-bee#for-informed-choice',
+    icon: InformationCircleIcon,
+    subItems: [
+      {
+        title: 'Asset health',
+        icon: HeartIcon,
+        href: '#',
+      },
+      {
+        title: 'Annual energy consumption ',
+        icon: BoltIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential issues and risks',
+        icon: ExclamationTriangleIcon,
+        href: '#',
+      },
+      {
+        title: 'Parts and reliability',
+        icon: CircleStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Sub-system health',
+        icon: InboxStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Depreciation',
+        icon: DocumentMinusIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential Issues',
+        icon: ExclamationCircleIcon,
+        href: '#',
+      },
+      {
+        title: 'Asset parts and services',
+        icon: WrenchIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential Faults',
+        icon: ShieldExclamationIcon,
+        href: '#',
+      },
+      {
+        title: 'Alerts',
+        icon: BookmarkSlashIcon,
+        href: '#',
+      },
+      {
+        title: 'Maintenance budget by sub-system',
+        icon: CurrencyDollarIcon,
+        href: '#',
+      },
+      {
+        title: 'Maintenance & sensor logs',
+        icon: WrenchScrewdriverIcon,
+        href: '#',
+      },
+    ],
+  },
+]
+
+const features = [
+  {
+    name: 'Current Performance ',
+    description:
+      'Get your to know the performance of your building portfolio in relation to the local regulatory and environmental conditions.',
+    subDescription:
+      'Manage every aspect of your infrastructure real estate from accounting and operations to sustainability and energy consumption: ',
+    href: '/features#current-performance',
+    icon: ChartBarIcon,
+    subItems: [
+      {
+        title: 'New project input',
+        icon: ArrowDownOnSquareStackIcon,
+        href: '#',
+      },
+      {
+        title: 'System & Subsystem Breakdown',
+        icon: CurrencyPoundIcon,
+        href: '#',
+      },
+      {
+        title: 'System and subsystem performance',
+        icon: BoltIcon,
+        href: '#',
+      },
+      {
+        title: 'Plant & Equipment State',
+        icon: GlobeEuropeAfricaIcon,
+        href: '#',
+      },
+      {
+        title: 'Energy Usage and Cost',
+        icon: BanknotesIcon,
+        href: '#',
+      },
+      {
+        title: 'Electrical Systems Information',
+        icon: BoltSlashIcon,
+        href: '#',
+      },
+      {
+        title: 'Carbon Emissions',
+        icon: GlobeAltIcon,
+        href: '#',
+      },
+      {
+        title: 'Incidental Gains Information',
+        icon: ArrowTrendingUpIcon,
+        href: '#',
+      },
+      {
+        title: 'Historical vs Current State',
+        icon: ScaleIcon,
+        href: '#',
+      },
+      {
+        title: 'Edit Input',
+        icon: PencilSquareIcon,
+        href: '#',
+      },
+      {
+        title: 'Current state of consumption',
+        icon: ChartPieIcon,
+        href: '#',
+      },
+      {
+        title: 'Save and Export',
+        icon: DocumentArrowUpIcon,
+        href: '#',
+      },
+    ],
+  },
+  {
+    name: 'Comparison',
+    description:
+      'Compare the current state of your buildings against the regulatory standards as well as the best in class for your building type.',
+    subDescription:
+      'Manage every aspect of your infrastructure real estate from accounting and operations to sustainability and energy consumption: ',
+    href: '/features#comparison',
+    icon: ScaleIcon,
+    subItems: [
+      {
+        title: 'Building Energy Performance',
+        icon: BuildingLibraryIcon,
+        href: '#',
+      },
+      {
+        title: 'Best-in-Class Comparison',
+        icon: HandThumbUpIcon,
+        href: '#',
+      },
+      {
+        title: 'CO2 Emission Performance',
+        icon: TruckIcon,
+        href: '#',
+      },
+      {
+        title: 'Multi-Building Comparison',
+        icon: BuildingOffice2Icon,
+        href: '#',
+      },
+      {
+        title: 'Sub-system Performance',
+        icon: DocumentChartBarIcon,
+        href: '#',
+      },
+      {
+        title: 'Multi-Sub-System Comparison',
+        icon: PauseIcon,
+        href: '#',
+      },
+      {
+        title: 'Envelope Performance Comparison',
+        icon: PresentationChartLineIcon,
+        href: '#',
+      },
+      {
+        title: 'Facilities Selection',
+        icon: DocumentCheckIcon,
+        href: '#',
+      },
+      {
+        title: 'Sub-system Comparison',
+        icon: PresentationChartBarIcon,
+        href: '#',
+      },
+      {
+        title: 'Edit Input',
+        icon: DocumentPlusIcon,
+        href: '#',
+      },
+      {
+        title: 'Regulatory  Comparison',
+        icon: Bars2Icon,
+        href: '#',
+      },
+      {
+        title: 'Save and Export',
+        icon: CloudArrowUpIcon,
+        href: '#',
+      },
+    ],
+  },
+  {
+    name: 'Improvements',
+    description:
+      'Identify and address the gaps with the best improvement measures  for your buildings and to your business needs.',
+    subDescription:
+      'Manage every aspect of your infrastructure real estate from accounting and operations to sustainability and energy consumption: ',
+    href: '/features#improvements',
+    icon: ArrowTrendingUpIcon,
+    subItems: [
+      {
+        title: 'Annual Energy Savings',
+        icon: BarsArrowDownIcon,
+        href: '#',
+      },
+      {
+        title: 'CO2 Emissions improvements',
+        icon: BarsArrowUpIcon,
+        href: '#',
+      },
+      {
+        title: 'Annual energy cost savings',
+        icon: XMarkIcon,
+        href: '#',
+      },
+      {
+        title: 'Energy savings breakdown',
+        icon: Square3Stack3DIcon,
+        href: '#',
+      },
+      {
+        title: 'Annual CO2 emissions avoided',
+        icon: XCircleIcon,
+        href: '#',
+      },
+      {
+        title: 'Cost savings breakdown',
+        icon: CurrencyDollarIcon,
+        href: '#',
+      },
+      {
+        title: 'Investment cost and payback',
+        icon: BanknotesIcon,
+        href: '#',
+      },
+      {
+        title: 'CO2 Emissions breakdown',
+        icon: PuzzlePieceIcon,
+        href: '#',
+      },
+      {
+        title: 'Energy usage intensity reduction',
+        icon: ScaleIcon,
+        href: '#',
+      },
+      {
+        title: 'Breakdown of improvements',
+        icon: RectangleStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Building energy improvements',
+        icon: ArrowTrendingUpIcon,
+        href: '#',
+      },
+      {
+        title: 'Improvement measures',
+        icon: ArrowUturnUpIcon,
+        href: '#',
+      },
+    ],
+  },
+  {
+    name: 'Asset Reliability',
+    description:
+      'Identify your assets health across your building portfolio to know where best to focus your time and effort.',
+    subDescription:
+      'Manage every aspect of your infrastructure real estate from accounting and operations to sustainability and energy consumption: ',
+    href: '/features#asset-reliability',
+    icon: Squares2X2Icon,
+    subItems: [
+      {
+        title: 'Asset health',
+        icon: HeartIcon,
+        href: '#',
+      },
+      {
+        title: 'Annual energy consumption ',
+        icon: BoltIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential issues and risks',
+        icon: ExclamationTriangleIcon,
+        href: '#',
+      },
+      {
+        title: 'Parts and reliability',
+        icon: CircleStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Sub-system health',
+        icon: InboxStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Depreciation',
+        icon: DocumentMinusIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential Issues',
+        icon: ExclamationCircleIcon,
+        href: '#',
+      },
+      {
+        title: 'Asset parts and services',
+        icon: WrenchIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential Faults',
+        icon: ShieldExclamationIcon,
+        href: '#',
+      },
+      {
+        title: 'Alerts',
+        icon: BookmarkSlashIcon,
+        href: '#',
+      },
+      {
+        title: 'Maintenance budget by sub-system',
+        icon: CurrencyDollarIcon,
+        href: '#',
+      },
+      {
+        title: 'Maintenance & sensor logs',
+        icon: WrenchScrewdriverIcon,
+        href: '#',
+      },
+    ],
+  },
+]
+
+const services = [
+  {
+    name: 'Consultancy',
+    description:
+      'Our expertise goes beyond software we work with you to find the most suitable solution that works best for your building’s operation and business objectives.',
+    href: '#',
+    icon: DocumentCheckIcon,
+  },
+  {
+    name: 'Building Condition Assessment',
+    description:
+      'Get visibility on the energy performance of all your buildings at the system and subsystem level and develop an energy savings plan that is sustainable and meets your organisation’s ESG objectives.',
+    href: '#',
+    icon: BuildingOffice2Icon,
+  },
+  {
+    name: 'Building Plant and Equipment Audit',
+    description:
+      'Understanding the current state of your facility’s plant and equipment helps with the rolling out your building maintenance strategies.',
+    href: '#',
+    icon: ShieldCheckIcon,
+  },
+  {
+    name: 'Software Service Consulting',
+    description:
+      'Provide the integration of your building and critical plant and equipment data and APIs of your building’s and existing BMS, BEMS, IWMS and Billing and Consumption information onto one easy to use solution.',
+    href: '#',
+    icon: ComputerDesktopIcon,
+  },
+]
+
+const callsToAction = [
+  { name: 'Watch Demo', href: '#', icon: PlayIcon },
+  { name: 'Contact Sales', href: '#', icon: PhoneIcon },
+]
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
 }
 
-function MobileNavIcon({ open }) {
-  return (
-    <svg
-      aria-hidden="true"
-      className="h-3.5 w-3.5 overflow-visible stroke-slate-700"
-      fill="none"
-      strokeWidth={2}
-      strokeLinecap="round"
-    >
-      <path
-        d="M0 1H14M0 7H14M0 13H14"
-        className={clsx(
-          'origin-center transition',
-          open && 'scale-90 opacity-0'
-        )}
-      />
-      <path
-        d="M2 2L12 12M12 2L2 12"
-        className={clsx(
-          'origin-center transition',
-          !open && 'scale-90 opacity-0'
-        )}
-      />
-    </svg>
-  )
-}
+export default function Header() {
+  const [softwareSelectedItem, setSoftwareSelectedItem] = useState(0)
 
-function MobileNavigation() {
   return (
-    <Popover>
-      <Popover.Button
-        className="relative z-10 flex h-8 w-8 items-center justify-center [&:not(:focus-visible)]:focus:outline-none"
-        aria-label="Toggle Navigation"
-      >
-        {({ open }) => <MobileNavIcon open={open} />}
-      </Popover.Button>
-      <Transition.Root>
-        <Transition.Child
+    <div className='fixed z-10 w-full'>
+      <Popover className='relative bg-white'>
+        <div
+          className='pointer-events-none absolute inset-0 z-30 shadow'
+          aria-hidden='true'
+        />
+        <div className='relative z-20'>
+          <div className='max-w-8xl mx-auto flex items-center justify-between py-5 pr-4 sm:px-6 sm:py-4 md:justify-start md:space-x-10 lg:pr-8'>
+            <Logo />
+            <div className='-my-2 -mr-2 md:hidden'>
+              <Popover.Button className='inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary'>
+                <span className='sr-only'>Open menu</span>
+                <Bars3Icon className='h-6 w-6' aria-hidden='true' />
+              </Popover.Button>
+            </div>
+            <div className='hidden md:flex md:flex-1 md:items-center md:justify-between'>
+              <Popover.Group as='nav' className='flex space-x-10'>
+                <Popover>
+                  {({ open }) => (
+                    <>
+                      <Popover.Button
+                        className={classNames(
+                          'group inline-flex items-center border-b-4 border-transparent bg-white text-base font-medium hover:border-primary focus:border-primary focus:outline-none'
+                        )}
+                      >
+                        <span className='font-display text-lg'>Why BEE</span>
+                        {!open ? (
+                          <ChevronDownIcon
+                            className={classNames(
+                              open ? 'text-gray-600' : 'text-gray-400',
+                              'ml-2 h-5 w-5 group-hover:text-gray-500'
+                            )}
+                            aria-hidden='true'
+                          />
+                        ) : (
+                          <ChevronUpIcon
+                            className={classNames(
+                              open ? 'text-gray-600' : 'text-gray-400',
+                              'ml-2 h-5 w-5 group-hover:text-gray-500'
+                            )}
+                            aria-hidden='true'
+                          />
+                        )}
+                      </Popover.Button>
+
+                      <Transition
+                        as={Fragment}
+                        enter='transition ease-out duration-800'
+                        enterFrom='opacity-0 -translate-y-1'
+                        enterTo='opacity-100 translate-y-0'
+                        leave='transition ease-in duration-400'
+                        leaveFrom='opacity-100 translate-y-0'
+                        leaveTo='opacity-0 -translate-y-1'
+                      >
+                        <Popover.Panel className='absolute inset-x-0 top-full z-10 hidden transform bg-white shadow-lg md:block bg-transparent'>
+                          <div className='grid h-[86vh] gap-8 overflow-auto max-w-lg mx-auto'>
+                            <div className='mx-auto flex max-w-7xl flex-col gap-8 overflow-auto bg-stone-50 px-4 py-4 pb-8 sm:px-6 sm:py-4 lg:px-8 lg:py-6 xl:py-8'>
+                              <h3 className='text-md font-display font-bold uppercase text-primary'>
+                                Why BEE?
+                              </h3>
+
+                              {whyBEE.map((item, index) => (
+                                <a
+                                  key={item.name}
+                                  href='#'
+                                  className={
+                                    '-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-stone-100' +
+                                    (index === softwareSelectedItem
+                                      ? ' bg-gray-100'
+                                      : '')
+                                  }
+                                  onClick={() => setSoftwareSelectedItem(index)}
+                                >
+                                  <div className='flex gap-4 md:h-full'>
+                                    <div className='mt-1 flex-shrink-0'>
+                                      <span className='inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary text-white sm:h-8 sm:w-8'>
+                                        <item.icon
+                                          className='h-6 w-6'
+                                          aria-hidden='true'
+                                        />
+                                      </span>
+                                    </div>
+                                    <div className='ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0'>
+                                      <div>
+                                        <p className='text-base font-medium text-gray-900'>
+                                          {item.name}
+                                        </p>
+                                        <p className='mt-1 text-sm text-gray-500'>
+                                          {item.description}
+                                        </p>
+                                      </div>
+                                      <Link href={item.href} className='mt-2 text-sm font-medium text-primary lg:mt-4'>
+                                        Learn more
+                                        <span aria-hidden='true'> &rarr;</span>
+                                      </Link>
+                                    </div>
+                                  </div>
+                                </a>
+                              ))}
+                            </div>
+                          </div>
+                        </Popover.Panel>
+                      </Transition>
+                    </>
+                  )}
+                </Popover>
+
+                <Popover>
+                  {({ open }) => (
+                    <>
+                      <Popover.Button
+                        className={classNames(
+                          'group inline-flex items-center border-b-4 border-transparent bg-white text-base font-medium hover:border-primary focus:border-primary focus:outline-none'
+                        )}
+                      >
+                        <span className='font-display text-lg'>Features</span>
+                        {!open ? (
+                          <ChevronDownIcon
+                            className={classNames(
+                              open ? 'text-gray-600' : 'text-gray-400',
+                              'ml-2 h-5 w-5 group-hover:text-gray-500'
+                            )}
+                            aria-hidden='true'
+                          />
+                        ) : (
+                          <ChevronUpIcon
+                            className={classNames(
+                              open ? 'text-gray-600' : 'text-gray-400',
+                              'ml-2 h-5 w-5 group-hover:text-gray-500'
+                            )}
+                            aria-hidden='true'
+                          />
+                        )}
+                      </Popover.Button>
+
+                      <Transition
+                        as={Fragment}
+                        enter='transition ease-out duration-800'
+                        enterFrom='opacity-0 -translate-y-1'
+                        enterTo='opacity-100 translate-y-0'
+                        leave='transition ease-in duration-400'
+                        leaveFrom='opacity-100 translate-y-0'
+                        leaveTo='opacity-0 -translate-y-1'
+                      >
+                        <Popover.Panel className='absolute inset-x-0 top-full z-10 hidden transform bg-white shadow-lg md:block bg-transparent'>
+                          <div className='h-[86vh] gap-8 overflow-auto max-w-lg mx-auto '>
+                            <div className='mx-auto flex max-w-7xl flex-col gap-8 overflow-auto bg-stone-50 px-4 py-4 pb-8 sm:px-6 sm:py-4 lg:px-8 lg:py-6 xl:py-8'>
+                              <h3 className='text-md font-display font-bold uppercase text-primary'>
+                                Features
+                              </h3>
+
+                              {features.map((item, index) => (
+                                <a
+                                  key={item.name}
+                                  href='#'
+                                  className={
+                                    '-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-stone-100' +
+                                    (index === softwareSelectedItem
+                                      ? ' bg-gray-100'
+                                      : '')
+                                  }
+                                  onClick={() => setSoftwareSelectedItem(index)}
+                                >
+                                  <div className='flex gap-4 md:h-full'>
+                                    <div className='mt-1 flex-shrink-0'>
+                                      <span className='inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary text-white sm:h-8 sm:w-8'>
+                                        <item.icon
+                                          className='h-6 w-6'
+                                          aria-hidden='true'
+                                        />
+                                      </span>
+                                    </div>
+                                    <div className='ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0'>
+                                      <div>
+                                        <p className='text-base font-medium text-gray-900'>
+                                          {item.name}
+                                        </p>
+                                        <p className='mt-1 text-sm text-gray-500'>
+                                          {item.description}
+                                        </p>
+                                      </div>
+                                      <Link href={item.href} className='mt-2 text-sm font-medium text-primary lg:mt-4'>
+                                        Learn more
+                                        <span aria-hidden='true'> &rarr;</span>
+                                      </Link>
+                                    </div>
+                                  </div>
+                                </a>
+                              ))}
+                            </div>
+                          </div>
+                        </Popover.Panel>
+                      </Transition>
+                    </>
+                  )}
+                </Popover>
+
+                <Popover>
+                  {({ open }) => (
+                    <>
+                      <Popover.Button
+                        className={classNames(
+                          'group inline-flex items-center border-0 border-b-4 border-white bg-white text-base font-medium hover:border-primary focus:border-primary focus:outline-none'
+                        )}
+                      >
+                        <span className='font-display text-lg'>Services</span>
+                        {!open ? (
+                          <ChevronDownIcon
+                            className={classNames(
+                              open ? 'text-gray-600' : 'text-gray-400',
+                              'ml-2 h-5 w-5 group-hover:text-gray-500'
+                            )}
+                            aria-hidden='true'
+                          />
+                        ) : (
+                          <ChevronUpIcon
+                            className={classNames(
+                              open ? 'text-gray-600' : 'text-gray-400',
+                              'ml-2 h-5 w-5 group-hover:text-gray-500'
+                            )}
+                            aria-hidden='true'
+                          />
+                        )}
+                      </Popover.Button>
+
+                      <Transition
+                        as={Fragment}
+                        enter='transition ease-out duration-200'
+                        enterFrom='opacity-0 -translate-y-1'
+                        enterTo='opacity-100 translate-y-0'
+                        leave='transition ease-in duration-150'
+                        leaveFrom='opacity-100 translate-y-0'
+                        leaveTo='opacity-0 -translate-y-1'
+                      >
+                        <Popover.Panel className='absolute inset-x-0 top-full z-10 hidden transform bg-white shadow-lg md:block'>
+                          <div className='mx-auto grid max-w-8xl gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16'>
+                            {services.map((item) => (
+                              <a
+                                key={item.name}
+                                href={item.href}
+                                className='-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-gray-50'
+                              >
+                                <div className='flex md:h-full lg:flex-col'>
+                                  <div className='flex-shrink-0'>
+                                    <span className='inline-flex h-10 w-10 items-center justify-center rounded-md bg-primary text-white sm:h-12 sm:w-12'>
+                                      <item.icon
+                                        className='h-6 w-6'
+                                        aria-hidden='true'
+                                      />
+                                    </span>
+                                  </div>
+                                  <div className='ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0 lg:mt-4'>
+                                    <div>
+                                      <p className='text-base font-medium text-gray-900'>
+                                        {item.name}
+                                      </p>
+                                      <p className='mt-1 text-sm text-gray-500'>
+                                        {item.description}
+                                      </p>
+                                    </div>
+                                    <p className='mt-2 text-sm font-semibold text-primary lg:mt-4'>
+                                      Learn more
+                                      <span aria-hidden='true'> &rarr;</span>
+                                    </p>
+                                  </div>
+                                </div>
+                              </a>
+                            ))}
+                          </div>
+                          <div className='bg-gray-50'>
+                            <div className='mx-auto max-w-7xl space-y-6 px-4 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-6 lg:px-8'>
+                              {callsToAction.map((item) => (
+                                <div key={item.name} className='flow-root'>
+                                  <a
+                                    href={item.href}
+                                    className='-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100'
+                                  >
+                                    <item.icon
+                                      className='h-6 w-6 flex-shrink-0 text-gray-400'
+                                      aria-hidden='true'
+                                    />
+                                    <span className='ml-3'>{item.name}</span>
+                                  </a>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </Popover.Panel>
+                      </Transition>
+                    </>
+                  )}
+                </Popover>
+                <Link
+                  href='/contact-us'
+                  className='border-b-4 border-transparent font-display text-lg font-medium hover:border-primary focus:border-primary'
+                >
+                  Contact Us
+                </Link>
+              </Popover.Group>
+              <div className='flex items-center md:ml-12'>
+                <Button
+                  className='ml-8 text-base font-medium text-white shadow-sm'
+                  href='/contact-us'
+                  color='primary'
+                >
+                  <span>
+                    Get started <span className='hidden lg:inline'>today</span>
+                  </span>
+                </Button>
+
+                {/*<a*/}
+                {/*  href='#'*/}
+                {/*  className='ml-8 inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700'*/}
+                {/*>*/}
+                {/*  Get started today*/}
+                {/*</a>*/}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <Transition
           as={Fragment}
-          enter="duration-150 ease-out"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="duration-150 ease-in"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-        >
-          <Popover.Overlay className="fixed inset-0 bg-slate-300/50" />
-        </Transition.Child>
-        <Transition.Child
-          as={Fragment}
-          enter="duration-150 ease-out"
-          enterFrom="opacity-0 scale-95"
-          enterTo="opacity-100 scale-100"
-          leave="duration-100 ease-in"
-          leaveFrom="opacity-100 scale-100"
-          leaveTo="opacity-0 scale-95"
+          enter='duration-200 ease-out'
+          enterFrom='opacity-0 scale-95'
+          enterTo='opacity-100 scale-100'
+          leave='duration-100 ease-in'
+          leaveFrom='opacity-100 scale-100'
+          leaveTo='opacity-0 scale-95'
         >
           <Popover.Panel
-            as="div"
-            className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
+            focus
+            className='absolute inset-x-0 top-0 z-30 origin-top-right transform p-2 transition md:hidden'
           >
-            <MobileNavLink href="#features">Solutions</MobileNavLink>
-            <MobileNavLink href="#testimonials">Products</MobileNavLink>
-            <MobileNavLink href="#pricing">Services</MobileNavLink>
-            <MobileNavLink href="/login">Industries</MobileNavLink>
-            <hr className="m-2 border-slate-300/40" />
-            <MobileNavLink href="/login">Contact us</MobileNavLink>
+            <div className='divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5'>
+              <div className='px-5 pt-5 pb-6 sm:pb-8'>
+                <div className='flex items-center justify-between'>
+                  <div>
+                    <Image
+                      className='h-8 w-auto'
+                      src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600'
+                      alt='lastfootprint'
+                    />
+                  </div>
+                  <div className='-mr-2'>
+                    <Popover.Button className='inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary'>
+                      <span className='sr-only'>Close menu</span>
+                      <XMarkIcon className='h-6 w-6' aria-hidden='true' />
+                    </Popover.Button>
+                  </div>
+                </div>
+                <div className='mt-6 sm:mt-8'>
+                  <nav>
+                    <div className='grid gap-7'>
+                      {whyBEE.map((item) => (
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          className='-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50'
+                        >
+                          <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md text-white focus:bg-primary sm:h-12 sm:w-12'>
+                            <item.icon className='h-6 w-6' aria-hidden='true' />
+                          </div>
+                          <div className='ml-4 text-base font-medium text-gray-900'>
+                            {item.name}
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                    <div className='mt-8 text-base'>
+                      <a
+                        href='#'
+                        className='font-medium text-primary text-green-500'
+                      >
+                        View all products
+                        <span aria-hidden='true'> &rarr;</span>
+                      </a>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+              <div className='py-6 px-5'>
+                <div className='grid grid-cols-2 gap-4'>
+                  <a
+                    href='#'
+                    className='rounded-md text-base font-medium text-gray-900 hover:text-gray-700'
+                  >
+                    Pricing
+                  </a>
+                  <a
+                    href='#'
+                    className='rounded-md text-base font-medium text-gray-900 hover:text-gray-700'
+                  >
+                    Docs
+                  </a>
+                  <a
+                    href='#'
+                    className='rounded-md text-base font-medium text-gray-900 hover:text-gray-700'
+                  >
+                    Company
+                  </a>
+                  <a
+                    href='#'
+                    className='rounded-md text-base font-medium text-gray-900 hover:text-gray-700'
+                  >
+                    Resources
+                  </a>
+                  <a
+                    href='#'
+                    className='rounded-md text-base font-medium text-gray-900 hover:text-gray-700'
+                  >
+                    Blog
+                  </a>
+                  <a
+                    href='#'
+                    className='rounded-md text-base font-medium text-gray-900 hover:text-gray-700'
+                  >
+                    Contact Sales
+                  </a>
+                </div>
+                <div className='mt-6'>
+                  <a
+                    href='#'
+                    className='flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700'
+                  >
+                    Sign up
+                  </a>
+                  <p className='mt-6 text-center text-base font-medium text-gray-500'>
+                    Existing customer?{' '}
+                    <a href='#' className='text-primary text-green-500'>
+                      Sign in
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
           </Popover.Panel>
-        </Transition.Child>
-      </Transition.Root>
-    </Popover>
-  )
-}
-
-export function Header() {
-  return (
-    <header className="py-5 fixed z-10 w-full bg-white">
-      <Container>
-        <nav className="relative z-50 flex justify-between">
-          <div className="flex items-center md:gap-x-12">
-            <Link href="#" aria-label="Home">
-              <Logo className="h-10 w-auto" />
-            </Link>
-            <div className="hidden md:flex md:gap-x-6 font-bold">
-              <NavLink href="#features">Solutions</NavLink>
-              <NavLink href="#testimonials">Platform</NavLink>
-              <NavLink href="#pricing">Services</NavLink>
-              <NavLink href="#pricing">News & Events</NavLink>
-            </div>
-          </div>
-          <div className="flex items-center gap-x-5 md:gap-x-8 font-bold">
-            <div className="hidden md:block">
-              <NavLink href="/login">Contact us</NavLink>
-            </div>
-            <Button href="/register" color="primary" >
-              <span>
-                Get started <span className="hidden lg:inline">today</span>
-              </span>
-            </Button>
-            <div className="-mr-1 md:hidden">
-              <MobileNavigation />
-            </div>
-          </div>
-        </nav>
-      </Container>
-    </header>
+        </Transition>
+      </Popover>
+    </div>
   )
 }

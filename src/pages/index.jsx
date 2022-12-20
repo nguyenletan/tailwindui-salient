@@ -8,7 +8,7 @@ import { EnergyConsumptionFeature } from '@/components/EnergyConsumptionFeature'
 import { ESGRequirementsFeature } from '@/components/ESGRequirementsFeature'
 
 import { FirstFFeatures } from '@/components/FirstFFeature'
-import Header2 from '@/components/Header2'
+import Header from '@/components/Header'
 
 import { VideoContent } from '@/components/VideoContent'
 
@@ -24,7 +24,7 @@ export default function Home() {
           content='Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.'
         />
       </Head>
-      <Header2 />
+      <Header />
 
       <main>
         <Hero />
