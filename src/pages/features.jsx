@@ -1,18 +1,12 @@
 import Head from 'next/head'
 import { Footer } from '@/components/Footer'
 import Header2 from '@/components/Header2'
-import { HeroForSubPage } from '@/components/HeroForSubPage'
-import { Overview } from '@/components/why-bee/Overview'
-import { Transparent } from '@/components/why-bee/Transparent'
-import { Forcasting } from '@/components/why-bee/Forcasting'
-import { Compliance } from '@/components/why-bee/Compliance'
-import { Effiency } from '@/components/why-bee/Effiency'
-import { InformacedChoice } from '@/components/why-bee/InformacedChoice'
 import { HeroForFeatures } from '@/components/Features/HeroForFeatures'
-import {
-  NotJustAnotherFeature
-} from '@/components/Features/NotJustAnotherFeature'
+import { NotJustAnotherFeature } from '@/components/Features/NotJustAnotherFeature'
 import { BuildingPeformace } from '@/components/Features/BuildingPeformace'
+import { Compare } from '@/components/Features/Compare'
+import { Improve } from '@/components/Features/Improve'
+import { AssetReliability } from '@/components/Features/AsserReliability'
 
 export default function Features() {
   return (
@@ -32,7 +26,9 @@ export default function Features() {
         <HeroForFeatures />
         <NotJustAnotherFeature />
         <BuildingPeformace />
-
+        <Compare />
+        <Improve />
+        <AssetReliability />
       </main>
       <Footer />
     </>

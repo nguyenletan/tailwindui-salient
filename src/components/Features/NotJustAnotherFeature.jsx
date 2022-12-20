@@ -1,6 +1,4 @@
-import Image from 'next/image'
 import { Container } from '@/components/Container'
-import feature from '@/images/why-bee-overview.webp'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Button } from '@/components/Button'
@@ -35,7 +33,7 @@ export function NotJustAnotherFeature() {
               BEE enables a continuous improvement process that suits your
               business needs.
             </p>
-            <div className='justify-left mt-10  gap-x-6'>
+            <div className='justify-left mt-10 gap-x-6'>
               <Button href='/contact-us' className='text-lg' color='primary'>
                 Get Started
               </Button>
@@ -56,7 +54,7 @@ export function NotJustAnotherFeature() {
               autoPlay
               loop
               type='video/mp4'
-              src="https://github.com/BEEUK/cdn/blob/master/BEE/BEE%20Process%20Animation.mp4?raw=true" />
+              src="https://github.com/BEEUK/cdn/blob/master/BEE/Continuous%20Monitoring%20and%20Improvement.mp4?raw=true" />
           </div>
         </motion.div>
       </Container>

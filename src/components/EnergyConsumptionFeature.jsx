@@ -25,7 +25,6 @@ export function EnergyConsumptionFeature() {
         >
           <div className='relative flex'>
             <Image
-              placeholder='blur'
               quality={100}
               className=''
               backgroundColor='#fff'

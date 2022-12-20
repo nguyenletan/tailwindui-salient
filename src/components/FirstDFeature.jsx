@@ -26,7 +26,6 @@ export function FirstDFeatures() {
 
             <div className='h-[500px] w-2/5'>
               <Image
-                placeholder='blur'
                 quality={100}
                 className=''
                 src={feature}

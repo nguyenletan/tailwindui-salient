@@ -18,7 +18,6 @@ export function ESGRequirementsFeature() {
         <div className='flex w-full justify-start lg:hidden'>
           <div className='relative flex justify-end self-center'>
             <Image
-              placeholder='blur'
               quality={100}
               className=''
               src={feature}
@@ -89,7 +88,6 @@ export function ESGRequirementsFeature() {
         >
           <div className='relative flex justify-end self-center'>
             <Image
-              placeholder='blur'
               quality={100}
               className=''
               src={feature}

@@ -26,7 +26,6 @@ export function FirstEFeatures() {
         >
           <div className='relative flex justify-end self-center'>
             <Image
-              placeholder='blur'
               quality={100}
               className=''
               src={feature}
@@ -61,7 +60,6 @@ export function FirstEFeatures() {
         >
           <div className='relative flex justify-end self-center'>
             <Image
-              placeholder='blur'
               quality={100}
               className=''
               src={feature}

@@ -29,7 +29,6 @@ export function Compliance() {
         >
           <div className='relative flex justify-end self-end'>
             <Image
-              placeholder='blur'
               quality={100}
               className=''
               src={feature1}
@@ -38,7 +37,6 @@ export function Compliance() {
           </div>
           <div className='relative flex justify-end self-end mt-12'>
             <Image
-              placeholder='blur'
               quality={100}
               className=''
               src={feature4}
@@ -64,7 +62,7 @@ export function Compliance() {
               <Image src={feature2} alt='' quality={100} />
             </div>
             <div>
-              <Image src={feature3} alt='' placeholder='blur' quality={100} />
+              <Image src={feature3} alt='' quality={100} />
             </div>
             <div className='justify-left mt-10  gap-x-6'>
               <Button href='/contact-us' className='text-lg' color='primary'>

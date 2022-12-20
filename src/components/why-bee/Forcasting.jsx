@@ -26,7 +26,6 @@ export function Forcasting() {
         >
           <div className='relative flex justify-end self-end'>
             <Image
-              placeholder='blur'
               quality={100}
               className=''
               src={feature2}
@@ -55,7 +54,7 @@ export function Forcasting() {
               buildings group portfolio
             </p>
             <div>
-              <Image src={feature1} alt='' placeholder='blur' quality={100} />
+              <Image src={feature1} alt='' quality={100} />
             </div>
           </div>
         </div>
@@ -69,7 +68,6 @@ export function Forcasting() {
         >
           <div className='relative flex justify-end self-end w-full'>
             <Image
-              placeholder='blur'
               quality={100}
               className=''
               src={feature2}

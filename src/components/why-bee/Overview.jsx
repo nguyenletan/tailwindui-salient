@@ -26,7 +26,6 @@ export function Overview() {
         >
           <div className='relative flex justify-end self-end'>
             <Image
-              placeholder='blur'
               quality={100}
               className=''
               src={feature}
@@ -65,7 +64,6 @@ export function Overview() {
         >
           <div className='relative flex justify-end self-end'>
             <Image
-              placeholder='blur'
               quality={100}
               className=''
               src={feature}
