@@ -3,7 +3,7 @@ import { Footer } from '@/components/Footer'
 import Header from '@/components/Header'
 import { HeroForFeatures } from '@/components/Features/HeroForFeatures'
 import { NotJustAnotherFeature } from '@/components/Features/NotJustAnotherFeature'
-import { BuildingPeformace } from '@/components/Features/BuildingPeformace'
+import { BuildingPerformance } from '@/components/Features/BuildingPerformance'
 import { Compare } from '@/components/Features/Compare'
 import { Improve } from '@/components/Features/Improve'
 import { AssetReliability } from '@/components/Features/AsserReliability'
@@ -25,7 +25,7 @@ export default function Features() {
       <main>
         <HeroForFeatures />
         <NotJustAnotherFeature />
-        <BuildingPeformace />
+        <BuildingPerformance />
         <Compare />
         <Improve />
         <AssetReliability />

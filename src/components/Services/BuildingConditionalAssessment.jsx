@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import { Container } from '@/components/Container'
-import feature from '@/images/building-peformance.webp'
+import feature from '@/images/building-assessment.webp'
+import feature2 from '@/images/conditional-assessment.webp'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Button } from '@/components/Button'
 
-export function BuildingPeformace() {
+export function BuildingConditionalAssessment() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: false })
 
@@ -25,32 +25,26 @@ export function BuildingPeformace() {
           className='flex hidden w-full justify-end lg:block lg:w-3/5'
         >
           <div className='relative flex justify-end self-end'>
-            <Image
-              quality={100}
-              className=''
-              src={feature}
-              alt=''
-            />
+            <Image quality={100} className='' src={feature} alt='' />
           </div>
         </motion.div>
 
         <div className='flex w-full justify-center lg:w-2/5' ref={ref}>
           <div className='md:text-left xl:max-w-none'>
             <span className='block pb-3 font-display text-sm font-bold uppercase text-primary'>
-              Why BEE | Building Performance
+              Services | CONDITION ASSESSMENT
             </span>
             <h2 className='font-display text-3xl font-extrabold !leading-tight tracking-tight text-deep-dark sm:text-3xl md:text-4xl'>
-              Building Performance - Continuous monitoring
+              Building Condition Assessment
             </h2>
             <p className='mt-6 text-lg tracking-tight text-deep-dark'>
-              Quickly see how your buildings are performing over time in terms
-              of Energy Consumption, Energy Cost and Carbon Emissions.
+              QGet visibility on the energy performance of all your buildings at
+              the system and subsystem level and develop an energy savings plan
+              that is sustainable and meets your organisation’s ESG objectives.
             </p>
-            <div className='justify-left mt-10  gap-x-6'>
-              <Button href='/contact-us' className='text-lg' color='primary'>
-                Get Started
-              </Button>
-            </div>
+            <p className='justify-left mt-10'>
+              <Image quality={100} className='' src={feature2} alt='' />
+            </p>
           </div>
         </div>
       </Container>

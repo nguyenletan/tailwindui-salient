@@ -786,28 +786,28 @@ const services = [
     name: 'Consultancy',
     description:
       'Our expertise goes beyond software we work with you to find the most suitable solution that works best for your building’s operation and business objectives.',
-    href: '#',
+    href: 'services#consultancy',
     icon: DocumentCheckIcon,
   },
   {
     name: 'Building Condition Assessment',
     description:
       'Get visibility on the energy performance of all your buildings at the system and subsystem level and develop an energy savings plan that is sustainable and meets your organisation’s ESG objectives.',
-    href: '#',
+    href: 'services#B=building-condition-assessment',
     icon: BuildingOffice2Icon,
   },
   {
     name: 'Building Plant and Equipment Audit',
     description:
       'Understanding the current state of your facility’s plant and equipment helps with the rolling out your building maintenance strategies.',
-    href: '#',
+    href: 'services#B=building-plant-equipment-audit',
     icon: ShieldCheckIcon,
   },
   {
     name: 'Software Service Consulting',
     description:
       'Provide the integration of your building and critical plant and equipment data and APIs of your building’s and existing BMS, BEMS, IWMS and Billing and Consumption information onto one easy to use solution.',
-    href: '#',
+    href: 'services#software-service-consulting',
     icon: ComputerDesktopIcon,
   },
 ]
@@ -1085,10 +1085,10 @@ export default function Header() {
                                         {item.description}
                                       </p>
                                     </div>
-                                    <p className='mt-2 text-sm font-semibold text-primary lg:mt-4'>
+                                    <Link href={item.href} className='mt-2 text-sm font-medium text-primary lg:mt-4'>
                                       Learn more
                                       <span aria-hidden='true'> &rarr;</span>
-                                    </p>
+                                    </Link>
                                   </div>
                                 </div>
                               </a>
