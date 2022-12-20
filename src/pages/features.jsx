@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { Footer } from '@/components/Footer'
-import Header2 from '@/components/Header2'
+import Header from '@/components/Header'
 import { HeroForFeatures } from '@/components/Features/HeroForFeatures'
 import { NotJustAnotherFeature } from '@/components/Features/NotJustAnotherFeature'
 import { BuildingPeformace } from '@/components/Features/BuildingPeformace'
@@ -20,7 +20,7 @@ export default function Features() {
           content='Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.'
         />
       </Head>
-      <Header2 />
+      <Header />
 
       <main>
         <HeroForFeatures />

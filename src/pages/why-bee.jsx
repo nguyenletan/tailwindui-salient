@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { Footer } from '@/components/Footer'
-import Header2 from '@/components/Header2'
+import Header from '@/components/Header'
 import { HeroForSubPage } from '@/components/HeroForSubPage'
 import { Overview } from '@/components/why-bee/Overview'
 import { Transparent } from '@/components/why-bee/Transparent'
@@ -21,7 +21,7 @@ export default function WhyBee() {
           content='Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.'
         />
       </Head>
-      <Header2 />
+      <Header />
 
       <main>
         <HeroForSubPage />
