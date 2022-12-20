@@ -5,7 +5,16 @@ import { Hero } from '@/components/Services/Hero'
 import {
   BuildingConditionalAssessment
 } from '@/components/Services/BuildingConditionalAssessment'
-import { OperationOfThings } from '@/components/Services/OeprationOfThings'
+import { OperationOfThings } from '@/components/Services/OperationOfThings'
+import {
+  EnvironmentalConditionsYourBuilding
+} from '@/components/Services/EnvironmentalConditionsYourBuilding'
+import {
+  ManagingYourDigitalTwin
+} from '@/components/Services/ManagingYourDigitalTwin'
+import {
+  DataDrivenIntelligence
+} from '@/components/Services/DataDrivenIntelligence'
 
 export default function Features() {
   return (
@@ -25,6 +34,9 @@ export default function Features() {
         <Hero />
         <BuildingConditionalAssessment/>
         <OperationOfThings/>
+        <EnvironmentalConditionsYourBuilding/>
+        <ManagingYourDigitalTwin />
+        <DataDrivenIntelligence />
       </main>
       <Footer />
     </>

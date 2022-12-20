@@ -27,7 +27,6 @@ export function OperationOfThings() {
             <Image quality={100} className='' src={feature} alt='' />
           </div>
         </motion.div>
-
         <div className='flex w-full justify-center lg:w-2/5' ref={ref}>
           <div className='md:text-left xl:max-w-none'>
             <span className='block pb-3 font-display text-sm font-bold uppercase text-primary'>
