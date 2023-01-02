@@ -1,5 +1,4 @@
 import { Container } from '@/components/Container'
-import BlackDishSVG from '@/components/BlackDishSVG'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import { useRef, useState } from 'react'
 import styled from 'styled-components'
@@ -162,12 +161,14 @@ export default function SecondFeature() {
       //className="lg:grid lg:grid-cols-2 lg:gap-8"
     >
       <Container>
-        <div className='lg:grid cols-1 lg:grid-cols-2 lg:gap-10'>
+        <div className='cols-1 lg:grid lg:grid-cols-2 lg:gap-10'>
           <div>
-            <div className='bg-neutral-100 px-8 lg:px-16 pt-14 pb-64'>
-              <p className='text-lg text-gray-500 pb-4'>SOLUTION METHODOLOGY</p>
+            <div className='bg-neutral-100 px-8 pt-14 pb-64 lg:px-16'>
+              <p className='pb-4 text-lg text-gray-500'>
+                About Bee | Methodology
+              </p>
               <h2 className='font-display text-4xl font-bold leading-tight text-deep-dark'>
-                Here’s how it all comes together
+                How it all comes together
               </h2>
 
               {/*<h3 className='mt-8 font-display text-2xl font-bold text-neutral-700'>*/}
@@ -185,11 +186,28 @@ export default function SecondFeature() {
             </div>
 
             <div
-              className='bg-neutral-100 px-8 lg:px-16 pb-64'
+              className='bg-neutral-100 px-8 pb-64 lg:px-16'
               ref={currentBuildingPerformanceBoxRef}
             >
               <h3 className='font-display text-xl font-bold leading-tight text-neutral-700'>
-                Current Building Performance
+                Find your building’s current performance
+              </h3>
+              <p className='mt-8 text-lg'>
+                Using building information and sub-meter readings, track key
+                energy and emission numbers to see which sub-systems have the
+                largest impacts. Drill down to critical plant and equipment and
+                see the factors that influence your building’s energy
+                consumption. Track key building information to understand and
+                make informed decisions.
+              </p>
+            </div>
+
+            <div
+              className='bg-neutral-100 px-8 pb-64 lg:px-16'
+              ref={compareBoxRef}
+            >
+              <h3 className='font-display text-xl font-bold leading-tight text-neutral-700'>
+                Comparing your building’s current performance
               </h3>
               <p className='mt-8 text-lg'>
                 Compare each building’s performance with similar ones in your
@@ -201,9 +219,12 @@ export default function SecondFeature() {
               </p>
             </div>
 
-            <div className='bg-neutral-100 px-8 lg:px-16 pb-64' ref={compareBoxRef}>
+            <div
+              className='bg-neutral-100 px-8 pb-64 lg:px-16'
+              ref={improveBoxRef}
+            >
               <h3 className='font-display text-xl font-bold leading-tight text-neutral-700'>
-                Compare Building Performance
+                Improving your building’s performance
               </h3>
               <p className='mt-8 text-lg'>
                 Identify potential energy performance improvements achievable
@@ -214,9 +235,12 @@ export default function SecondFeature() {
               </p>
             </div>
 
-            <div className='bg-neutral-100 px-8 lg:px-16 pb-64' ref={improveBoxRef}>
+            <div
+              className='bg-neutral-100 px-8 pb-64 lg:px-16'
+              ref={assetReliabilityBoxRef}
+            >
               <h3 className='font-display text-xl font-bold leading-tight text-neutral-700'>
-                Improve Building Performance
+                Check on your asset reliability performance
               </h3>
               <p className='mt-8 text-lg'>
                 Monitor the health of critical assets and receive alerts when
@@ -227,24 +251,8 @@ export default function SecondFeature() {
                 your business priorities.
               </p>
             </div>
-
-            <div
-              className='bg-neutral-100 px-8 lg:px-16 pb-64'
-              ref={assetReliabilityBoxRef}
-            >
-              <h3 className='font-display text-xl font-bold leading-tight text-neutral-700'>
-                Asset Reliability
-              </h3>
-              <p className='mt-8 text-lg'>
-                Initially when our Building Energy Estimator was created it was
-                to quickly and easily enable you to get a quick overview of the
-                current state of your building compared to current building
-                regulations and what’s the best energy and CO2 performance you
-                could get from your building.
-              </p>
-            </div>
           </div>
-          <div className='mt-[7%] h-[90%] self-center px-4 hidden lg:block'>
+          <div className='mt-[7%] hidden h-[90%] self-center px-4 lg:block'>
             <div className='stack-layer relative sticky top-[250px] flex h-[230px] flex-col'>
               <CurrentBuildingStack
                 className={
@@ -258,7 +266,7 @@ export default function SecondFeature() {
                     Current Building Performance
                   </p>
                 </div>
-                <ColorDishSVG color='#87972fde' />
+                <ColorDishSVG color='#71717Ade' />
               </CurrentBuildingStack>
 
               <CompareStack
@@ -273,7 +281,7 @@ export default function SecondFeature() {
                     Compare Building Performance
                   </p>
                 </div>
-                <ColorDishSVG color='#BF4E03de' />
+                <ColorDishSVG color='#52525Bde' />
               </CompareStack>
 
               <ImproveStack
@@ -288,13 +296,13 @@ export default function SecondFeature() {
                     Improve Building Performance
                   </p>
                 </div>
-                <ColorDishSVG color='#3f3cbbde' />
+                <ColorDishSVG color='#3F3F46de' />
               </ImproveStack>
 
               <AssetReliabilityStack
                 className={
                   activeAssetReliabilityStack
-                    ? 'active absolutez-20 grid w-full grid-cols-2 items-center gap-2'
+                    ? 'active absolute z-20 grid w-full grid-cols-2 items-center gap-2'
                     : 'absolute z-20 grid w-full grid-cols-2 items-center gap-2'
                 }
               >
@@ -304,8 +312,7 @@ export default function SecondFeature() {
                   </p>
                 </div>
                 <div className='stack-layer-end'>
-                  {/*<BlackDishSVG/>*/}
-                  <ColorDishSVG color='#2E424D' />
+                  <ColorDishSVG color='#27272Ade' />
                 </div>
               </AssetReliabilityStack>
             </div>

@@ -36,9 +36,9 @@ export function Logo() {
           Lastfootprint
         </Link>{' '}
         |{' '}
-        <a target='_blank' href='https://lastingfootprint.ai' rel="noreferrer">
+        <span rel="noreferrer">
           BEE
-        </a>
+        </span>
       </h1>
     </div>
   )

@@ -62,6 +62,437 @@ import { Logo } from '@/components/Logo'
 import { Button } from '@/components/Button'
 import Image from 'next/image'
 
+const aboutBEE = [
+  {
+    name: 'Transform your energy management',
+    description:
+      'Transform your operations with one flexible, powerful robust software suite that has solutions for a myriad of business needs.',
+    subDescription: '',
+    href: '/#transform-your-energy-management',
+    icon: ChartBarIcon,
+    subItems: [
+      {
+        title: 'Overview of  your properties performance',
+        icon: ArrowDownOnSquareStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Cost Breakdown',
+        icon: CurrencyPoundIcon,
+        href: '#',
+      },
+      {
+        title: 'Total Energy Consumption',
+        icon: BoltIcon,
+        href: '#',
+      },
+      {
+        title: 'CO2 Breakdown',
+        icon: GlobeEuropeAfricaIcon,
+        href: '#',
+      },
+      {
+        title: 'Total Energy Cost',
+        icon: BanknotesIcon,
+        href: '#',
+      },
+      {
+        title: 'Electrical Systems Information',
+        icon: BoltSlashIcon,
+        href: '#',
+      },
+      {
+        title: 'Total Carbon Emissions',
+        icon: GlobeAltIcon,
+        href: '#',
+      },
+      {
+        title: 'Incidental Gains Information',
+        icon: ArrowTrendingUpIcon,
+        href: '#',
+      },
+      {
+        title: 'Operational Efficiency',
+        icon: ScaleIcon,
+        href: '#',
+      },
+      {
+        title: 'Historical  Comparison',
+        icon: PencilSquareIcon,
+        href: '#',
+      },
+      {
+        title: 'Utilisation Overview',
+        icon: ChartPieIcon,
+        href: '#',
+      },
+      {
+        title: 'Consumption Breakdown',
+        icon: DocumentArrowUpIcon,
+        href: '#',
+      },
+      {
+        title: 'Save and Export',
+        icon: ChevronUpIcon,
+        href: '#',
+      },
+    ],
+  },
+  {
+    name: 'Run 24/7',
+    description:
+      'Manage your entire real estate portfolio 24/7 with a comprehensive suite specifically designed for the property industry.',
+    subDescription:
+      '',
+    href: '/#run-247',
+    icon: ScaleIcon,
+    subItems: [
+      {
+        title: 'Building Energy Performance',
+        icon: BuildingLibraryIcon,
+        href: '#',
+      },
+      {
+        title: 'Best-in-Class Comparison',
+        icon: HandThumbUpIcon,
+        href: '#',
+      },
+      {
+        title: 'CO2 Emission Performance',
+        icon: TruckIcon,
+        href: '#',
+      },
+      {
+        title: 'Multi-Building Comparison',
+        icon: BuildingOffice2Icon,
+        href: '#',
+      },
+      {
+        title: 'Sub-system Performance',
+        icon: DocumentChartBarIcon,
+        href: '#',
+      },
+      {
+        title: 'Multi-Sub-System Comparison',
+        icon: PauseIcon,
+        href: '#',
+      },
+      {
+        title: 'Envelope Performance Comparison',
+        icon: PresentationChartLineIcon,
+        href: '#',
+      },
+      {
+        title: 'Facilities Selection',
+        icon: DocumentCheckIcon,
+        href: '#',
+      },
+      {
+        title: 'Sub-system Comparison',
+        icon: PresentationChartBarIcon,
+        href: '#',
+      },
+      {
+        title: 'Edit Input',
+        icon: DocumentPlusIcon,
+        href: '#',
+      },
+      {
+        title: 'Regulatory  Comparison',
+        icon: Bars2Icon,
+        href: '#',
+      },
+      {
+        title: 'Save and Export',
+        icon: CloudArrowUpIcon,
+        href: '#',
+      },
+    ],
+  },
+  {
+    name: 'User friendly software',
+    description:
+      'A modern cloud-based software platform for managing commercial and corporate real estate’s energy consumption and CO2 emissions.',
+    subDescription:
+      '',
+    href: '/#user-friendly-software',
+    icon: ArrowTrendingUpIcon,
+    subItems: [
+      {
+        title: 'Annual Energy Savings',
+        icon: BarsArrowDownIcon,
+        href: '#',
+      },
+      {
+        title: 'CO2 Emissions improvements',
+        icon: BarsArrowUpIcon,
+        href: '#',
+      },
+      {
+        title: 'Annual energy cost savings',
+        icon: XMarkIcon,
+        href: '#',
+      },
+      {
+        title: 'Energy savings breakdown',
+        icon: Square3Stack3DIcon,
+        href: '#',
+      },
+      {
+        title: 'Annual CO2 emissions avoided',
+        icon: XCircleIcon,
+        href: '#',
+      },
+      {
+        title: 'Cost savings breakdown',
+        icon: CurrencyDollarIcon,
+        href: '#',
+      },
+      {
+        title: 'Investment cost and payback',
+        icon: BanknotesIcon,
+        href: '#',
+      },
+      {
+        title: 'CO2 Emissions breakdown',
+        icon: PuzzlePieceIcon,
+        href: '#',
+      },
+      {
+        title: 'Energy usage intensity reduction',
+        icon: ScaleIcon,
+        href: '#',
+      },
+      {
+        title: 'Breakdown of improvements',
+        icon: RectangleStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Building energy improvements',
+        icon: ArrowTrendingUpIcon,
+        href: '#',
+      },
+      {
+        title: 'Improvement measures',
+        icon: ArrowUturnUpIcon,
+        href: '#',
+      },
+    ],
+  },
+  {
+    name: 'A single platform for your ESG requirements',
+    description:
+      'A software that your and your tenants can use to coordinate and manage your ESG strategy.',
+    subDescription:
+      '',
+    href: '/#a-single-platform',
+    icon: Squares2X2Icon,
+    subItems: [
+      {
+        title: 'Asset health',
+        icon: HeartIcon,
+        href: '#',
+      },
+      {
+        title: 'Annual energy consumption ',
+        icon: BoltIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential issues and risks',
+        icon: ExclamationTriangleIcon,
+        href: '#',
+      },
+      {
+        title: 'Parts and reliability',
+        icon: CircleStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Sub-system health',
+        icon: InboxStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Depreciation',
+        icon: DocumentMinusIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential Issues',
+        icon: ExclamationCircleIcon,
+        href: '#',
+      },
+      {
+        title: 'Asset parts and services',
+        icon: WrenchIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential Faults',
+        icon: ShieldExclamationIcon,
+        href: '#',
+      },
+      {
+        title: 'Alerts',
+        icon: BookmarkSlashIcon,
+        href: '#',
+      },
+      {
+        title: 'Maintenance budget by sub-system',
+        icon: CurrencyDollarIcon,
+        href: '#',
+      },
+      {
+        title: 'Maintenance & sensor logs',
+        icon: WrenchScrewdriverIcon,
+        href: '#',
+      },
+    ],
+  },
+  {
+    name: 'Solution Methodology',
+    description:
+      'Here’s how it all comes together from current to future performance, comparison through to improvements and the health of your building’s plant and equipment',
+    href: '/why-bee#for-efficiency',
+    icon: Square3Stack3DIcon,
+    subItems: [
+      {
+        title: 'Asset health',
+        icon: HeartIcon,
+        href: '#',
+      },
+      {
+        title: 'Annual energy consumption ',
+        icon: BoltIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential issues and risks',
+        icon: ExclamationTriangleIcon,
+        href: '#',
+      },
+      {
+        title: 'Parts and reliability',
+        icon: CircleStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Sub-system health',
+        icon: InboxStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Depreciation',
+        icon: DocumentMinusIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential Issues',
+        icon: ExclamationCircleIcon,
+        href: '#',
+      },
+      {
+        title: 'Asset parts and services',
+        icon: WrenchIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential Faults',
+        icon: ShieldExclamationIcon,
+        href: '#',
+      },
+      {
+        title: 'Alerts',
+        icon: BookmarkSlashIcon,
+        href: '#',
+      },
+      {
+        title: 'Maintenance budget by sub-system',
+        icon: CurrencyDollarIcon,
+        href: '#',
+      },
+      {
+        title: 'Maintenance & sensor logs',
+        icon: WrenchScrewdriverIcon,
+        href: '#',
+      },
+    ],
+  },
+  {
+    name: 'Average Electricity prices',
+    description:
+      'A review of the monthly wholesale price of electricity from Jan to September.',
+    subDescription:
+      '',
+    href: '/#average-electricity-prices',
+    icon: InformationCircleIcon,
+    subItems: [
+      {
+        title: 'Asset health',
+        icon: HeartIcon,
+        href: '#',
+      },
+      {
+        title: 'Annual energy consumption ',
+        icon: BoltIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential issues and risks',
+        icon: ExclamationTriangleIcon,
+        href: '#',
+      },
+      {
+        title: 'Parts and reliability',
+        icon: CircleStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Sub-system health',
+        icon: InboxStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Depreciation',
+        icon: DocumentMinusIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential Issues',
+        icon: ExclamationCircleIcon,
+        href: '#',
+      },
+      {
+        title: 'Asset parts and services',
+        icon: WrenchIcon,
+        href: '#',
+      },
+      {
+        title: 'Potential Faults',
+        icon: ShieldExclamationIcon,
+        href: '#',
+      },
+      {
+        title: 'Alerts',
+        icon: BookmarkSlashIcon,
+        href: '#',
+      },
+      {
+        title: 'Maintenance budget by sub-system',
+        icon: CurrencyDollarIcon,
+        href: '#',
+      },
+      {
+        title: 'Maintenance & sensor logs',
+        icon: WrenchScrewdriverIcon,
+        href: '#',
+      },
+    ],
+  },
+]
+
 const whyBEE = [
   {
     name: 'Overview',
@@ -850,6 +1281,99 @@ export default function Header() {
                           'group inline-flex items-center border-b-4 border-transparent bg-white text-base font-medium hover:border-primary focus:border-primary focus:outline-none'
                         )}
                       >
+                        <span className='font-display text-lg'>About BEE</span>
+                        {!open ? (
+                          <ChevronDownIcon
+                            className={classNames(
+                              open ? 'text-gray-600' : 'text-gray-400',
+                              'ml-2 h-5 w-5 group-hover:text-gray-500'
+                            )}
+                            aria-hidden='true'
+                          />
+                        ) : (
+                          <ChevronUpIcon
+                            className={classNames(
+                              open ? 'text-gray-600' : 'text-gray-400',
+                              'ml-2 h-5 w-5 group-hover:text-gray-500'
+                            )}
+                            aria-hidden='true'
+                          />
+                        )}
+                      </Popover.Button>
+
+                      <Transition
+                        as={Fragment}
+                        enter='transition ease-out duration-800'
+                        enterFrom='opacity-0 -translate-y-1'
+                        enterTo='opacity-100 translate-y-0'
+                        leave='transition ease-in duration-400'
+                        leaveFrom='opacity-100 translate-y-0'
+                        leaveTo='opacity-0 -translate-y-1'
+                      >
+                        <Popover.Panel className='absolute inset-x-0 top-full z-10 hidden transform bg-white bg-transparent shadow-lg md:block'>
+                          <div className='mx-auto grid h-[86vh] max-w-lg gap-8 overflow-auto'>
+                            <div className='mx-auto flex max-w-7xl flex-col gap-8 overflow-auto bg-stone-50 px-4 py-4 pb-8 sm:px-6 sm:py-4 lg:px-8 lg:py-6 xl:py-8'>
+                              <h3 className='text-md font-display font-bold uppercase text-primary'>
+                                About BEE?
+                              </h3>
+
+                              {aboutBEE.map((item, index) => (
+                                <a
+                                  key={item.name}
+                                  href='#'
+                                  className={
+                                    '-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-stone-100' +
+                                    (index === softwareSelectedItem
+                                      ? ' bg-gray-100'
+                                      : '')
+                                  }
+                                  onClick={() => setSoftwareSelectedItem(index)}
+                                >
+                                  <div className='flex gap-4 md:h-full'>
+                                    <div className='mt-1 flex-shrink-0'>
+                                      <span className='inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary text-white sm:h-8 sm:w-8'>
+                                        <item.icon
+                                          className='h-6 w-6'
+                                          aria-hidden='true'
+                                        />
+                                      </span>
+                                    </div>
+                                    <div className='ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0'>
+                                      <div>
+                                        <p className='text-base font-medium text-gray-900'>
+                                          {item.name}
+                                        </p>
+                                        <p className='mt-1 text-sm text-gray-500'>
+                                          {item.description}
+                                        </p>
+                                      </div>
+                                      <Link
+                                        href={item.href}
+                                        className='mt-2 text-sm font-medium text-primary lg:mt-4'
+                                      >
+                                        Learn more
+                                        <span aria-hidden='true'> &rarr;</span>
+                                      </Link>
+                                    </div>
+                                  </div>
+                                </a>
+                              ))}
+                            </div>
+                          </div>
+                        </Popover.Panel>
+                      </Transition>
+                    </>
+                  )}
+                </Popover>
+
+                <Popover>
+                  {({ open }) => (
+                    <>
+                      <Popover.Button
+                        className={classNames(
+                          'group inline-flex items-center border-b-4 border-transparent bg-white text-base font-medium hover:border-primary focus:border-primary focus:outline-none'
+                        )}
+                      >
                         <span className='font-display text-lg'>Why BEE</span>
                         {!open ? (
                           <ChevronDownIcon
@@ -879,8 +1403,8 @@ export default function Header() {
                         leaveFrom='opacity-100 translate-y-0'
                         leaveTo='opacity-0 -translate-y-1'
                       >
-                        <Popover.Panel className='absolute inset-x-0 top-full z-10 hidden transform bg-white shadow-lg md:block bg-transparent'>
-                          <div className='grid h-[86vh] gap-8 overflow-auto max-w-lg mx-auto'>
+                        <Popover.Panel className='absolute inset-x-0 top-full z-10 hidden transform bg-white bg-transparent shadow-lg md:block'>
+                          <div className='mx-auto grid h-[86vh] max-w-lg gap-8 overflow-auto'>
                             <div className='mx-auto flex max-w-7xl flex-col gap-8 overflow-auto bg-stone-50 px-4 py-4 pb-8 sm:px-6 sm:py-4 lg:px-8 lg:py-6 xl:py-8'>
                               <h3 className='text-md font-display font-bold uppercase text-primary'>
                                 Why BEE?
@@ -916,7 +1440,10 @@ export default function Header() {
                                           {item.description}
                                         </p>
                                       </div>
-                                      <Link href={item.href} className='mt-2 text-sm font-medium text-primary lg:mt-4'>
+                                      <Link
+                                        href={item.href}
+                                        className='mt-2 text-sm font-medium text-primary lg:mt-4'
+                                      >
                                         Learn more
                                         <span aria-hidden='true'> &rarr;</span>
                                       </Link>
@@ -969,8 +1496,8 @@ export default function Header() {
                         leaveFrom='opacity-100 translate-y-0'
                         leaveTo='opacity-0 -translate-y-1'
                       >
-                        <Popover.Panel className='absolute inset-x-0 top-full z-10 hidden transform bg-white shadow-lg md:block bg-transparent'>
-                          <div className='h-[86vh] gap-8 overflow-auto max-w-lg mx-auto '>
+                        <Popover.Panel className='absolute inset-x-0 top-full z-10 hidden transform bg-white bg-transparent shadow-lg md:block'>
+                          <div className='mx-auto h-[86vh] max-w-lg gap-8 overflow-auto '>
                             <div className='mx-auto flex max-w-7xl flex-col gap-8 overflow-auto bg-stone-50 px-4 py-4 pb-8 sm:px-6 sm:py-4 lg:px-8 lg:py-6 xl:py-8'>
                               <h3 className='text-md font-display font-bold uppercase text-primary'>
                                 Features
@@ -1006,7 +1533,10 @@ export default function Header() {
                                           {item.description}
                                         </p>
                                       </div>
-                                      <Link href={item.href} className='mt-2 text-sm font-medium text-primary lg:mt-4'>
+                                      <Link
+                                        href={item.href}
+                                        className='mt-2 text-sm font-medium text-primary lg:mt-4'
+                                      >
                                         Learn more
                                         <span aria-hidden='true'> &rarr;</span>
                                       </Link>
@@ -1060,7 +1590,7 @@ export default function Header() {
                         leaveTo='opacity-0 -translate-y-1'
                       >
                         <Popover.Panel className='absolute inset-x-0 top-full z-10 hidden transform bg-white shadow-lg md:block'>
-                          <div className='mx-auto grid max-w-8xl gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16'>
+                          <div className='max-w-8xl mx-auto grid gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16'>
                             {services.map((item) => (
                               <a
                                 key={item.name}
@@ -1085,7 +1615,10 @@ export default function Header() {
                                         {item.description}
                                       </p>
                                     </div>
-                                    <Link href={item.href} className='mt-2 text-sm font-medium text-primary lg:mt-4'>
+                                    <Link
+                                      href={item.href}
+                                      className='mt-2 text-sm font-medium text-primary lg:mt-4'
+                                    >
                                       Learn more
                                       <span aria-hidden='true'> &rarr;</span>
                                     </Link>

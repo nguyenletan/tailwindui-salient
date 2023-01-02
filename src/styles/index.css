@@ -5,7 +5,7 @@
 }
 
 .stack-layer-end::after {
-    background-color: rgba(135, 151, 47, 0.45);
+    background-color: rgba(24, 24, 27,  0.125);
     transform: scale(1) translate3d(0px, 40%, 0px);
     filter: blur(56px);
     content: "";
