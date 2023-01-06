@@ -1,29 +1,31 @@
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 const navigation = {
-  solutions: [
-    { name: 'Commercial Real Estate', href: '#' },
-    { name: 'Corporate Real Estate', href: '#' },
-    { name: 'Commerce', href: '#' },
-    { name: 'Insights', href: '#' },
+  aboutBEE: [
+    { name: 'Transform your energy management', href: '#' },
+    { name: 'Run 24/7', href: '#' },
+    { name: 'User friendly software', href: '#' },
+    { name: 'A single platform your ESG requirements', href: '#' },
+    { name: 'Solution Methodology', href: '#' },
+    { name: 'Average Electricity price', href: '#' },
   ],
-  support: [
+  whyBEE: [
     { name: 'Pricing', href: '#' },
     { name: 'Documentation', href: '#' },
     { name: 'Guides', href: '#' },
     { name: 'API Status', href: '#' },
   ],
-  company: [
-    { name: 'About', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Jobs', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Partners', href: '#' },
+  features: [
+    { name: 'Current Performance', href: '#' },
+    { name: 'Comparison', href: '#' },
+    { name: 'Improvements', href: '#' },
+    { name: 'Asset Reliability', href: '#' },
   ],
-  legal: [
-    { name: 'Claim', href: '#' },
-    { name: 'Privacy', href: '#' },
-    { name: 'Terms', href: '#' },
+  services: [
+    { name: 'Consultancy', href: '#' },
+    { name: 'Building Conditional Assessment', href: '#' },
+    { name: 'Building Plant and Equipment Audit', href: '#' },
+    { name: 'Software Service Consulting', href: '#' },
   ],
   social: [
     {
@@ -101,9 +103,9 @@ export function Footer() {
           <div className="grid grid-cols-2 gap-8 xl:col-span-4">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-base font-medium text-white">Solutions</h3>
+                <h3 className="text-base font-medium text-white">About BEE</h3>
                 <ul role="list" className="mt-4 space-y-4">
-                  {navigation.solutions.map((item) => (
+                  {navigation.aboutBEE.map((item) => (
                     <li key={item.name}>
                       <a href={item.href} className="text-base text-gray-300 hover:text-white">
                         {item.name}
@@ -113,9 +115,9 @@ export function Footer() {
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
-                <h3 className="text-base font-medium text-white">Support</h3>
+                <h3 className="text-base font-medium text-white">Why BEE</h3>
                 <ul role="list" className="mt-4 space-y-4">
-                  {navigation.support.map((item) => (
+                  {navigation.whyBEE.map((item) => (
                     <li key={item.name}>
                       <a href={item.href} className="text-base text-gray-300 hover:text-white">
                         {item.name}
@@ -127,9 +129,9 @@ export function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-base font-medium text-white">Company</h3>
+                <h3 className="text-base font-medium text-white">Features</h3>
                 <ul role="list" className="mt-4 space-y-4">
-                  {navigation.company.map((item) => (
+                  {navigation.features.map((item) => (
                     <li key={item.name}>
                       <a href={item.href} className="text-base text-gray-300 hover:text-white">
                         {item.name}
@@ -139,9 +141,9 @@ export function Footer() {
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
-                <h3 className="text-base font-medium text-white">Legal</h3>
+                <h3 className="text-base font-medium text-white">Services</h3>
                 <ul role="list" className="mt-4 space-y-4">
-                  {navigation.legal.map((item) => (
+                  {navigation.services.map((item) => (
                     <li key={item.name}>
                       <a href={item.href} className="text-base text-gray-300 hover:text-white">
                         {item.name}
@@ -167,41 +169,39 @@ export function Footer() {
                     defaultValue="English"
                   >
                     <option>English</option>
-                    <option>French</option>
                     <option>German</option>
-                    <option>Japanese</option>
-                    <option>Spanish</option>
+                    <option>Chinese</option>
                   </select>
                   <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
                     <ChevronDownIcon className="h-4 w-4 text-white" aria-hidden="true" />
                   </div>
                 </div>
               </fieldset>
-              <fieldset className="mt-4 w-full">
-                <label htmlFor="currency" className="sr-only">
-                  Currency
-                </label>
-                <div className="relative mt-1.5">
-                  <select
-                    id="currency"
-                    name="currency"
-                    className="block w-full appearance-none rounded-md border border-transparent bg-gray-700 bg-none py-2 pl-3 pr-10 text-base text-white focus:border-white focus:outline-none focus:ring-white sm:text-sm"
-                    defaultValue="AUD"
-                  >
-                    <option>ARS</option>
-                    <option>AUD</option>
-                    <option>CAD</option>
-                    <option>CHF</option>
-                    <option>EUR</option>
-                    <option>GBP</option>
-                    <option>JPY</option>
-                    <option>USD</option>
-                  </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
-                    <ChevronDownIcon className="h-4 w-4 text-white" aria-hidden="true" />
-                  </div>
-                </div>
-              </fieldset>
+              {/*<fieldset className="mt-4 w-full">*/}
+              {/*  <label htmlFor="currency" className="sr-only">*/}
+              {/*    Currency*/}
+              {/*  </label>*/}
+              {/*  <div className="relative mt-1.5">*/}
+              {/*    <select*/}
+              {/*      id="currency"*/}
+              {/*      name="currency"*/}
+              {/*      className="block w-full appearance-none rounded-md border border-transparent bg-gray-700 bg-none py-2 pl-3 pr-10 text-base text-white focus:border-white focus:outline-none focus:ring-white sm:text-sm"*/}
+              {/*      defaultValue="AUD"*/}
+              {/*    >*/}
+              {/*      <option>ARS</option>*/}
+              {/*      <option>AUD</option>*/}
+              {/*      <option>CAD</option>*/}
+              {/*      <option>CHF</option>*/}
+              {/*      <option>EUR</option>*/}
+              {/*      <option>GBP</option>*/}
+              {/*      <option>JPY</option>*/}
+              {/*      <option>USD</option>*/}
+              {/*    </select>*/}
+              {/*    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">*/}
+              {/*      <ChevronDownIcon className="h-4 w-4 text-white" aria-hidden="true" />*/}
+              {/*    </div>*/}
+              {/*  </div>*/}
+              {/*</fieldset>*/}
             </form>
           </div>
         </div>
