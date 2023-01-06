@@ -164,9 +164,9 @@ export default function SecondFeature() {
         <div className='cols-1 lg:grid lg:grid-cols-2 lg:gap-10'>
           <div>
             <div className='bg-neutral-100 px-8 pt-14 pb-64 lg:px-16'>
-              <p className='pb-4 text-lg text-gray-500'>
-                About Bee | Methodology
-              </p>
+              <span className='block pb-3 text-sm text-gray-500'>
+                About BEE | Methodology
+              </span>
               <h2 className='font-display text-4xl font-bold leading-tight text-deep-dark'>
                 How it all comes together
               </h2>

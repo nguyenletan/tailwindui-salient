@@ -32,6 +32,9 @@ export function VideoContent() {
         </motion.div>
         <div className='flex w-full lg:w-2/5' ref={ref}>
           <div className='md:text-left xl:max-w-none'>
+             <span className='block pb-3 text-sm text-gray-500'>
+              About BEE | Easy to use
+            </span>
             <h2 className='font-display text-3xl font-extrabold !leading-tight tracking-tight text-deep-dark sm:text-3xl md:text-4xl'>
               EASY TO USE INTERFACE
             </h2>
