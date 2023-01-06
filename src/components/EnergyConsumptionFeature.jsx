@@ -10,7 +10,7 @@ export function EnergyConsumptionFeature() {
 
   return (
     <section
-      id='features'
+      id='energy-consumption-feature'
       aria-label='The most user friendly energy management software for managing your building portfolio'
       className='relative overflow-hidden bg-stone-100 pt-28 pb-28 sm:pb-24 sm:pt-24'
     >
@@ -43,7 +43,7 @@ export function EnergyConsumptionFeature() {
             </h2>
             <p className='mt-6  text-lg tracking-tight text-deep-dark'>
               A modern cloud-based software platform for managing commercial and
-              corporate real estate’s energy consumption and CO2 emissions.
+              corporate real estate’s energy consumption and CO<sub>2</sub> emissions.
               Manage your entire portfolio with a comprehensive suite of
               integrated modules specifically designed for the property industry
             </p>

@@ -68,7 +68,7 @@ const aboutBEE = [
     description:
       'Transform your operations with one flexible, powerful robust software suite that has solutions for a myriad of business needs.',
     subDescription: '',
-    href: '/#transform-your-energy-management',
+    href: '/#make-decisions-based-on-real-data',
     icon: ChartBarIcon,
     subItems: [
       {
@@ -286,7 +286,7 @@ const aboutBEE = [
       'A software that your and your tenants can use to coordinate and manage your ESG strategy.',
     subDescription:
       '',
-    href: '/#a-single-platform',
+    href: '/#esg-requirements-feature',
     icon: Squares2X2Icon,
     subItems: [
       {
@@ -355,7 +355,7 @@ const aboutBEE = [
     name: 'Solution Methodology',
     description:
       'Here’s how it all comes together from current to future performance, comparison through to improvements and the health of your building’s plant and equipment',
-    href: '/why-bee#for-efficiency',
+    href: '/#solution-methodology',
     icon: Square3Stack3DIcon,
     subItems: [
       {
@@ -426,7 +426,7 @@ const aboutBEE = [
       'A review of the monthly wholesale price of electricity from Jan to September.',
     subDescription:
       '',
-    href: '/#average-electricity-prices',
+    href: '/#average-german-whole-sale-electricity-price',
     icon: InformationCircleIcon,
     subItems: [
       {
@@ -1281,7 +1281,7 @@ export default function Header() {
                           'group inline-flex items-center border-b-4 border-transparent bg-white text-base font-medium hover:border-primary focus:border-primary focus:outline-none'
                         )}
                       >
-                        <span className='font-display text-lg'>About BEE</span>
+                        <span className='font-display text-lg'>About Bee</span>
                         {!open ? (
                           <ChevronDownIcon
                             className={classNames(
@@ -1374,7 +1374,7 @@ export default function Header() {
                           'group inline-flex items-center border-b-4 border-transparent bg-white text-base font-medium hover:border-primary focus:border-primary focus:outline-none'
                         )}
                       >
-                        <span className='font-display text-lg'>Why BEE</span>
+                        <span className='font-display text-lg'>Why Bee</span>
                         {!open ? (
                           <ChevronDownIcon
                             className={classNames(

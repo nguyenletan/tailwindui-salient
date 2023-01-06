@@ -154,7 +154,7 @@ export default function SecondFeature() {
 
   return (
     <section
-      id='features'
+      id='solution-methodology'
       aria-label='Features for running your books'
       //className="relative overflow-hidden bg-white  sm:py-32 h-[1601px]"
       className='pt-28 pb-28 sm:pb-24 sm:pt-24'

@@ -10,7 +10,7 @@ export function ESGRequirementsFeature() {
 
   return (
     <section
-      id='features'
+      id='esg-requirements-feature'
       aria-label='Features for running your books'
       className='relative overflow-hidden pt-28 pb-28 sm:pb-24 sm:pt-24'
     >
@@ -29,11 +29,11 @@ export function ESGRequirementsFeature() {
         <div ref={ref} className='flex w-full lg:w-1/2'>
           <div className='md:text-left xl:max-w-none'>
             <h2 className='font-display text-3xl font-extrabold !leading-tight tracking-tight text-deep-dark sm:text-4xl md:text-4xl'>
-              A single platform to manage your property’s ESG requirements
+              Manage your property's ESG requirements
             </h2>
             <p className='py-8 text-xl text-gray-600'>
               A software that you and your tenants can use to coordinate and
-              manage your building’s energy consumption and CO2 emissions.
+              manage your building’s energy consumption and CO<sub>2</sub> emissions.
             </p>
             {/*<div className='mt-6 pb-8 text-lg tracking-tight text-deep-dark'>*/}
             {/*  <h4 className='pb-4 font-semibold'>*/}

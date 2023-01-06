@@ -103,7 +103,7 @@ export function Footer() {
           <div className="grid grid-cols-2 gap-8 xl:col-span-4">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-base font-medium text-white">About BEE</h3>
+                <h3 className="text-base font-medium text-white">About Bee</h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.aboutBEE.map((item) => (
                     <li key={item.name}>
@@ -115,7 +115,7 @@ export function Footer() {
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
-                <h3 className="text-base font-medium text-white">Why BEE</h3>
+                <h3 className="text-base font-medium text-white">Why Bee</h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.whyBEE.map((item) => (
                     <li key={item.name}>

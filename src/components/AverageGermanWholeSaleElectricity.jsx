@@ -9,7 +9,7 @@ export function AverageGermanWholeSaleElectricity() {
 
   return (
     <section
-      id='features'
+      id='average-german-whole-sale-electricity-price'
       aria-label='Features for running your books'
       className='relative overflow-hidden pt-28 pb-28 sm:pb-24 sm:pt-24'
     >

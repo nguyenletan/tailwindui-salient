@@ -10,7 +10,7 @@ export function MakeDecisionsBasedOnRealData() {
 
   return (
     <section
-      id='features'
+      id='make-decisions-based-on-real-data'
       aria-label='Make informed decisions based on real data'
       className='relative overflow-hidden pt-28 pb-28 sm:pb-24 sm:pt-24'
     >

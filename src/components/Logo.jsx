@@ -32,12 +32,12 @@ export function Logo() {
 
       {/*<h1 className=" text-lg uppercase font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-primary">Last footprint</h1>*/}
       <h1 className='font-display text-3xl '>
-        <Link className='text-primary font-extrabold' href='/'>
+        <Link className='text-primary font-extrabold pr-4' href='/'>
           Lastfootprint
-        </Link>{' '}
-        |{' '}
-        <span rel="noreferrer">
-          BEE
+        </Link>
+        |
+        <span rel="noreferrer" className="pl-4">
+          Bee
         </span>
       </h1>
     </div>
