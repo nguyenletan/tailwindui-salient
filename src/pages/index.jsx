@@ -3,13 +3,11 @@ import { Footer } from '@/components/Footer'
 import { Hero } from '@/components/Hero'
 
 import SecondFeature from '@/components/SecondFeature'
-import { Run247Feature } from '@/components/Run247Feature'
+import { MakeDecisionsBasedOnRealData } from '@/components/MakeDecisionsBasedOnRealData'
 import { EnergyConsumptionFeature } from '@/components/EnergyConsumptionFeature'
 import { ESGRequirementsFeature } from '@/components/ESGRequirementsFeature'
-
-import { FirstFFeatures } from '@/components/FirstFFeature'
+import { AverageGermanWholeSaleElectricity } from '@/components/AverageGermanWholeSaleElectricity'
 import Header from '@/components/Header'
-
 import { VideoContent } from '@/components/VideoContent'
 
 export default function Home() {
@@ -28,14 +26,12 @@ export default function Home() {
 
       <main>
         <Hero />
-        <Run247Feature />
+        <MakeDecisionsBasedOnRealData />
         <EnergyConsumptionFeature />
         <ESGRequirementsFeature />
-        {/*<FirstDFeatures />*/}
-        {/*<FirstEFeatures />*/}
-        <VideoContent/>
+        <VideoContent />
         <SecondFeature />
-        <FirstFFeatures />
+        <AverageGermanWholeSaleElectricity />
         {/*<AsanaFeature />*/}
         {/*<Solutions />*/}
         {/*<PrimaryFeatures />*/}

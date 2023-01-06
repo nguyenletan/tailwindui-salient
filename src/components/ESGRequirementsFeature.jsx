@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Container } from '@/components/Container'
-import feature from '@/images/feature2.webp'
+import feature from '@/images/esg-requirements-feature.webp'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 

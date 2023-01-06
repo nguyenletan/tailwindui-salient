@@ -12,9 +12,9 @@ export function EnergyConsumptionFeature() {
     <section
       id='features'
       aria-label='The most user friendly energy management software for managing your building portfolio'
-      className='relative overflow-hidden pt-28 pb-28 sm:pb-24 sm:pt-24 bg-stone-100'
+      className='relative overflow-hidden bg-stone-100 pt-28 pb-28 sm:pb-24 sm:pt-24'
     >
-      <Container className='flex flex-wrap gap-2 align-top lg:flex-nowrap'>
+      <Container className='flex flex-wrap gap-3 align-top lg:flex-nowrap'>
         <motion.div
           style={{
             transform: isInView ? 'none' : 'translateX(-200px)',
@@ -35,9 +35,11 @@ export function EnergyConsumptionFeature() {
         </motion.div>
         <div className='flex w-full lg:w-2/5' ref={ref}>
           <div className='md:text-left xl:max-w-none'>
+            <span className='block pb-3 text-sm text-gray-500'>
+              About BEE | Energy Consumption
+            </span>
             <h2 className='font-display text-3xl font-extrabold !leading-tight tracking-tight text-deep-dark sm:text-3xl md:text-4xl'>
-              The most user friendly energy management software for managing
-              your building portfolio
+              Energy Consumption
             </h2>
             <p className='mt-6  text-lg tracking-tight text-deep-dark'>
               A modern cloud-based software platform for managing commercial and

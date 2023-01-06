@@ -1,11 +1,9 @@
-import Image from 'next/image'
 import { Container } from '@/components/Container'
-import feature from '@/images/feature3.webp'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import GermanWholeSaleLineChart from '@/components/Charts/GermanWholeSaleLineChart'
 
-export function FirstFFeatures() {
+export function AverageGermanWholeSaleElectricity() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: false })
 
@@ -15,16 +13,21 @@ export function FirstFFeatures() {
       aria-label='Features for running your books'
       className='relative overflow-hidden pt-28 pb-28 sm:pb-24 sm:pt-24'
     >
-      <Container className='flex gap-8 align-top flex-wrap lg:flex-nowrap'>
+      <Container className='flex flex-wrap gap-8 align-top lg:flex-nowrap'>
         <motion.div
           style={{
             transform: isInView ? 'none' : 'translateX(-200px)',
             opacity: isInView ? 1 : 0,
             transition: 'all 1.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
           }}
-          className='flex w-full lg:w-3/5 pb-5 lg:pb-0'
+          className='flex w-full pb-5 lg:w-3/5 lg:pb-0 flex-col gap-2'
         >
           <GermanWholeSaleLineChart />
+          <p>
+            Statista 2022 I In cooperation with EMBER Oct 2022 Germany Survey
+            Published by Bruna Alves Oct 24 2022 Monthly wholesale electricity
+            prices in Germany 2019-2022
+          </p>
         </motion.div>
         <div className='flex w-full lg:w-2/5' ref={ref}>
           <div className='md:text-left xl:max-w-none'>
@@ -32,7 +35,7 @@ export function FirstFFeatures() {
               Average German wholesale electricity monthly price from Jan 2019
               to Sept 2022 (in euros per megawatt-hour)
             </h2>
-            <h5 className='font-semibold pt-8'>
+            <h5 className='pt-8 font-semibold'>
               Monthly wholesale electricity prices in Germany 2019-2022 Research
               expert covering energy and environment Oct 24, 2022
             </h5>
