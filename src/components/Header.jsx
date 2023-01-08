@@ -64,9 +64,9 @@ import Image from 'next/image'
 
 const aboutBEE = [
   {
-    name: 'Transform your energy management',
+    name: 'Make informed decisions based on real data',
     description:
-      'Transform your operations with one flexible, powerful robust software suite that has solutions for a myriad of business needs.',
+      'Use more accurate methods to measure your building’s energy consumption and CO2 emissions.',
     subDescription: '',
     href: '/#make-decisions-based-on-real-data',
     icon: ChartBarIcon,
@@ -139,11 +139,10 @@ const aboutBEE = [
     ],
   },
   {
-    name: 'Run 24/7',
+    name: 'Energy Consumption',
     description:
-      'Manage your entire real estate portfolio 24/7 with a comprehensive suite specifically designed for the property industry.',
-    subDescription:
-      '',
+      'A modern cloud-based software platform for managing commercial and corporate real estate’s energy consumption and CO2 emissions. Manage your entire portfolio with a comprehensive suite of integrated modules specifically designed for the property industry.',
+    subDescription: '',
     href: '/#run-247',
     icon: ScaleIcon,
     subItems: [
@@ -210,82 +209,10 @@ const aboutBEE = [
     ],
   },
   {
-    name: 'User friendly software',
-    description:
-      'A modern cloud-based software platform for managing commercial and corporate real estate’s energy consumption and CO2 emissions.',
-    subDescription:
-      '',
-    href: '/#user-friendly-software',
-    icon: ArrowTrendingUpIcon,
-    subItems: [
-      {
-        title: 'Annual Energy Savings',
-        icon: BarsArrowDownIcon,
-        href: '#',
-      },
-      {
-        title: 'CO2 Emissions improvements',
-        icon: BarsArrowUpIcon,
-        href: '#',
-      },
-      {
-        title: 'Annual energy cost savings',
-        icon: XMarkIcon,
-        href: '#',
-      },
-      {
-        title: 'Energy savings breakdown',
-        icon: Square3Stack3DIcon,
-        href: '#',
-      },
-      {
-        title: 'Annual CO2 emissions avoided',
-        icon: XCircleIcon,
-        href: '#',
-      },
-      {
-        title: 'Cost savings breakdown',
-        icon: CurrencyDollarIcon,
-        href: '#',
-      },
-      {
-        title: 'Investment cost and payback',
-        icon: BanknotesIcon,
-        href: '#',
-      },
-      {
-        title: 'CO2 Emissions breakdown',
-        icon: PuzzlePieceIcon,
-        href: '#',
-      },
-      {
-        title: 'Energy usage intensity reduction',
-        icon: ScaleIcon,
-        href: '#',
-      },
-      {
-        title: 'Breakdown of improvements',
-        icon: RectangleStackIcon,
-        href: '#',
-      },
-      {
-        title: 'Building energy improvements',
-        icon: ArrowTrendingUpIcon,
-        href: '#',
-      },
-      {
-        title: 'Improvement measures',
-        icon: ArrowUturnUpIcon,
-        href: '#',
-      },
-    ],
-  },
-  {
     name: 'A single platform for your ESG requirements',
     description:
       'A software that your and your tenants can use to coordinate and manage your ESG strategy.',
-    subDescription:
-      '',
+    subDescription: '',
     href: '/#esg-requirements-feature',
     icon: Squares2X2Icon,
     subItems: [
@@ -347,6 +274,76 @@ const aboutBEE = [
       {
         title: 'Maintenance & sensor logs',
         icon: WrenchScrewdriverIcon,
+        href: '#',
+      },
+    ],
+  },
+  {
+    name: 'User friendly software',
+    description:
+      'A modern cloud-based software platform for managing commercial and corporate real estate’s energy consumption and CO2 emissions.',
+    subDescription: '',
+    href: '/#easy-to-use',
+    icon: ArrowTrendingUpIcon,
+    subItems: [
+      {
+        title: 'Annual Energy Savings',
+        icon: BarsArrowDownIcon,
+        href: '#',
+      },
+      {
+        title: 'CO2 Emissions improvements',
+        icon: BarsArrowUpIcon,
+        href: '#',
+      },
+      {
+        title: 'Annual energy cost savings',
+        icon: XMarkIcon,
+        href: '#',
+      },
+      {
+        title: 'Energy savings breakdown',
+        icon: Square3Stack3DIcon,
+        href: '#',
+      },
+      {
+        title: 'Annual CO2 emissions avoided',
+        icon: XCircleIcon,
+        href: '#',
+      },
+      {
+        title: 'Cost savings breakdown',
+        icon: CurrencyDollarIcon,
+        href: '#',
+      },
+      {
+        title: 'Investment cost and payback',
+        icon: BanknotesIcon,
+        href: '#',
+      },
+      {
+        title: 'CO2 Emissions breakdown',
+        icon: PuzzlePieceIcon,
+        href: '#',
+      },
+      {
+        title: 'Energy usage intensity reduction',
+        icon: ScaleIcon,
+        href: '#',
+      },
+      {
+        title: 'Breakdown of improvements',
+        icon: RectangleStackIcon,
+        href: '#',
+      },
+      {
+        title: 'Building energy improvements',
+        icon: ArrowTrendingUpIcon,
+        href: '#',
+      },
+      {
+        title: 'Improvement measures',
+        icon: ArrowUturnUpIcon,
         href: '#',
       },
     ],
@@ -424,8 +421,7 @@ const aboutBEE = [
     name: 'Average Electricity prices',
     description:
       'A review of the monthly wholesale price of electricity from Jan to September.',
-    subDescription:
-      '',
+    subDescription: '',
     href: '/#average-german-whole-sale-electricity-price',
     icon: InformationCircleIcon,
     subItems: [
@@ -1320,14 +1316,14 @@ export default function Header() {
                               {aboutBEE.map((item, index) => (
                                 <a
                                   key={item.name}
-                                  href='#'
+                                  href={item.href}
                                   className={
                                     '-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-stone-100' +
                                     (index === softwareSelectedItem
                                       ? ' bg-gray-100'
                                       : '')
                                   }
-                                  onClick={() => setSoftwareSelectedItem(index)}
+                                  //onClick={() => setSoftwareSelectedItem(index)}
                                 >
                                   <div className='flex gap-4 md:h-full'>
                                     <div className='mt-1 flex-shrink-0'>
