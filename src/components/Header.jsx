@@ -1231,6 +1231,13 @@ const services = [
     icon: ShieldCheckIcon,
   },
   {
+    name: 'Managing your Digital Twin',
+    description:
+      'Visualise how your building and your real estate portfolio has been performing - the ‘what is happening currently and predict what may happen in the future.',
+    href: 'services#managing-your-digital-twin',
+    icon: ComputerDesktopIcon,
+  },
+  {
     name: 'Software Service Consulting',
     description:
       'Provide the integration of your building and critical plant and equipment data and APIs of your building’s and existing BMS, BEMS, IWMS and Billing and Consumption information onto one easy to use solution.',
