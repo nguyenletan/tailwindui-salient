@@ -143,7 +143,7 @@ const aboutBEE = [
     description:
       'A modern cloud-based software platform for managing commercial and corporate real estate’s energy consumption and CO2 emissions. Manage your entire portfolio with a comprehensive suite of integrated modules specifically designed for the property industry.',
     subDescription: '',
-    href: '/#run-247',
+    href: '/#energy-consumption-feature',
     icon: ScaleIcon,
     subItems: [
       {
