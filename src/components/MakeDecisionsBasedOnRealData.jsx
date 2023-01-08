@@ -42,7 +42,7 @@ export function MakeDecisionsBasedOnRealData() {
               Make informed decisions based on real data
             </h2>
             <p className='mt-6  text-lg tracking-tight text-deep-dark sm:w-3/5'>
-              Use more accurate methods to measure your building’s energy consumption and CO2 emissions.
+              Use more accurate methods to measure your building’s energy consumption and CO<sub>2</sub> emissions.
             </p>
           </div>
         </div>
