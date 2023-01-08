@@ -8,7 +8,7 @@ export function Hero() {
       <div className='mt-[85px] mb-16 flex grid h-[500px] w-full sm:grid-cols-1 md:grid-cols-2 '>
         <div className='mx-auto max-w-2xl self-center'>
           <h5 className='font-display font-bold text-primary'>
-            BEE | SERVICES
+            Bee | Services
           </h5>
           <h2 className='leading-tight pb-4 pt-1 font-display text-4xl font-bold'>
             The building management process

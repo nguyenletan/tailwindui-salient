@@ -10,7 +10,7 @@ export function EnvironmentalConditionsYourBuilding() {
 
   return (
     <section
-      id='features'
+      id='environmental-conditions-your-building'
       aria-label='We run 24/7 so you can sleep in peace'
       className='relative overflow-hidden pt-28 pb-28 sm:pb-24 sm:pt-24'
     >
@@ -19,8 +19,8 @@ export function EnvironmentalConditionsYourBuilding() {
 
         <div className='flex w-full justify-center lg:w-2/5' ref={ref}>
           <div className='md:text-left xl:max-w-none'>
-            <span className='block pb-3 font-display text-sm font-bold uppercase text-primary'>
-              Services | CONDITION ASSESSMENT
+            <span className='block pb-3 text-sm text-gray-500'>
+              Services | Condition Assessment
             </span>
             <h2 className='font-display text-3xl font-extrabold !leading-tight tracking-tight text-deep-dark sm:text-3xl md:text-4xl'>
               Environmental conditions and your building

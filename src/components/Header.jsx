@@ -1213,21 +1213,21 @@ const services = [
     name: 'Consultancy',
     description:
       'Our expertise goes beyond software we work with you to find the most suitable solution that works best for your building’s operation and business objectives.',
-    href: 'services#consultancy',
+    href: 'services#building-conditional-assessment',
     icon: DocumentCheckIcon,
   },
   {
     name: 'Building Condition Assessment',
     description:
       'Get visibility on the energy performance of all your buildings at the system and subsystem level and develop an energy savings plan that is sustainable and meets your organisation’s ESG objectives.',
-    href: 'services#B=building-condition-assessment',
+    href: 'services#operation-of-things',
     icon: BuildingOffice2Icon,
   },
   {
     name: 'Building Plant and Equipment Audit',
     description:
       'Understanding the current state of your facility’s plant and equipment helps with the rolling out your building maintenance strategies.',
-    href: 'services#B=building-plant-equipment-audit',
+    href: 'services#environmental-conditions-your-building',
     icon: ShieldCheckIcon,
   },
   {

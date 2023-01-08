@@ -31,8 +31,8 @@ export function ManagingYourDigitalTwin() {
 
         <div className='flex w-full justify-center lg:w-2/5' ref={ref}>
           <div className='md:text-left xl:max-w-none'>
-            <span className='block pb-3 font-display text-sm font-bold uppercase text-primary'>
-              Services | DIGITAL TWIN MANAGEMENT
+            <span className='block pb-3 text-sm text-gray-500'>
+              Services | Digital Twin Management
             </span>
             <h2 className='font-display text-3xl font-extrabold !leading-tight tracking-tight text-deep-dark sm:text-3xl md:text-4xl'>
               Managing your Digital Twin

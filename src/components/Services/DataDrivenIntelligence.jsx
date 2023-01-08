@@ -18,8 +18,8 @@ export function DataDrivenIntelligence() {
       <Container className='flex flex-wrap gap-12 lg:flex-nowrap'>
         <div className='flex w-full justify-center lg:w-2/5' ref={ref}>
           <div className='md:text-left xl:max-w-none'>
-            <span className='block pb-3 font-display text-sm font-bold uppercase text-primary'>
-              Services | DATA-DRIVEN INTELLIGENCE
+            <span className='block pb-3 text-sm text-gray-500'>
+              Services | Data-driven Intelligence
             </span>
             <h2 className='font-display text-3xl font-extrabold !leading-tight tracking-tight text-deep-dark sm:text-3xl md:text-4xl'>
               Powered by data-driven intelligence

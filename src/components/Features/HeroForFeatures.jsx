@@ -10,7 +10,7 @@ export function HeroForFeatures() {
         className='grid sm:grid-cols-1 md:grid-cols-2 w-full mt-[88px] mb-16 flex h-[500px] '
       >
         <div className="self-center mx-auto max-w-2xl">
-          <h5 className="text-primary font-bold font-display">BEE | FEATURES</h5>
+          <h5 className="text-primary font-bold font-display">Bee | FEATURES</h5>
           <h2 className='font-display text-4xl font-bold pb-4 pt-1'>A single platform for  managing your building’s energy and ESG</h2>
           <p className="text-lg">Transform your operations with one flexible, powerful, robust software suite that has solutions for a myriad of business needs.</p>
           <div className='justify-left mt-10 gap-x-6'>
