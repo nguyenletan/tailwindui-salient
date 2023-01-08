@@ -14,7 +14,7 @@ export function Compliance() {
 
   return (
     <section
-      id='features'
+      id='compliance'
       aria-label='We run 24/7 so you can sleep in peace'
       className='relative overflow-hidden pt-28 pb-28 sm:pb-24 sm:pt-24 '
     >
@@ -46,7 +46,7 @@ export function Compliance() {
         </motion.div>
         <div className='flex w-full justify-center lg:w-1/2' ref={ref}>
           <div className='md:text-left xl:max-w-none'>
-            <span className='block pb-3 font-display text-sm font-bold uppercase text-primary'>
+            <span className='block pb-3 text-sm text-gray-500'>
               Why BEE | For Compliance
             </span>
             <h2 className='font-display text-3xl font-extrabold !leading-tight tracking-tight text-deep-dark sm:text-3xl md:text-4xl'>

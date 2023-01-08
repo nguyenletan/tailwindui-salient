@@ -12,7 +12,7 @@ export function InformacedChoice() {
 
   return (
     <section
-      id='features'
+      id='informed-choice'
       aria-label='We run 24/7 so you can sleep in peace'
       className='relative overflow-hidden pt-28 pb-28 sm:pb-24 sm:pt-24'
     >
@@ -44,7 +44,7 @@ export function InformacedChoice() {
 
         <div className='flex w-full justify-center lg:w-1/3' ref={ref}>
           <div className='md:text-left xl:max-w-none'>
-            <span className='block pb-3 font-display text-sm font-bold uppercase text-primary'>
+            <span className='block pb-3 text-sm text-gray-500'>
               Why BEE | For Informed Choice
             </span>
             <h2 className='text-deep-darksm:text-3xl font-display text-3xl font-extrabold !leading-tight tracking-tight md:text-4xl'>

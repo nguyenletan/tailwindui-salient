@@ -572,7 +572,7 @@ const whyBEE = [
       'Have a clear understanding of your energy consumption about where  and what is being used to be able to make informed choices for energy procurement.',
     subDescription:
       'Seeing and managing in real time your buildings energy consumption and emissions',
-    href: '/why-bee#for-transparency',
+    href: '/why-bee#transparent',
     icon: ScaleIcon,
     subItems: [
       {
@@ -643,7 +643,7 @@ const whyBEE = [
       'Forecasting your future energy usage with and without improvements have been implemented. ',
     subDescription:
       'Seeing and managing in real time your buildings energy consumption and emissions',
-    href: '/why-bee#for-forecasting',
+    href: '/why-bee#forecasting',
     icon: ArrowTrendingUpIcon,
     subItems: [
       {
@@ -714,7 +714,7 @@ const whyBEE = [
       'Ensure all  your buildings meet the current and future regulatory requirements for energy consumption and CO2 emissions.',
     subDescription:
       'Seeing and managing in real time your buildings energy consumption and emissions',
-    href: '/why-bee#for-compliance',
+    href: '/why-bee#compliance',
     icon: Squares2X2Icon,
     subItems: [
       {
@@ -783,7 +783,7 @@ const whyBEE = [
     name: 'For Efficiency',
     description:
       'Ensure all  your building’s critical plant and equipment are fully optimised and operating efficiently.',
-    href: '/why-bee#for-efficiency',
+    href: '/why-bee#efficiency',
     icon: Square3Stack3DIcon,
     subItems: [
       {
@@ -854,7 +854,7 @@ const whyBEE = [
       'Ensure clarity and focus  on current and future needs for your building portfolio based on your business needs.',
     subDescription:
       'Seeing and managing in real time your buildings energy consumption and emissions',
-    href: '/why-bee#for-informed-choice',
+    href: '/why-bee#informed-choice',
     icon: InformationCircleIcon,
     subItems: [
       {
@@ -1409,14 +1409,14 @@ export default function Header() {
                               {whyBEE.map((item, index) => (
                                 <a
                                   key={item.name}
-                                  href='#'
+                                  href={item.href}
                                   className={
                                     '-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-stone-100' +
                                     (index === softwareSelectedItem
                                       ? ' bg-gray-100'
                                       : '')
                                   }
-                                  onClick={() => setSoftwareSelectedItem(index)}
+                                  //onClick={() => setSoftwareSelectedItem(index)}
                                 >
                                   <div className='flex gap-4 md:h-full'>
                                     <div className='mt-1 flex-shrink-0'>
