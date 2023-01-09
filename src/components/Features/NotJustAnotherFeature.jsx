@@ -54,7 +54,7 @@ export function NotJustAnotherFeature() {
               autoPlay
               loop
               type='video/mp4'
-              src="https://github.com/BEEUK/cdn/blob/master/BEE/Continuous%20Monitoring%20and%20Improvement.mp4?raw=true" />
+              src="https://raw.githubusercontent.com/BEEUK/cdn/master/BEE/Continuous%20Monitoring%20and%20Improvement%20V1.1.mp4" />
           </div>
         </motion.div>
       </Container>

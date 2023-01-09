@@ -4,6 +4,8 @@
     border-radius: 50%;
 }
 
+
+
 .stack-layer-end::after {
     background-color: rgba(24, 24, 27,  0.125);
     transform: scale(1) translate3d(0px, 40%, 0px);

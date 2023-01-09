@@ -11,7 +11,7 @@ export function DataDrivenIntelligence() {
 
   return (
     <section
-      id='features'
+      id='data-driven-intelligence'
       aria-label='We run 24/7 so you can sleep in peace'
       className='relative overflow-hidden pt-28 pb-28 sm:pb-24 sm:pt-24'
     >

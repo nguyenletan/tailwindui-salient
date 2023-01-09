@@ -21,14 +21,19 @@ export function VideoContent() {
           }}
           className='flex w-full pb-5 lg:w-3/5 lg:pb-0'
         >
-          <div className='relative flex'>
-            <video
-              muted
-              autoPlay
-              loop
-              type='video/mp4'
-              src='https://github.com/BEEUK/cdn/blob/master/BEE/BEE%20Process%20Animation.mp4?raw=true'
-            />
+          <div className='relative'>
+            {/*<video*/}
+            {/*  controls={true}*/}
+            {/*  loop*/}
+            {/*  type='video/mp4'*/}
+            {/*  src='https://raw.githubusercontent.com/BEEUK/cdn/master/BEE/EAM%20Video%20(ENG).mp4'*/}
+            {/*/>*/}
+
+            <iframe width='560' height='315'
+                    src="https://www.youtube.com/embed/VjJFruFOxIE"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen></iframe>
           </div>
         </motion.div>
         <div className='flex w-full lg:w-2/5' ref={ref}>

@@ -1309,10 +1309,10 @@ const services = [
     icon: ComputerDesktopIcon,
   },
   {
-    name: 'Software Service Consulting',
+    name: 'Powered by data-driven intelligence',
     description:
-      'Provide the integration of your building and critical plant and equipment data and APIs of your building’s and existing BMS, BEMS, IWMS and Billing and Consumption information onto one easy to use solution.',
-    href: 'services#software-service-consulting',
+      'We help you to understand what’s possible, desirable and practical and coupled with predictive analytics,  BEE applies machine learning on the building IoT network for continuous optimisation of building operations and refine demand-based controls to maximise efficiency.',
+    href: 'services#data-driven-intelligence',
     icon: ComputerDesktopIcon,
   },
 ]
@@ -1631,7 +1631,7 @@ export default function Header() {
                     <>
                       <Popover.Button
                         className={classNames(
-                          'group inline-flex items-center border-0 border-b-4 border-white bg-white text-base font-medium hover:border-primary focus:border-primary focus:outline-none'
+                          'group inline-flex items-center border-b-4 border-transparent bg-white text-base font-medium hover:border-primary focus:border-primary focus:outline-none'
                         )}
                       >
                         <span className='font-display text-lg'>Services</span>
@@ -1656,66 +1656,60 @@ export default function Header() {
 
                       <Transition
                         as={Fragment}
-                        enter='transition ease-out duration-200'
+                        enter='transition ease-out duration-800'
                         enterFrom='opacity-0 -translate-y-1'
                         enterTo='opacity-100 translate-y-0'
-                        leave='transition ease-in duration-150'
+                        leave='transition ease-in duration-400'
                         leaveFrom='opacity-100 translate-y-0'
                         leaveTo='opacity-0 -translate-y-1'
                       >
-                        <Popover.Panel className='absolute inset-x-0 top-full z-10 hidden transform bg-white shadow-lg md:block'>
-                          <div className='max-w-8xl mx-auto grid gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-5 lg:px-8 lg:py-12 xl:py-16'>
-                            {services.map((item) => (
-                              <a
-                                key={item.name}
-                                href={item.href}
-                                className='-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-gray-50'
-                              >
-                                <div className='flex md:h-full lg:flex-col'>
-                                  <div className='flex-shrink-0'>
-                                    <span className='inline-flex h-10 w-10 items-center justify-center rounded-md bg-primary text-white sm:h-12 sm:w-12'>
-                                      <item.icon
-                                        className='h-6 w-6'
-                                        aria-hidden='true'
-                                      />
-                                    </span>
-                                  </div>
-                                  <div className='ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0 lg:mt-4'>
-                                    <div>
-                                      <p className='text-base font-medium text-gray-900'>
-                                        {item.name}
-                                      </p>
-                                      <p className='mt-1 text-sm text-gray-500'>
-                                        {item.description}
-                                      </p>
+                        <Popover.Panel className='absolute inset-x-0 top-full z-10 hidden transform bg-white bg-transparent shadow-lg md:block'>
+                          <div className='mx-auto h-[86vh] max-w-lg gap-8 overflow-auto '>
+                            <div className='mx-auto flex max-w-7xl flex-col gap-8 overflow-auto bg-stone-50 px-4 py-4 pb-8 sm:px-6 sm:py-4 lg:px-8 lg:py-6 xl:py-8'>
+                              <h3 className='text-md font-display font-bold uppercase text-primary'>
+                                Services
+                              </h3>
+
+                              {services.map((item, index) => (
+                                <a
+                                  key={item.name}
+                                  href={item.href}
+                                  className={
+                                    '-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-stone-100' +
+                                    (index === softwareSelectedItem
+                                      ? ' bg-gray-100'
+                                      : '')
+                                  }
+                                  //onClick={() => setSoftwareSelectedItem(index)}
+                                >
+                                  <div className='flex gap-4 md:h-full'>
+                                    <div className='mt-1 flex-shrink-0'>
+                                      <span className='inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary text-white sm:h-8 sm:w-8'>
+                                        <item.icon
+                                          className='h-6 w-6'
+                                          aria-hidden='true'
+                                        />
+                                      </span>
                                     </div>
-                                    <Link
-                                      href={item.href}
-                                      className='mt-2 text-sm font-medium text-primary lg:mt-4'
-                                    >
-                                      Learn more
-                                      <span aria-hidden='true'> &rarr;</span>
-                                    </Link>
+                                    <div className='ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0'>
+                                      <div>
+                                        <p className='text-base font-medium text-gray-900'>
+                                          {item.name}
+                                        </p>
+                                        <p className='mt-1 text-sm text-gray-500'>
+                                          {item.description}
+                                        </p>
+                                      </div>
+                                      <Link
+                                        href={item.href}
+                                        className='mt-2 text-sm font-medium text-primary lg:mt-4'
+                                      >
+                                        Learn more
+                                        <span aria-hidden='true'> &rarr;</span>
+                                      </Link>
+                                    </div>
                                   </div>
-                                </div>
-                              </a>
-                            ))}
-                          </div>
-                          <div className='bg-gray-50'>
-                            <div className='mx-auto max-w-7xl space-y-6 px-4 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-6 lg:px-8'>
-                              {callsToAction.map((item) => (
-                                <div key={item.name} className='flow-root'>
-                                  <a
-                                    href={item.href}
-                                    className='-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100'
-                                  >
-                                    <item.icon
-                                      className='h-6 w-6 flex-shrink-0 text-gray-400'
-                                      aria-hidden='true'
-                                    />
-                                    <span className='ml-3'>{item.name}</span>
-                                  </a>
-                                </div>
+                                </a>
                               ))}
                             </div>
                           </div>
@@ -1724,6 +1718,105 @@ export default function Header() {
                     </>
                   )}
                 </Popover>
+
+                {/*<Popover>*/}
+                {/*  {({ open }) => (*/}
+                {/*    <>*/}
+                {/*      <Popover.Button*/}
+                {/*        className={classNames(*/}
+                {/*          'group inline-flex items-center border-0 border-b-4 border-white bg-white text-base font-medium hover:border-primary focus:border-primary focus:outline-none'*/}
+                {/*        )}*/}
+                {/*      >*/}
+                {/*        <span className='font-display text-lg'>Services</span>*/}
+                {/*        {!open ? (*/}
+                {/*          <ChevronDownIcon*/}
+                {/*            className={classNames(*/}
+                {/*              open ? 'text-gray-600' : 'text-gray-400',*/}
+                {/*              'ml-2 h-5 w-5 group-hover:text-gray-500'*/}
+                {/*            )}*/}
+                {/*            aria-hidden='true'*/}
+                {/*          />*/}
+                {/*        ) : (*/}
+                {/*          <ChevronUpIcon*/}
+                {/*            className={classNames(*/}
+                {/*              open ? 'text-gray-600' : 'text-gray-400',*/}
+                {/*              'ml-2 h-5 w-5 group-hover:text-gray-500'*/}
+                {/*            )}*/}
+                {/*            aria-hidden='true'*/}
+                {/*          />*/}
+                {/*        )}*/}
+                {/*      </Popover.Button>*/}
+
+                {/*      <Transition*/}
+                {/*        as={Fragment}*/}
+                {/*        enter='transition ease-out duration-200'*/}
+                {/*        enterFrom='opacity-0 -translate-y-1'*/}
+                {/*        enterTo='opacity-100 translate-y-0'*/}
+                {/*        leave='transition ease-in duration-150'*/}
+                {/*        leaveFrom='opacity-100 translate-y-0'*/}
+                {/*        leaveTo='opacity-0 -translate-y-1'*/}
+                {/*      >*/}
+                {/*        <Popover.Panel className='absolute inset-x-0 top-full z-10 hidden transform bg-white shadow-lg md:block'>*/}
+                {/*          <div className='max-w-8xl mx-auto grid gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-5 lg:px-8 lg:py-12 xl:py-16'>*/}
+                {/*            {services.map((item) => (*/}
+                {/*              <a*/}
+                {/*                key={item.name}*/}
+                {/*                href={item.href}*/}
+                {/*                className='-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-gray-50'*/}
+                {/*              >*/}
+                {/*                <div className='flex md:h-full lg:flex-col'>*/}
+                {/*                  <div className='flex-shrink-0'>*/}
+                {/*                    <span className='inline-flex h-10 w-10 items-center justify-center rounded-md bg-primary text-white sm:h-12 sm:w-12'>*/}
+                {/*                      <item.icon*/}
+                {/*                        className='h-6 w-6'*/}
+                {/*                        aria-hidden='true'*/}
+                {/*                      />*/}
+                {/*                    </span>*/}
+                {/*                  </div>*/}
+                {/*                  <div className='ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0 lg:mt-4'>*/}
+                {/*                    <div>*/}
+                {/*                      <p className='text-base font-medium text-gray-900'>*/}
+                {/*                        {item.name}*/}
+                {/*                      </p>*/}
+                {/*                      <p className='mt-1 text-sm text-gray-500'>*/}
+                {/*                        {item.description}*/}
+                {/*                      </p>*/}
+                {/*                    </div>*/}
+                {/*                    <Link*/}
+                {/*                      href={item.href}*/}
+                {/*                      className='mt-2 text-sm font-medium text-primary lg:mt-4'*/}
+                {/*                    >*/}
+                {/*                      Learn more*/}
+                {/*                      <span aria-hidden='true'> &rarr;</span>*/}
+                {/*                    </Link>*/}
+                {/*                  </div>*/}
+                {/*                </div>*/}
+                {/*              </a>*/}
+                {/*            ))}*/}
+                {/*          </div>*/}
+                {/*          <div className='bg-gray-50'>*/}
+                {/*            <div className='mx-auto max-w-7xl space-y-6 px-4 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-6 lg:px-8'>*/}
+                {/*              {callsToAction.map((item) => (*/}
+                {/*                <div key={item.name} className='flow-root'>*/}
+                {/*                  <a*/}
+                {/*                    href={item.href}*/}
+                {/*                    className='-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100'*/}
+                {/*                  >*/}
+                {/*                    <item.icon*/}
+                {/*                      className='h-6 w-6 flex-shrink-0 text-gray-400'*/}
+                {/*                      aria-hidden='true'*/}
+                {/*                    />*/}
+                {/*                    <span className='ml-3'>{item.name}</span>*/}
+                {/*                  </a>*/}
+                {/*                </div>*/}
+                {/*              ))}*/}
+                {/*            </div>*/}
+                {/*          </div>*/}
+                {/*        </Popover.Panel>*/}
+                {/*      </Transition>*/}
+                {/*    </>*/}
+                {/*  )}*/}
+                {/*</Popover>*/}
                 <Link
                   href='/contact-us'
                   className='border-b-4 border-transparent font-display text-lg font-medium hover:border-primary focus:border-primary'
