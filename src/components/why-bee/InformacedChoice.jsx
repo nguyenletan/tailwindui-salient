@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { Container } from '@/components/Container'
-import feature from '@/images/why-bee-for-informed-choice-1.webp'
-import feature2 from '@/images/why-bee-for-informed-choice-2.webp'
+import feature from '@/images/why-bee-for-informed-choice.webp'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Button } from '@/components/Button'
@@ -25,21 +24,7 @@ export function InformacedChoice() {
           }}
           className='flex w-full justify-end lg:block lg:w-2/3'
         >
-          <div className='relative flex self-end gap-3'>
-            <Image
-              quality={100}
-              className='h-full w-2/3'
-              src={feature}
-              alt=''
-            />
-
-            <Image
-              quality={100}
-              className='h-full w-1/2'
-              src={feature2}
-              alt=''
-            />
-          </div>
+          <Image quality={100} className='' src={feature} alt='' />
         </motion.div>
 
         <div className='flex w-full justify-center lg:w-1/3' ref={ref}>

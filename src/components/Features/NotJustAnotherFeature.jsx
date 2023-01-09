@@ -9,7 +9,7 @@ export function NotJustAnotherFeature() {
 
   return (
     <section
-      id='features'
+      id='not-just-another-feature'
       aria-label='We run 24/7 so you can sleep in peace'
       className='relative overflow-hidden pt-28 pb-28 sm:pb-24 sm:pt-24'
     >
@@ -24,7 +24,7 @@ export function NotJustAnotherFeature() {
               Not just another energy monitoring solution
             </h2>
             <p className='my-6 text-lg tracking-tight text-deep-dark'>
-              TA platform to foster a common language between building services
+              A platform to foster a common language between building services
               engineers, FM services, C-Suite, building owners and finance. BEE
               enables a simple, clear and concise overview of the your building
               and asset health for all user levels.

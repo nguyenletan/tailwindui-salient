@@ -923,12 +923,83 @@ const whyBEE = [
 
 const features = [
   {
+    name: 'Not just another solution',
+    description:
+      'A platform to foster a common language between building services engineers, FM services, C-Suite, building owners and finance. BEE enables a simple, clear and concise overview of the your building and asset health for all user levels.',
+    subDescription:
+      'Manage every aspect of your infrastructure real estate from accounting and operations to sustainability and energy consumption: ',
+    href: '/features#not-just-another-feature',
+    icon: ChartBarIcon,
+    subItems: [
+      {
+        title: 'New project input',
+        icon: ArrowDownOnSquareStackIcon,
+        href: '#',
+      },
+      {
+        title: 'System & Subsystem Breakdown',
+        icon: CurrencyPoundIcon,
+        href: '#',
+      },
+      {
+        title: 'System and subsystem performance',
+        icon: BoltIcon,
+        href: '#',
+      },
+      {
+        title: 'Plant & Equipment State',
+        icon: GlobeEuropeAfricaIcon,
+        href: '#',
+      },
+      {
+        title: 'Energy Usage and Cost',
+        icon: BanknotesIcon,
+        href: '#',
+      },
+      {
+        title: 'Electrical Systems Information',
+        icon: BoltSlashIcon,
+        href: '#',
+      },
+      {
+        title: 'Carbon Emissions',
+        icon: GlobeAltIcon,
+        href: '#',
+      },
+      {
+        title: 'Incidental Gains Information',
+        icon: ArrowTrendingUpIcon,
+        href: '#',
+      },
+      {
+        title: 'Historical vs Current State',
+        icon: ScaleIcon,
+        href: '#',
+      },
+      {
+        title: 'Edit Input',
+        icon: PencilSquareIcon,
+        href: '#',
+      },
+      {
+        title: 'Current state of consumption',
+        icon: ChartPieIcon,
+        href: '#',
+      },
+      {
+        title: 'Save and Export',
+        icon: DocumentArrowUpIcon,
+        href: '#',
+      },
+    ],
+  },
+  {
     name: 'Current Performance ',
     description:
       'Get your to know the performance of your building portfolio in relation to the local regulatory and environmental conditions.',
     subDescription:
       'Manage every aspect of your infrastructure real estate from accounting and operations to sustainability and energy consumption: ',
-    href: '/features#current-performance',
+    href: '/features#building-performance',
     icon: ChartBarIcon,
     subItems: [
       {
@@ -999,7 +1070,7 @@ const features = [
       'Compare the current state of your buildings against the regulatory standards as well as the best in class for your building type.',
     subDescription:
       'Manage every aspect of your infrastructure real estate from accounting and operations to sustainability and energy consumption: ',
-    href: '/features#comparison',
+    href: '/features#compare',
     icon: ScaleIcon,
     subItems: [
       {
@@ -1070,7 +1141,7 @@ const features = [
       'Identify and address the gaps with the best improvement measures  for your buildings and to your business needs.',
     subDescription:
       'Manage every aspect of your infrastructure real estate from accounting and operations to sustainability and energy consumption: ',
-    href: '/features#improvements',
+    href: '/features#improve',
     icon: ArrowTrendingUpIcon,
     subItems: [
       {
@@ -1509,14 +1580,14 @@ export default function Header() {
                               {features.map((item, index) => (
                                 <a
                                   key={item.name}
-                                  href='#'
+                                  href={item.href}
                                   className={
                                     '-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-stone-100' +
                                     (index === softwareSelectedItem
                                       ? ' bg-gray-100'
                                       : '')
                                   }
-                                  onClick={() => setSoftwareSelectedItem(index)}
+                                  //onClick={() => setSoftwareSelectedItem(index)}
                                 >
                                   <div className='flex gap-4 md:h-full'>
                                     <div className='mt-1 flex-shrink-0'>
@@ -1593,7 +1664,7 @@ export default function Header() {
                         leaveTo='opacity-0 -translate-y-1'
                       >
                         <Popover.Panel className='absolute inset-x-0 top-full z-10 hidden transform bg-white shadow-lg md:block'>
-                          <div className='max-w-8xl mx-auto grid gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16'>
+                          <div className='max-w-8xl mx-auto grid gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-5 lg:px-8 lg:py-12 xl:py-16'>
                             {services.map((item) => (
                               <a
                                 key={item.name}
@@ -1666,9 +1737,7 @@ export default function Header() {
                   href='/contact-us'
                   color='primary'
                 >
-                  <span>
-                    Get started <span className='hidden lg:inline'>today</span>
-                  </span>
+                  <span>Get started</span>
                 </Button>
 
                 {/*<a*/}
