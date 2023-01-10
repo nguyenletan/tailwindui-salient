@@ -35,10 +35,10 @@ export function Logo() {
         <Link className='text-primary font-extrabold pr-4' href='/'>
           Lastfootprint
         </Link>
-        |
-        <span rel="noreferrer" className="pl-4">
-          Bee
-        </span>
+        {/*|*/}
+        {/*<span rel="noreferrer" className="pl-4">*/}
+        {/*  Bee*/}
+        {/*</span>*/}
       </h1>
     </div>
   )

@@ -1388,7 +1388,7 @@ export default function Header() {
                           <div className='mx-auto grid h-[86vh] max-w-lg gap-8 overflow-auto'>
                             <div className='mx-auto flex max-w-7xl flex-col gap-8 overflow-auto bg-stone-50 px-4 py-4 pb-8 sm:px-6 sm:py-4 lg:px-8 lg:py-6 xl:py-8'>
                               <h3 className='text-md font-display font-bold uppercase text-primary'>
-                                About BEE?
+                                About Bee?
                               </h3>
 
                               {aboutBEE.map((item, index) => (
@@ -1481,7 +1481,7 @@ export default function Header() {
                           <div className='mx-auto grid h-[86vh] max-w-lg gap-8 overflow-auto'>
                             <div className='mx-auto flex max-w-7xl flex-col gap-8 overflow-auto bg-stone-50 px-4 py-4 pb-8 sm:px-6 sm:py-4 lg:px-8 lg:py-6 xl:py-8'>
                               <h3 className='text-md font-display font-bold uppercase text-primary'>
-                                Why BEE?
+                                Why Bee?
                               </h3>
 
                               {whyBEE.map((item, index) => (
