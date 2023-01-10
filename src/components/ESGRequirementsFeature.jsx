@@ -29,6 +29,7 @@ export function ESGRequirementsFeature() {
         <div ref={ref} className='flex w-full lg:w-1/2'>
           <div className='md:text-left xl:max-w-none'>
             <h2 className='font-display text-3xl font-extrabold !leading-tight tracking-tight text-deep-dark sm:text-4xl md:text-4xl'>
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
               Manage your property's ESG requirements
             </h2>
             <p className='py-8 text-xl text-gray-600'>

@@ -45,7 +45,9 @@ export function VideoContent() {
               An easy and friendly to user interface
             </h2>
             <p className='mt-6  text-lg tracking-tight text-deep-dark'>
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
               We've designed a clear and logical interface that is intuitive for
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
               you to manage your commercial and corporate real estate's energy
               consumption and CO<sub>2</sub> emissions.
             </p>

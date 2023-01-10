@@ -1,9 +1,7 @@
 import { Container } from '@/components/Container'
-import BlackDishSVG from '@/components/BlackDishSVG'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import { useRef, useState } from 'react'
 import styled from 'styled-components'
-import ColorDishSVG from '@/components/ColorDishSVG'
 import asana01 from '@/images/asana01.webp'
 import Image from 'next/image'
 
@@ -241,7 +239,7 @@ export default function AsanaFeature() {
                     : 'absolute z-50 w-full gap-2 opacity-0'
                 }
               >
-                <Image src={asana01} />
+                <Image src={asana01} alt=""/>
               </CurrentBuildingStack>
 
               <CompareStack
