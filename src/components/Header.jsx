@@ -1346,7 +1346,7 @@ export default function Header() {
               </Popover.Button>
             </div>
             <div className='hidden md:flex md:flex-1 md:items-center md:justify-between'>
-              <Popover.Group as='nav' className='flex space-x-10'>
+              <Popover.Group as='nav' className='flex space-x-10 self-end'>
                 <Popover>
                   {({ open }) => (
                     <>
