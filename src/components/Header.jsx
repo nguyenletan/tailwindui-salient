@@ -1374,7 +1374,7 @@ export default function Header() {
                           />
                         )}
                       </Popover.Button>
-                      <Popover.Overlay className='fixed inset-0 mt-[85px] bg-black opacity-30' />
+                      <Popover.Overlay className='fixed inset-0 mt-[85px] bg-black opacity-50' />
 
                       <Transition
                         as={Fragment}
@@ -1468,7 +1468,7 @@ export default function Header() {
                           />
                         )}
                       </Popover.Button>
-                      <Popover.Overlay className='fixed inset-0 mt-[85px] bg-black opacity-30' />
+                      <Popover.Overlay className='fixed inset-0 mt-[85px] bg-black opacity-50' />
                       <Transition
                         as={Fragment}
                         enter='transition ease-out duration-800'
@@ -1564,7 +1564,7 @@ export default function Header() {
                           />
                         )}
                       </Popover.Button>
-                      <Popover.Overlay className='fixed inset-0 mt-[85px] bg-black opacity-30' />
+                      <Popover.Overlay className='fixed inset-0 mt-[85px] bg-black opacity-50' />
                       <Transition
                         as={Fragment}
                         enter='transition ease-out duration-800'
@@ -1658,7 +1658,7 @@ export default function Header() {
                           />
                         )}
                       </Popover.Button>
-                      <Popover.Overlay className='fixed inset-0 mt-[85px] bg-black opacity-30' />
+                      <Popover.Overlay className='fixed inset-0 mt-[85px] bg-black opacity-50' />
                       <Transition
                         as={Fragment}
                         enter='transition ease-out duration-800'
