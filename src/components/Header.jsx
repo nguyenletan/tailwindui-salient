@@ -1348,7 +1348,7 @@ export default function Header() {
             <div className='hidden md:flex md:flex-1 md:items-center md:justify-between'>
               <Popover.Group as='nav' className='flex space-x-10 self-end'>
                 <Popover>
-                  {({ open }) => (
+                  {({ open, close }) => (
                     <>
                       <Popover.Button
                         className={classNames(
@@ -1374,6 +1374,7 @@ export default function Header() {
                           />
                         )}
                       </Popover.Button>
+                      <Popover.Overlay className='fixed inset-0 mt-[85px] bg-black opacity-80' />
 
                       <Transition
                         as={Fragment}
@@ -1384,15 +1385,15 @@ export default function Header() {
                         leaveFrom='opacity-100 translate-y-0'
                         leaveTo='opacity-0 -translate-y-1'
                       >
-                        <Popover.Panel className='absolute inset-x-0 top-full z-10 hidden transform bg-white bg-transparent shadow-lg md:block'>
+                        <Popover.Panel className='absolute inset-x-0 z-10 mx-auto hidden w-[500px] transform bg-white bg-transparent shadow-lg md:block'>
                           <div className='mx-auto grid h-[86vh] max-w-lg gap-8 overflow-auto'>
                             <div className='mx-auto flex max-w-7xl flex-col gap-8 overflow-auto bg-stone-50 px-4 py-4 pb-8 sm:px-6 sm:py-4 lg:px-8 lg:py-6 xl:py-8'>
                               <h3 className='text-md font-display font-bold uppercase text-primary'>
-                                About Bee?
+                                About Bee
                               </h3>
 
                               {aboutBEE.map((item, index) => (
-                                <a
+                                <Link
                                   key={item.name}
                                   href={item.href}
                                   className={
@@ -1401,7 +1402,7 @@ export default function Header() {
                                       ? ' bg-gray-100'
                                       : '')
                                   }
-                                  //onClick={() => setSoftwareSelectedItem(index)}
+                                  onClick={() => close()}
                                 >
                                   <div className='flex gap-4 md:h-full'>
                                     <div className='mt-1 flex-shrink-0'>
@@ -1430,7 +1431,7 @@ export default function Header() {
                                       </Link>
                                     </div>
                                   </div>
-                                </a>
+                                </Link>
                               ))}
                             </div>
                           </div>
@@ -1441,7 +1442,7 @@ export default function Header() {
                 </Popover>
 
                 <Popover>
-                  {({ open }) => (
+                  {({ open, close }) => (
                     <>
                       <Popover.Button
                         className={classNames(
@@ -1467,7 +1468,7 @@ export default function Header() {
                           />
                         )}
                       </Popover.Button>
-
+                      <Popover.Overlay className='fixed inset-0 mt-[85px] bg-black opacity-80' />
                       <Transition
                         as={Fragment}
                         enter='transition ease-out duration-800'
@@ -1477,7 +1478,7 @@ export default function Header() {
                         leaveFrom='opacity-100 translate-y-0'
                         leaveTo='opacity-0 -translate-y-1'
                       >
-                        <Popover.Panel className='absolute inset-x-0 top-full z-10 hidden transform bg-white bg-transparent shadow-lg md:block'>
+                        <Popover.Panel className='absolute inset-x-0 top-full z-10 mx-auto hidden w-[500px] transform bg-white bg-transparent shadow-lg md:block'>
                           <div className='mx-auto grid h-[86vh] max-w-lg gap-8 overflow-auto'>
                             <div className='mx-auto flex max-w-7xl flex-col gap-8 overflow-auto bg-stone-50 px-4 py-4 pb-8 sm:px-6 sm:py-4 lg:px-8 lg:py-6 xl:py-8'>
                               <h3 className='text-md font-display font-bold uppercase text-primary'>
@@ -1485,7 +1486,7 @@ export default function Header() {
                               </h3>
 
                               {whyBEE.map((item, index) => (
-                                <a
+                                <Link
                                   key={item.name}
                                   href={item.href}
                                   className={
@@ -1495,6 +1496,9 @@ export default function Header() {
                                       : '')
                                   }
                                   //onClick={() => setSoftwareSelectedItem(index)}
+                                  onClick={() => {
+                                    close()
+                                  }}
                                 >
                                   <div className='flex gap-4 md:h-full'>
                                     <div className='mt-1 flex-shrink-0'>
@@ -1523,7 +1527,7 @@ export default function Header() {
                                       </Link>
                                     </div>
                                   </div>
-                                </a>
+                                </Link>
                               ))}
                             </div>
                           </div>
@@ -1534,7 +1538,7 @@ export default function Header() {
                 </Popover>
 
                 <Popover>
-                  {({ open }) => (
+                  {({ open, close }) => (
                     <>
                       <Popover.Button
                         className={classNames(
@@ -1560,7 +1564,7 @@ export default function Header() {
                           />
                         )}
                       </Popover.Button>
-
+                      <Popover.Overlay className='fixed inset-0 mt-[85px] bg-black opacity-80' />
                       <Transition
                         as={Fragment}
                         enter='transition ease-out duration-800'
@@ -1570,7 +1574,7 @@ export default function Header() {
                         leaveFrom='opacity-100 translate-y-0'
                         leaveTo='opacity-0 -translate-y-1'
                       >
-                        <Popover.Panel className='absolute inset-x-0 top-full z-10 hidden transform bg-white bg-transparent shadow-lg md:block'>
+                        <Popover.Panel className='absolute inset-x-0 top-full z-10 mx-auto hidden w-[500px] transform bg-white bg-transparent shadow-lg md:block'>
                           <div className='mx-auto h-[86vh] max-w-lg gap-8 overflow-auto '>
                             <div className='mx-auto flex max-w-7xl flex-col gap-8 overflow-auto bg-stone-50 px-4 py-4 pb-8 sm:px-6 sm:py-4 lg:px-8 lg:py-6 xl:py-8'>
                               <h3 className='text-md font-display font-bold uppercase text-primary'>
@@ -1578,7 +1582,7 @@ export default function Header() {
                               </h3>
 
                               {features.map((item, index) => (
-                                <a
+                                <Link
                                   key={item.name}
                                   href={item.href}
                                   className={
@@ -1588,6 +1592,7 @@ export default function Header() {
                                       : '')
                                   }
                                   //onClick={() => setSoftwareSelectedItem(index)}
+                                  onClick={() => close()}
                                 >
                                   <div className='flex gap-4 md:h-full'>
                                     <div className='mt-1 flex-shrink-0'>
@@ -1616,7 +1621,7 @@ export default function Header() {
                                       </Link>
                                     </div>
                                   </div>
-                                </a>
+                                </Link>
                               ))}
                             </div>
                           </div>
@@ -1627,7 +1632,7 @@ export default function Header() {
                 </Popover>
 
                 <Popover>
-                  {({ open }) => (
+                  {({ open, close }) => (
                     <>
                       <Popover.Button
                         className={classNames(
@@ -1653,7 +1658,7 @@ export default function Header() {
                           />
                         )}
                       </Popover.Button>
-
+                      <Popover.Overlay className='fixed inset-0 mt-[85px] bg-black opacity-80' />
                       <Transition
                         as={Fragment}
                         enter='transition ease-out duration-800'
@@ -1663,15 +1668,15 @@ export default function Header() {
                         leaveFrom='opacity-100 translate-y-0'
                         leaveTo='opacity-0 -translate-y-1'
                       >
-                        <Popover.Panel className='absolute inset-x-0 top-full z-10 hidden transform bg-white bg-transparent shadow-lg md:block'>
-                          <div className='mx-auto h-[86vh] max-w-lg gap-8 overflow-auto '>
+                        <Popover.Panel className='absolute inset-x-0 top-full z-10 mx-auto hidden w-[500px] transform bg-white bg-transparent shadow-lg md:block'>
+                          <div className='mx-auto h-[86vh] max-w-lg gap-8 overflow-auto'>
                             <div className='mx-auto flex max-w-7xl flex-col gap-8 overflow-auto bg-stone-50 px-4 py-4 pb-8 sm:px-6 sm:py-4 lg:px-8 lg:py-6 xl:py-8'>
                               <h3 className='text-md font-display font-bold uppercase text-primary'>
                                 Services
                               </h3>
 
                               {services.map((item, index) => (
-                                <a
+                                <Link
                                   key={item.name}
                                   href={item.href}
                                   className={
@@ -1681,6 +1686,7 @@ export default function Header() {
                                       : '')
                                   }
                                   //onClick={() => setSoftwareSelectedItem(index)}
+                                  onClick={() => close()}
                                 >
                                   <div className='flex gap-4 md:h-full'>
                                     <div className='mt-1 flex-shrink-0'>
@@ -1709,7 +1715,7 @@ export default function Header() {
                                       </Link>
                                     </div>
                                   </div>
-                                </a>
+                                </Link>
                               ))}
                             </div>
                           </div>
